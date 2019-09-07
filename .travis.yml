@@ -1,0 +1,6 @@
+language: go
+
+go_import_path: packages/backend/app
+
+script:
+  - go test -v
