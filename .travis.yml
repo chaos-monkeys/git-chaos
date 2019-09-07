@@ -1,6 +1,4 @@
 language: go
 
-go_import_path: packages/backend/app
-
 script:
-  - go test -v
+  - go test -v packages/backend/app
