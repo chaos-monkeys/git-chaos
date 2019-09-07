@@ -17,3 +17,7 @@ services:
       - database
     links:
       - database
+
+  frontend:
+    container_name: git-chaos_frontend
+    build: ./packages/frontend
