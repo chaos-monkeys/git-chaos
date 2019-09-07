@@ -1,4 +1,4 @@
 language: go
 
 script:
-  - go test -v packages/backend/app
+  - go test -v
