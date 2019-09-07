@@ -1,5 +1,7 @@
 # Git Chaos
 
+[![Build Status](https://travis-ci.org/chaos-monkeys/git-chaos.svg?branch=master)](https://travis-ci.org/chaos-monkeys/git-chaos)
+
 ## Getting Started
 
 ### Prerequisites
