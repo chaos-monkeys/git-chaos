@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "netlify-lambda": "^1.6.3"
-  },
-  "scripts": {
-    "build:lambda": "netlify-lambda build /src"
-  }
-}

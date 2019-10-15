@@ -1,4 +1,7 @@
 [build]
-  command = "yarn build" # the command you run to build this file
-  functions = "dist" # netlify-lambda builds to this folder AND Netlify reads functions from here
-
+  command = "make build"
+  functions = "src"
+  publish = "dist"
+[build.environment]
+  # Change this path with the path to your repository
+  GO_IMPORT_PATH = "https://github.com/chaos-monkeys/git-chaos/"
