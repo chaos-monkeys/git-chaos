@@ -7,6 +7,14 @@ jobs:
     name: HelloWorld
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - name: Install Dependencies
+        uses: actions/setup-node@v1
         run: |
           npm install
+      - name: Leave Comment
+        uses: /chaos-monkeys/git-chaos@feat/actions-and-workflows
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          message: "Hello World from Github Action!"
