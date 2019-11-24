@@ -17,17 +17,12 @@ const checkRequiredEnv = () => {
   }
 };
 
-const getPullRequestNumber = () => {
-  const openPullRequest = octokit.pulls.list({
+async function getPullRequestNumber() {
+  const openPullRequest = await octokit.pulls.list({
     owner: GIT_OWNER,
     repo: GIT_OWNER,
     state: 'open'
-  }).catch(err => {
-    console.log(err)
   })
-
-  console.log(openPullRequest)
-  console.log(typeof openPullRequest)
 
   openPullRequest.forEach(pullRequest => {
     const pullRequestSHA = pullRequest.head.sha;
