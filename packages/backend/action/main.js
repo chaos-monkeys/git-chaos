@@ -21,7 +21,7 @@ const run = () => {
   octokit.pulls
     .createComment({
       owner: "chaos-monkeys",
-      repo: process.env.GITHUB_REPOSITORY,
+      repo: "git-chaos",
       pull_number: 10,
       body: commentMessage,
       commit_id: process.env.GITHUB_SHA,
