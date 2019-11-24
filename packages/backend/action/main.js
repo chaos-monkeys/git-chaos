@@ -19,21 +19,24 @@ const checkRequiredEnv = () => {
 
 async function getPullRequestNumber() {
   const pullRequestNumber = 0;
-  const openPullRequest = await octokit.pulls.list({
+  octokit.pulls.list({
     owner: GIT_OWNER,
     repo: GIT_OWNER,
     state: 'open'
+  }).then(openPullRequest => {
+    openPullRequest.forEach(pullRequest => {
+      const pullRequestSHA = pullRequest.head.sha;
+      if (GITHUB_SHA === pullRequestSHA) {
+        pullRequestNumber = parseInt(pullRequest.number);
+      }
+    });
+    console.log('pullRequestNumber', pullRequestNumber)
+    // Exports the PR variable for future workflows
+    await core.exportVariable('PR_NUMBER', pullRequestNumber);
+  }).catch(err => {
+    console.log(err)
   })
 
-  openPullRequest.forEach(pullRequest => {
-    const pullRequestSHA = pullRequest.head.sha;
-    if (GITHUB_SHA === pullRequestSHA) {
-      pullRequestNumber = parseInt(pullRequest.number);
-    }
-  });
-  console.log('pullRequestNumber', pullRequestNumber)
-  // Exports the PR variable for future workflows
-  await core.exportVariable('PR_NUMBER', pullRequestNumber);
   return pullRequestNumber;
 }
 
