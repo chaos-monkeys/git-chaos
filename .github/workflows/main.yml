@@ -12,7 +12,7 @@ jobs:
           fetch-depth: 1
       - run: npm install
       - name: Leave Comment
-        uses: ./.github/actions/leave-comment
+        uses: ./.github/actions
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
