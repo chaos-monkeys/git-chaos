@@ -18,14 +18,11 @@ const octokit = new Octokit({
 
 const run = () => {
   const commentMessage = core.getInput("message");
-  octokit.pulls
-    .createComment({
-      owner: "chaos-monkeys",
-      repo: "git-chaos",
+  octokit
+    .add_comment({
+      repo: process.env.GITHUB_REPOSITORY,
       pull_number: 10,
-      body: commentMessage,
-      commit_id: process.env.GITHUB_SHA,
-      path: process.env.GITHUB_EVENT_PATH
+      body: commentMessage
     })
     .catch(err => {
       console.log(err);
