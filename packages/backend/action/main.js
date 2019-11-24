@@ -17,31 +17,33 @@ const checkRequiredEnv = () => {
   }
 };
 
-const getPullRequestNumber = () => {
-  // const pullRequestNumber = 0;
-  octokit.pulls.list({
-    owner: GIT_OWNER,
-    repo: GIT_OWNER,
-    state: 'open'
-  }).then(openPullRequest => {
+async function getPullRequestNumber() {
+  let pullRequestNumber = 0;
+
+  try {
+    const openPullRequest = await octokit.pulls.list({
+      owner: GIT_OWNER,
+      repo: GIT_OWNER,
+      state: 'open'
+    })
+
     openPullRequest.forEach(pullRequest => {
       const pullRequestSHA = pullRequest.head.sha;
       if (GITHUB_SHA === pullRequestSHA) {
         pullRequestNumber = parseInt(pullRequest.number);
       }
     });
-    console.log('pullRequestNumber', pullRequestNumber)
-    // Exports the PR variable for future workflows
-    core.exportVariable('PR_NUMBER', pullRequestNumber);
-    return pullRequestNumber;
-  }).catch(err => {
-    console.log(err)
-  })
+  } catch (error) {
+    console.log(error)
+  } finally {
+    await core.exportVariable('PR_NUMBER', pullRequestNumber);
+    return pullRequestNumber
+  }
 }
 
 (async () => {
   checkRequiredEnv();
-  const commentMessage = core.getInput("message");
+  const commentMessage = await core.getInput("message");
   const pullRequestNumber = await getPullRequestNumber();
   octokit.issues
     .createComment({
