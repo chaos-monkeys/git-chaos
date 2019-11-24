@@ -7,7 +7,8 @@ branding:
 inputs:
   msg:
     description: Comment's message
+    default: "Hello World"
     required: true
 runs:
   using: "node12"
-  main: "backend/action.js"
+  main: "backend/action/main.js"
