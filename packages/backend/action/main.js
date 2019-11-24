@@ -37,10 +37,10 @@ async function getPullRequestNumber() {
   return pullRequestNumber;
 }
 
-(function run() {
+(async () => {
   checkRequiredEnv();
   const commentMessage = core.getInput("message");
-  const pullRequestNumber = getPullRequestNumber();
+  const pullRequestNumber = await getPullRequestNumber();
   octokit.issues
     .createComment({
       owner: GIT_OWNER,
