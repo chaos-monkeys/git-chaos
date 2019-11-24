@@ -1,11 +1,9 @@
 name: Hello World
-# Triggers on Push
+# Triggers on push or pull request
 on: [push, pull_request]
 
 jobs:
   echo:
-    name: Echo
-  build:
     name: HelloWorld
     runs-on: ubuntu-latest
     steps:
