@@ -23,25 +23,22 @@ async function getPullRequestNumber() {
   try {
     const openPullRequest = await octokit.pulls.list({
       owner: GIT_OWNER,
-      repo: GIT_OWNER,
+      repo: GIT_REPO,
       state: 'open'
     })
 
-    openPullRequest.forEach(pullRequest => {
+    openPullRequest['data'].forEach(async (pullRequest) => {
       const pullRequestSHA = pullRequest.head.sha;
       if (GITHUB_SHA === pullRequestSHA) {
-        console.error('GITHUB_SHA', GITHUB_SHA);
-        console.error('pullRequestSHA', pullRequestSHA)
-        console.error('pullRequest.number', pullRequest.number)
-        pullRequestNumber = parseInt(pullRequest.number);
+        pullRequestNumber = await parseInt(pullRequest.number);
       }
     });
   } catch (error) {
     console.log(error)
-  } finally {
-    await core.exportVariable('PR_NUMBER', pullRequestNumber);
-    return pullRequestNumber
   }
+
+  await core.exportVariable('PR_NUMBER', pullRequestNumber);
+  return pullRequestNumber
 }
 
 (async () => {
