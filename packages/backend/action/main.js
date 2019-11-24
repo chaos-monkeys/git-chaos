@@ -17,7 +17,7 @@ const checkRequiredEnv = () => {
   }
 };
 
-async function getPullRequestNumber() {
+const getPullRequestNumber = () => {
   const pullRequestNumber = 0;
   octokit.pulls.list({
     owner: GIT_OWNER,
@@ -32,7 +32,7 @@ async function getPullRequestNumber() {
     });
     console.log('pullRequestNumber', pullRequestNumber)
     // Exports the PR variable for future workflows
-    await core.exportVariable('PR_NUMBER', pullRequestNumber);
+    core.exportVariable('PR_NUMBER', pullRequestNumber);
   }).catch(err => {
     console.log(err)
   })
