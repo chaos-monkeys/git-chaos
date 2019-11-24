@@ -2,9 +2,9 @@ const core = require("@actions/core");
 const Octokit = require("@octokit/rest");
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_SHA = process.env.GITHUB_SHA;
 const GIT_OWNER = process.env.GIT_OWNER;
 const GIT_REPO = process.env.GIT_REPO;
-const GITHUB_SHA = process.env.GITHUB_SHA;
 
 const octokit = new Octokit({
   auth: GITHUB_TOKEN
@@ -30,6 +30,8 @@ async function getPullRequestNumber() {
     openPullRequest.forEach(pullRequest => {
       const pullRequestSHA = pullRequest.head.sha;
       if (GITHUB_SHA === pullRequestSHA) {
+        core.debug('GITHUB_SHA', GITHUB_SHA);
+        core.debug('pullRequestSHA', pullRequestSHA)
         pullRequestNumber = parseInt(pullRequest.number);
       }
     });
@@ -45,10 +47,11 @@ async function getPullRequestNumber() {
   checkRequiredEnv();
   const commentMessage = await core.getInput("message");
   const pullRequestNumber = await getPullRequestNumber();
+  core.debug('pullRequestNumber', pullRequestNumber)
   octokit.issues
     .createComment({
       owner: GIT_OWNER,
-      repo: GIT_OWNER,
+      repo: GIT_REPO,
       issue_number: pullRequestNumber,
       body: commentMessage
     })
