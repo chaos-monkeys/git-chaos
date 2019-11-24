@@ -18,7 +18,7 @@ const checkRequiredEnv = () => {
 };
 
 const getPullRequestNumber = () => {
-  const pullRequestNumber = 0;
+  // const pullRequestNumber = 0;
   octokit.pulls.list({
     owner: GIT_OWNER,
     repo: GIT_OWNER,
