@@ -2,13 +2,8 @@ name: "leave-comment"
 description: "This runs and posts a comment on the PR"
 author: "chaos-monkeys"
 branding:
-  icon: "message-square"
+  icon: "info"
   color: "blue"
-inputs:
-  message:
-    description: Comment's message
-    default: "👋 Hello World"
-    required: true
 runs:
   using: "node12"
   main: "../../packages/backend/action/main.js"
