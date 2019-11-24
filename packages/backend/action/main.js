@@ -19,7 +19,7 @@ const checkRequiredEnv = () => {
 
 async function getPullRequestNumber() {
   let pullRequestNumber = 0;
-
+  core.debug(process.env)
   try {
     const openPullRequest = await octokit.pulls.list({
       owner: GIT_OWNER,
