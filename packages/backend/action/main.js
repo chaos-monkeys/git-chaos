@@ -20,7 +20,15 @@ async function run() {
   checkRequiredEnv();
   try {
     const commentMessage = core.getInput("message");
-    core.debug(`Actino outputs message ${commentMessage}`);
+    octokit.pulls.createComment({
+      owner: "chaos-monkeys",
+      repo: process.env.GITHUB_REPOSITORY,
+      pull_number: 10,
+      body: commentMessage,
+      commit_id: process.env.GITHUB_SHA,
+      path: process.env.GITHUB_EVENT_PATH
+    });
+    core.debug(`Action outputs message ${commentMessage}`);
   } catch (error) {
     core.setFailed(error.message);
   }
