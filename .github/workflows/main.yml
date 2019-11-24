@@ -15,5 +15,7 @@ jobs:
         uses: ./.github/actions
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_OWNER: "chaos-monkeys"
+          GIT_REPO: "git-chaos"
         with:
           message: "Hello World from Github Action!"
