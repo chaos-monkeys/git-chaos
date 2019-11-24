@@ -30,8 +30,9 @@ async function getPullRequestNumber() {
     openPullRequest.forEach(pullRequest => {
       const pullRequestSHA = pullRequest.head.sha;
       if (GITHUB_SHA === pullRequestSHA) {
-        core.debug('GITHUB_SHA', GITHUB_SHA);
-        core.debug('pullRequestSHA', pullRequestSHA)
+        console.error('GITHUB_SHA', GITHUB_SHA);
+        console.error('pullRequestSHA', pullRequestSHA)
+        console.error('pullRequest.number', pullRequest.number)
         pullRequestNumber = parseInt(pullRequest.number);
       }
     });
