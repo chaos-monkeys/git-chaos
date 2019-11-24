@@ -26,6 +26,9 @@ const getPullRequestNumber = () => {
     console.log(err)
   })
 
+  console.log(openPullRequest)
+  console.log(typeof openPullRequest)
+
   openPullRequest.forEach(pullRequest => {
     const pullRequestSHA = pullRequest.head.sha;
     const pullRequestNumber = 0;
