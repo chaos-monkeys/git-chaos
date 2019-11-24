@@ -10,9 +10,3 @@ jobs:
       - name: Install Dependencies
         run: |
           npm install
-      - name: Leave Comment
-        uses: /chaos-monkeys/git-chaos@feat/actions-and-workflows
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          message: "Hello World from Github Action!"
