@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Install Dependencies
         run: |
-          npm install --prefix ./packages/backend/action
+          npm install --prefix ../packages/backend/action
       - name: Leave Comment
         uses: /chaos-monkeys/git-chaos@feat/actions-and-workflows
         env:
