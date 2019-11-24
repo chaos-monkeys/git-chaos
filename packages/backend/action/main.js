@@ -36,6 +36,7 @@ async function getPullRequestNumber() {
       }
     });
   } catch (error) {
+    core.debug(error)
     console.log(error)
   }
 
