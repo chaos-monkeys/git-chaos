@@ -1,6 +1,6 @@
 name: Hello World
 # Triggers on Push
-on: [push]
+on: [push, pull_request]
 
 jobs:
   echo:
