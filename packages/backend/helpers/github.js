@@ -1,19 +1,38 @@
-const { axios } = require('./axios');
+const Octokit = require('@octokit/rest');
+const querystring = require('querystring');
 
-// TODO: make these env variables (command line?)
-const ENV_ORG = 'chaos-monkeys';
-const ENV_REPO = 'git-chaos';
+const { owner, repo, token } = require('./config');
 
-const getAllBranches = () => axios.get(`/repos/${ENV_ORG}/${ENV_REPO}/branches`).then((o) => o.data);
+const CONFIG = {
+  owner,
+  repo,
+};
 
-// make it paginate!
-const getCommits = (sha) => axios.get(`/repos/${ENV_ORG}/${ENV_REPO}/commits?per_page=100&sha=${sha}`).then((o) => o.data);
+const octokit = new Octokit({
+  ...CONFIG,
+  auth: token,
+});
 
-const getSingleCommit = (sha) => axios.get(`/repos/${ENV_ORG}/${ENV_REPO}/commits/${sha}`).then((o) => o.data);
+const getCommits = async (sha) => {
+  const qs = querystring.stringify({ sha });
 
+  // by using a query string that's the name of a branch - we can get all the commits
+  // BUT the commits are missing some data, so we will need to re-get them one-by-one
+  const getAllCommits = await octokit.paginate(
+    `GET /repos/:owner/:repo/commits?${qs}`,
+    { ...CONFIG },
+  );
+
+  return Promise.all(
+    // make the detailed requests one by one
+    getAllCommits.map((commit) => octokit
+      .request(`GET /repos/:owner/:repo/commits/${commit.sha}`, { ...CONFIG })
+      .then((c) => c.data)),
+  );
+};
 
 module.exports = {
+  octokit,
+  CONFIG,
   getCommits,
-  getSingleCommit,
-  getAllBranches,
 };

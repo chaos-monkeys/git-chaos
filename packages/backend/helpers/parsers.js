@@ -1,5 +1,3 @@
-const getShaFromBranch = (branch) => branch.commit.sha;
-
 const parseFiles = (commit) => commit.files.map((file) => ({
   filename: file.filename,
   status: file.status,
@@ -11,6 +9,10 @@ const parseFiles = (commit) => commit.files.map((file) => ({
 
 const parseStats = (commit) => commit.stats;
 
+const parseMessage = (commit) => commit.commit.message;
+
+const parseUrl = (commit) => commit.commit.url;
+
 const parseAuthor = (commit) => commit.author;
 
 const parseCommitter = (commit) => commit.committer;
@@ -21,11 +23,10 @@ const formatCommits = (commit) => ({
   committer: parseCommitter(commit),
   files: parseFiles(commit),
   stats: parseStats(commit),
-  message: commit.commit.message,
-  url: commit.commit.url,
+  message: parseMessage(commit),
+  url: parseUrl(commit),
 });
 
 module.exports = {
   formatCommits,
-  getShaFromBranch,
 };

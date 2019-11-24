@@ -1,31 +1,28 @@
-const { getShaFromBranch, formatCommits } = require('./helpers/parsers');
-const {
-  getCommits,
-  getAllBranches,
-  getSingleCommit,
-} = require('./helpers/github');
+require('dotenv').config();
 
-const ENV_BRANCH = 'feat/actions-and-workflows';
+const util = require('util');
+const fs = require('fs');
+const { branch: envBranch } = require('./helpers/config');
+const { formatCommits } = require('./helpers/parsers');
+const { octokit, CONFIG, getCommits } = require('./helpers/github');
+
 
 const run = async () => {
-  const allBranches = await getAllBranches();
+  // get branch
+  // get detailed commits
+  // cleanup the detailed commits
+  // generate file
 
-  const branch = allBranches.find((o) => o.name === ENV_BRANCH);
-  const sha = getShaFromBranch(branch);
+  const { data: branch } = await octokit.repos.getBranch({
+    ...CONFIG,
+    branch: envBranch,
+  });
 
-  const commits = await getCommits(sha);
+  const commits = await getCommits(branch.name);
 
-  const fullCommits = await Promise.all(commits.map((o) => getSingleCommit(o.sha)));
+  const formattedCommits = commits.map(formatCommits);
 
-
-  const util = require('util');
-  const fs = require('fs');
-
-  fs.writeFileSync(
-    './formatted.js',
-    util.inspect(fullCommits.map(formatCommits), { showHidden: false, depth: null }),
-    'utf-8',
-  );
+  fs.writeFileSync('./temp/formattedCommits.js', util.inspect(formattedCommits, { showHidden: false, depth: null }), 'utf-8');
 };
 
 run();
