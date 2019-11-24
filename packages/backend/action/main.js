@@ -33,11 +33,10 @@ const getPullRequestNumber = () => {
     console.log('pullRequestNumber', pullRequestNumber)
     // Exports the PR variable for future workflows
     core.exportVariable('PR_NUMBER', pullRequestNumber);
+    return pullRequestNumber;
   }).catch(err => {
     console.log(err)
   })
-
-  return pullRequestNumber;
 }
 
 (async () => {
