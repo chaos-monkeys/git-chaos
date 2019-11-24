@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Install Dependencies
-        run: |
-          npm install --prefix ../packages/backend/action
+        with:
+          fetch-depth: 1
+      - run: npm install
       - name: Leave Comment
         uses: /chaos-monkeys/git-chaos@feat/actions-and-workflows
         env:
