@@ -3,8 +3,6 @@ const Octokit = require("@octokit/rest");
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
-core.debug(`List all env variables ${process.env}`);
-
 const octokit = new Octokit({
   auth: GITHUB_TOKEN
 });
@@ -23,7 +21,7 @@ const run = () => {
       owner: "chaos-monkeys",
       repo: "git-chaos",
       issue_number: 10,
-      body: commentMessage
+      body: "Hello from Citizen M"
     })
     .catch(err => {
       console.log(err);
