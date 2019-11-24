@@ -7,7 +7,9 @@ jobs:
     name: HelloWorld
     runs-on: ubuntu-latest
     steps:
-      - name: Hello world
-        id: hello-world
-        run: |
-          echo "Hello World"
+      - name: comment PR
+        uses: chaos-monkeys/pr-comment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          msg: "Hello World from Github Action!"

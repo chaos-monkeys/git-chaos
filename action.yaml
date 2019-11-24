@@ -1,0 +1,13 @@
+name: "pr-comment"
+description: "This runs and posts a comment on the PR"
+author: "chaos-monkeys"
+branding:
+  icon: "message-square"
+  color: "blue"
+inputs:
+  msg:
+    description: Comment's message
+    required: true
+runs:
+  using: "node12"
+  main: "backend/action.js"
