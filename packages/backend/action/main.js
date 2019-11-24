@@ -28,10 +28,10 @@ async function getPullRequestNumber() {
     })
 
     openPullRequest['data'].forEach(async (pullRequest) => {
-      const pullRequestSHA = pullRequest.head.sha;
+      const mergeCommitSHA = pullRequest.merge_commit_sha;
       core.debug(`GITHUB_SHA, ${GITHUB_SHA}`)
-      core.debug(`pullRequestSHA, ${pullRequestSHA}`)
-      if (GITHUB_SHA === pullRequestSHA) {
+      core.debug(`mergeCommitSHA, ${mergeCommitSHA}`)
+      if (GITHUB_SHA === mergeCommitSHA) {
         pullRequestNumber = await parseInt(pullRequest.number);
       }
     });
