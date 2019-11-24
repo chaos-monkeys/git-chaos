@@ -8,9 +8,9 @@ const successHandler = (response, provider) => {
   const headers = _.get(response, 'config.headers');
   const args = _.get(response, 'config.data');
 
-  // console.log(url, {
-  //   args, body, method, headers, url, status, provider,
-  // });
+  console.log(url, {
+    args, body, method, headers, url, status, provider,
+  });
   return response;
 };
 
@@ -24,18 +24,18 @@ const errorHandler = (error, provider) => {
   const method = _.get(error, 'response.config.method');
   const headers = _.get(error, 'response.config.headers');
 
-  // console.log(url, {
-  //   method,
-  //   body,
-  //   args,
-  //   headers,
-  //   message,
-  //   stack,
-  //   url,
-  //   status,
-  //   statusText,
-  //   provider,
-  // });
+  console.log(url, {
+    method,
+    body,
+    args,
+    headers,
+    message,
+    stack,
+    url,
+    status,
+    statusText,
+    provider,
+  });
   return Promise.reject(error);
 };
 

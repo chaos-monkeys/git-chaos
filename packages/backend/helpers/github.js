@@ -9,13 +9,11 @@ const getAllBranches = () => axios.get(`/repos/${ENV_ORG}/${ENV_REPO}/branches`)
 // make it paginate!
 const getCommits = (sha) => axios.get(`/repos/${ENV_ORG}/${ENV_REPO}/commits?per_page=100&sha=${sha}`).then((o) => o.data);
 
-const getPull = (id) => axios.get(`/repos/${ENV_ORG}/${ENV_REPO}/pulls/${id}`).then((o) => o.data);
+const getSingleCommit = (sha) => axios.get(`/repos/${ENV_ORG}/${ENV_REPO}/commits/${sha}`).then((o) => o.data);
 
-const getPullFiles = (id) => axios.get(`/repos/${ENV_ORG}/${ENV_REPO}/pulls/${id}/commits`).then((o) => o.data);
 
 module.exports = {
   getCommits,
+  getSingleCommit,
   getAllBranches,
-  getPull,
-  getPullFiles,
 };

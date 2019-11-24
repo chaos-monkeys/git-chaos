@@ -1,41 +1,31 @@
-const formatFile = (file) => ({
+const getShaFromBranch = (branch) => branch.commit.sha;
+
+const parseFiles = (commit) => commit.files.map((file) => ({
   filename: file.filename,
   status: file.status,
   additions: file.additions,
   deletions: file.deletions,
   changes: file.changes,
   raw_url: file.raw_url,
-});
+}));
 
-const formatStats = (stats) => ({
-  total: stats.total,
-  additions: stats.additions,
-  deletions: stats.deletions,
-});
+const parseStats = (commit) => commit.stats;
 
+const parseAuthor = (commit) => commit.author;
 
-// const parseFiles = (files) => files.map(formatFile);
-const parseFiles = (files) => {
-  const a = Array.isArray(files) ? files : [files];
-  return a.map(formatFile);
-};
+const parseCommitter = (commit) => commit.committer;
 
-const parseStats = (stats) => formatStats(stats);
-
-const parseCommit = (commit) => ({
-  files: parseFiles(commit.files),
-  stats: parseStats(commit.stats),
-});
-
-const getShaFromBranch = (branch) => branch.commit.sha;
-
-
-const getBranches = (pr) => ({
-  head: pr.head,
-  base: pr.base,
+const formatCommits = (commit) => ({
+  sha: commit.sha,
+  author: parseAuthor(commit),
+  committer: parseCommitter(commit),
+  files: parseFiles(commit),
+  stats: parseStats(commit),
+  message: commit.commit.message,
+  url: commit.commit.url,
 });
 
 module.exports = {
-  parseCommit,
+  formatCommits,
   getShaFromBranch,
 };
