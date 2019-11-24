@@ -29,6 +29,8 @@ async function getPullRequestNumber() {
 
     openPullRequest['data'].forEach(async (pullRequest) => {
       const pullRequestSHA = pullRequest.head.sha;
+      core.debug('GITHUB_SHA', GITHUB_SHA)
+      core.debug('pullRequestSHA', pullRequestSHA)
       if (GITHUB_SHA === pullRequestSHA) {
         pullRequestNumber = await parseInt(pullRequest.number);
       }
@@ -43,7 +45,7 @@ async function getPullRequestNumber() {
 
 (async () => {
   checkRequiredEnv();
-  const commentMessage = await core.getInput("message");
+  const commentMessage = core.getInput("message");
   const pullRequestNumber = await getPullRequestNumber();
   core.debug('pullRequestNumber', pullRequestNumber)
   octokit.issues
