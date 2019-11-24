@@ -1,5 +1,3 @@
-const { axios } = require('./helpers/axios');
-
 const { parseCommit } = require('./helpers/parsers');
 const { getCommits } = require('./helpers/github');
 

@@ -63,7 +63,6 @@ const createAxiosInstance = (options, provider) => {
 
 const github = {
   baseURL: 'https://api.github.com/',
-  headers: { Authorization: 'token d0b09bb0e5bf0c126bfea597122699bff4eb258e' },
 };
 
 module.exports = {
