@@ -5,7 +5,7 @@ branding:
   icon: "message-square"
   color: "blue"
 inputs:
-  msg:
+  message:
     description: Comment's message
     default: "Hello World"
     required: true

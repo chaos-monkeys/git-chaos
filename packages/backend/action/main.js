@@ -19,7 +19,7 @@ const checkRequiredEnv = () => {
 async function run() {
   checkRequiredEnv();
   try {
-    const commentMessage = core.getInput("msg");
+    const commentMessage = core.getInput("message");
     core.debug(`Actino outputs message ${commentMessage}`);
   } catch (error) {
     core.setFailed(error.message);
