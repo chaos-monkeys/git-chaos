@@ -1,6 +1,6 @@
 name: Hello World
-# Triggers on push or pull request
-on: [push, pull_request]
+# Triggers on pull request changes
+on: [pull_request]
 
 jobs:
   echo:
@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Dependencies
-        uses: /chaos-monkeys/git-chaos@feat/actions-and-workflows
         run: npm install
       - name: Leave Comment
         uses: /chaos-monkeys/git-chaos@feat/actions-and-workflows
