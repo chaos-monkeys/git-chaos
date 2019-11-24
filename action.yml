@@ -11,4 +11,4 @@ inputs:
     required: true
 runs:
   using: "node12"
-  main: "backend/action/main.js"
+  main: "packages/backend/action/main.js"
