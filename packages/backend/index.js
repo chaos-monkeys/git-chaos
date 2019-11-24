@@ -1,16 +1,16 @@
-const { parseCommit } = require('./helpers/parsers');
-const { getCommits } = require('./helpers/github');
+const { parseCommit, getShaFromBranch } = require('./helpers/parsers');
+const {
+  getCommits, getPull, getPullFiles, getAllBranches,
+} = require('./helpers/github');
 
+const get = async () => {
+  const allBranches = await getAllBranches();
 
-(async () => {
-  // get pr
-  // get base branch
-  // get commits on both
-  // merge
-  // clean
+  const branch = allBranches.find((o) => o.name === 'feat/actions-and-workflows');
+  const sha = getShaFromBranch(branch);
 
+  const commits = await getCommits(sha);
+  console.log(commits.length);
+};
 
-  const commits = await getCommits('replace-elm-with-gatsby');
-  const commit = parseCommit(commits.data);
-  console.log(commit);
-})();
+get();

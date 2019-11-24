@@ -14,7 +14,12 @@ const formatStats = (stats) => ({
 });
 
 
-const parseFiles = (files) => files.map(formatFile);
+// const parseFiles = (files) => files.map(formatFile);
+const parseFiles = (files) => {
+  const a = Array.isArray(files) ? files : [files];
+  return a.map(formatFile);
+};
+
 const parseStats = (stats) => formatStats(stats);
 
 const parseCommit = (commit) => ({
@@ -22,6 +27,15 @@ const parseCommit = (commit) => ({
   stats: parseStats(commit.stats),
 });
 
+const getShaFromBranch = (branch) => branch.commit.sha;
+
+
+const getBranches = (pr) => ({
+  head: pr.head,
+  base: pr.base,
+});
+
 module.exports = {
   parseCommit,
+  getShaFromBranch,
 };
