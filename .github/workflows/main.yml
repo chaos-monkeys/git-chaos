@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Install Dependencies
         run: npm install
+        with:
+          path: /packages/backend
       - name: Leave Comment
         uses: /chaos-monkeys/git-chaos@feat/actions-and-workflows
         env:
