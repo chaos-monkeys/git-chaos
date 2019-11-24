@@ -17,14 +17,10 @@ const formatStats = (stats) => ({
 const parseFiles = (files) => files.map(formatFile);
 const parseStats = (stats) => formatStats(stats);
 
-const parseCommit = (commit) => {
-  const files = parseFiles(commit.files);
-  const stats = parseStats(commit.stats);
-
-  return {
-    files, stats,
-  };
-};
+const parseCommit = (commit) => ({
+  files: parseFiles(commit.files),
+  stats: parseStats(commit.stats),
+});
 
 module.exports = {
   parseCommit,
