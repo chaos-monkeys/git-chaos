@@ -7,12 +7,12 @@ const { formatCommits } = require('./helpers/parsers');
 const { octokit, CONFIG, getCommits } = require('./helpers/github');
 
 
-const run = async () => {
-  // get branch
-  // get detailed commits
-  // cleanup the detailed commits
-  // generate file
+// get branch
+// get detailed commits
+// cleanup the detailed commits
+// generate file
 
+const run = async () => {
   const { data: branch } = await octokit.repos.getBranch({
     ...CONFIG,
     branch: envBranch,
