@@ -1,3 +1,5 @@
+const core = require('@actions/core');
+
 const { formatCommits } = require('./helpers/parsers');
 const { getCommits } = require('./helpers/github');
 
@@ -12,7 +14,12 @@ const createHistory = async ({
     owner,
     repo,
     branch: envBranch,
+  }).catch((e) => {
+    core.debug(e);
   });
+
+  core.debug(envBranch);
+  core.debug(branch);
 
   // get detailed commits
   const commits = await getCommits({
@@ -20,6 +27,8 @@ const createHistory = async ({
     owner,
     repo,
     sha: branch.name,
+  }).catch((e) => {
+    core.debug(e);
   });
 
   // clean it up!

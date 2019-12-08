@@ -78,6 +78,8 @@ const findBranch = async () => {
       core.debug(`condition: ${GITHUB_SHA === openPullRequest[i].merge_commit_sha}`);
 
       core.debug(openPullRequest[i].merge_commit_sha);
+
+
       if (GITHUB_SHA === openPullRequest[i].merge_commit_sha) {
         core.debug(`inside: ${openPullRequest[i].pullRequest}`);
         return openPullRequest[i].head.ref;

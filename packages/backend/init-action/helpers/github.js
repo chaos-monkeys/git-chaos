@@ -9,7 +9,8 @@ const getCommits = async ({
   // by using a query string that's the name of a branch - we can get all the commits
   // BUT the commits are missing some data, so we will need to re-get them one-by-one
   const getAllCommits = await octokit.paginate(
-    `GET /repos/:owner/:repo/commits?${qs}`, {
+    `GET /repos/:owner/:repo/commits?${qs}`,
+    {
       owner,
       repo,
     },
