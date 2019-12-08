@@ -65,11 +65,13 @@ const findBranch = async () => {
   const currentBranch = (() => {
     for (let i = 0; i < openPullRequest.length; i += 1) {
       if (GITHUB_SHA === openPullRequest[i].merge_commit_sha) {
+        core.debug(`head.ref ${openPullRequest[i].head.ref}`);
         return openPullRequest[i].head.ref;
       }
     }
   })();
 
+  core.debug(`currentBranch ${currentBranch}`);
   return currentBranch;
 };
 
