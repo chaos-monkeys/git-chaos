@@ -89,6 +89,8 @@ const run = async () => {
     envBranch,
   });
 
+  core.debug(JSON.stringify(history));
+
 
   // const commentMessage = core.getInput('message');
   const pullRequestNumber = await getPullRequestNumber();
@@ -99,7 +101,7 @@ const run = async () => {
       owner: GIT_OWNER,
       repo: GIT_REPO,
       issue_number: pullRequestNumber,
-      body: history[0],
+      body: 'u wot m8',
     })
     .catch((err) => {
       core.debug(err);
