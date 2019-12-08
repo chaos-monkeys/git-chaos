@@ -1,9 +1,13 @@
-require('dotenv').config();
-
 const { formatCommits } = require('./helpers/parsers');
 const { getCommits } = require('./helpers/github');
 
-const createHistory = async ({ octokit }) => {
+const createHistory = async ({
+  octokit,
+  owner,
+  repo,
+  envBranch
+}) => {
+
   // get branch
   const { data: branch } = await octokit.repos.getBranch({
     branch: envBranch,

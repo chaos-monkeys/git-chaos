@@ -35,8 +35,9 @@ const getPullRequestNumber = async () => {
       core.debug(`GITHUB_SHA, ${GITHUB_SHA}`);
       core.debug(`mergeCommitSHA, ${mergeCommitSHA}`);
 
+
       if (GITHUB_SHA === mergeCommitSHA) {
-        pullRequestNumber = await parseInt(pullRequest.number, 10);
+        pullRequestNumber = parseInt(pullRequest.number, 10);
       }
     });
   } catch (error) {
@@ -49,12 +50,29 @@ const getPullRequestNumber = async () => {
 };
 
 
+const findBranch = async () => {
+  const openPullRequest = await octokit.pulls.list({
+    owner: GIT_OWNER,
+    repo: GIT_REPO,
+    state: 'open',
+  });
+
+  const currentBranch = openPullRequest.map((pullRequest) => {
+    if (GITHUB_SHA === pullRequest.merge_commit_sha) {
+      return pullRequest.head.ref;
+    }
+  })
+
+  return currentBranch;
+};
+
+
 const run = async () => {
   hasToken();
 
-  const commentMessage = core.getInput('message');
+  // const commentMessage = core.getInput('message');
 
-  const pullRequestNumber = await getPullRequestNumber();
+  // const pullRequestNumber = await getPullRequestNumber();
 
   core.debug(`pullRequestNumber ${pullRequestNumber}`);
 
@@ -63,6 +81,7 @@ const run = async () => {
     octokit,
     owner: GIT_OWNER,
     repo: GIT_REPO,
+    envBranch: findBranch()
   });
 
   octokit.issues
