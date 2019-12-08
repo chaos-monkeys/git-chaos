@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 const Octokit = require('@octokit/rest');
-const { createHistory} = require('./createHistory');
+const { createHistory } = require('./createHistory');
 
 // these envs come from the github action
 const { GITHUB_TOKEN } = process.env;
@@ -57,11 +57,22 @@ const findBranch = async () => {
     state: 'open',
   });
 
-  const currentBranch = openPullRequest.map((pullRequest) => {
-    if (GITHUB_SHA === pullRequest.merge_commit_sha) {
-      return pullRequest.head.ref;
+
+  const currentBranch = (() => {
+    for (let i = 0; i < openPullRequest.length; i += 1) {
+      if (GITHUB_SHA === openPullRequest[i].pullRequest.merge_commit_sha) {
+        return openPullRequest[i].pullRequest.head.ref;
+      }
     }
-  })
+
+
+    // openPullRequest.forEach((pullRequest) => {
+    //   if (GITHUB_SHA === pullRequest.merge_commit_sha) {
+    //     s = pullRequest.head.ref;
+    //   }
+    // });
+    // return s;
+  })();
 
   return currentBranch;
 };
@@ -73,17 +84,16 @@ const run = async () => {
   // const commentMessage = core.getInput('message');
 
 
-  core.debug(`pullRequestNumber ${pullRequestNumber}`);
-
-
   const history = createHistory({
     octokit,
     owner: GIT_OWNER,
     repo: GIT_REPO,
-    envBranch: findBranch()
+    envBranch: findBranch(),
   });
 
+
   const pullRequestNumber = await getPullRequestNumber();
+  core.debug(`pullRequestNumber ${pullRequestNumber}`);
 
   octokit.issues
     .createComment({
