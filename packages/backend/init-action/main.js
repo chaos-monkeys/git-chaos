@@ -8,9 +8,15 @@ const { GITHUB_SHA } = process.env;
 const { GIT_OWNER } = process.env;
 const { GIT_REPO } = process.env;
 
+const CONFIG = {
+  owner: GIT_OWNER,
+  repo: GIT_REPO,
+};
+
 const octokit = new Octokit({
   auth: GITHUB_TOKEN,
 });
+
 
 const hasToken = () => {
   if (GITHUB_TOKEN === null || GITHUB_TOKEN === undefined) {
@@ -24,8 +30,7 @@ const getPullRequestNumber = async () => {
 
   try {
     const openPullRequest = await octokit.pulls.list({
-      owner: GIT_OWNER,
-      repo: GIT_REPO,
+      ...CONFIG,
       state: 'open',
     });
 
@@ -52,8 +57,7 @@ const getPullRequestNumber = async () => {
 
 const findBranch = async () => {
   const openPullRequest = await octokit.pulls.list({
-    owner: GIT_OWNER,
-    repo: GIT_REPO,
+    ...CONFIG,
     state: 'open',
   });
 
@@ -86,8 +90,7 @@ const run = async () => {
 
   const history = await createHistory({
     octokit,
-    owner: GIT_OWNER,
-    repo: GIT_REPO,
+    ...CONFIG,
     envBranch: findBranch(),
   });
 
@@ -97,8 +100,7 @@ const run = async () => {
 
   octokit.issues
     .createComment({
-      owner: GIT_OWNER,
-      repo: GIT_REPO,
+      ...CONFIG,
       issue_number: pullRequestNumber,
       body: history[0],
     })

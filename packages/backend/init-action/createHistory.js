@@ -9,11 +9,18 @@ const createHistory = async ({
 }) => {
   // get branch
   const { data: branch } = await octokit.repos.getBranch({
+    owner,
+    repo,
     branch: envBranch,
   });
 
   // get detailed commits
-  const commits = await getCommits({ octokit, sha: branch.name });
+  const commits = await getCommits({
+    octokit,
+    owner,
+    repo,
+    sha: branch.name,
+  });
 
   // clean it up!
   const formattedCommits = commits.map(formatCommits);
