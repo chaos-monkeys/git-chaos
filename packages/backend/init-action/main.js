@@ -1,5 +1,6 @@
 const core = require('@actions/core');
 const Octokit = require('@octokit/rest');
+const { createHistory} = require('./createHistory');
 
 // these envs come from the github action
 const { GITHUB_TOKEN } = process.env;
@@ -64,13 +65,12 @@ const run = async () => {
     repo: GIT_REPO,
   });
 
-
   octokit.issues
     .createComment({
       owner: GIT_OWNER,
       repo: GIT_REPO,
       issue_number: pullRequestNumber,
-      body: commentMessage,
+      body: history[0],
     })
     .catch((err) => {
       console.log(err);
