@@ -139,3 +139,9 @@ Temporary Items
 
 # Local Netlify folder
 .netlify
+
+#vscode settings
+.vscode
+
+#python folders
+.venv
