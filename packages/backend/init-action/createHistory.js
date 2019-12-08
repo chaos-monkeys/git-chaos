@@ -15,6 +15,10 @@ const createHistory = async ({
     repo,
     branch: envBranch,
   }).catch((e) => {
+    core.debug('getBranch');
+    core.debug(owner);
+    core.debug(repo);
+    core.debug(envBranch);
     core.debug(e);
   });
 
@@ -28,6 +32,10 @@ const createHistory = async ({
     repo,
     sha: branch.name,
   }).catch((e) => {
+    core.debug('getBranch');
+    core.debug(owner);
+    core.debug(repo);
+    core.debug(branch);
     core.debug(e);
   });
 

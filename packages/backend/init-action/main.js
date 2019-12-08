@@ -55,8 +55,6 @@ const getPullRequestNumber = async () => {
 
 
 const findBranch = async () => {
-  core.debug('inside findBranch');
-
   const { data: openPullRequest } = await octokit.pulls.list({
     owner: GIT_OWNER,
     repo: GIT_REPO,
@@ -65,29 +63,13 @@ const findBranch = async () => {
 
 
   const currentBranch = (() => {
-    core.debug('entering findBranch iife');
-
-    core.debug(openPullRequest.length);
-    core.debug(openPullRequest);
-
-    core.debug(openPullRequest[1].merge_commit_sha);
-    core.debug('example branch name');
-    core.debug(openPullRequest[1].head.ref);
-
     for (let i = 0; i < openPullRequest.length; i += 1) {
-      core.debug(`condition: ${GITHUB_SHA === openPullRequest[i].merge_commit_sha}`);
-
-      core.debug(openPullRequest[i].merge_commit_sha);
-
-
       if (GITHUB_SHA === openPullRequest[i].merge_commit_sha) {
-        core.debug(`inside: ${openPullRequest[i].pullRequest}`);
         return openPullRequest[i].head.ref;
       }
     }
   })();
 
-  core.debug('exiting findBranch');
   return currentBranch;
 };
 
@@ -96,6 +78,7 @@ const run = async () => {
   hasToken();
 
   const envBranch = await findBranch();
+  console.log(envBranch);
 
   const history = await createHistory({
     octokit,
