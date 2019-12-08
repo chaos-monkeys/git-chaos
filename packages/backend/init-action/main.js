@@ -16,9 +16,11 @@ const getBranchName = async ({ octokit }) => {
     state: 'open',
   });
 
-  const branchName = pullRequests.forEach((pullRequest) => (GITHUB_SHA === pullRequest.merge_commit_sha ? pullRequest.head.ref : ''));
+  const branchName = pullRequests
+    .map((pullRequest) => (GITHUB_SHA === pullRequest.merge_commit_sha ? pullRequest.head.ref : ''))
+    .filter(Boolean);
 
-  return branchName || core.setFailed('Unable to find branch');
+  return branchName[0] || core.setFailed('Unable to find branch');
 };
 
 const getPullRequestNumber = async ({ octokit }) => {

@@ -18,7 +18,7 @@ const createHistory = async ({
     core.debug('getBranch');
     core.debug(JSON.stringify(owner));
     core.debug(JSON.stringify(repo));
-    core.debug(JSON.stringify(branch));
+    core.debug(JSON.stringify(envBranch));
     core.debug(JSON.stringify(e));
   });
 
