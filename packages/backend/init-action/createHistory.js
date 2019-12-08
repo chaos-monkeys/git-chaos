@@ -5,9 +5,8 @@ const createHistory = async ({
   octokit,
   owner,
   repo,
-  envBranch
+  envBranch,
 }) => {
-
   // get branch
   const { data: branch } = await octokit.repos.getBranch({
     branch: envBranch,

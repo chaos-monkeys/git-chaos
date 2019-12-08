@@ -84,7 +84,7 @@ const run = async () => {
   // const commentMessage = core.getInput('message');
 
 
-  const history = createHistory({
+  const history = await createHistory({
     octokit,
     owner: GIT_OWNER,
     repo: GIT_REPO,
