@@ -1,28 +1,28 @@
 require('dotenv').config();
 
-const util = require('util');
-const fs = require('fs');
 const { branch: envBranch } = require('./helpers/config');
 const { formatCommits } = require('./helpers/parsers');
 const { octokit, CONFIG, getCommits } = require('./helpers/github');
 
 
-// get branch
-// get detailed commits
-// cleanup the detailed commits
-// generate file
-
 const run = async () => {
+  // get branch
   const { data: branch } = await octokit.repos.getBranch({
     ...CONFIG,
     branch: envBranch,
   });
 
+  // get detailed commits
   const commits = await getCommits(branch.name);
 
+  // clean it up!
   const formattedCommits = commits.map(formatCommits);
 
-  fs.writeFileSync('./temp/formattedCommits.js', util.inspect(formattedCommits, { showHidden: false, depth: null }), 'utf-8');
+  return formattedCommits;
 };
 
 run();
+
+module.exports = {
+  run,
+};
