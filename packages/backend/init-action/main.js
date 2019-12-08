@@ -46,7 +46,7 @@ const getPullRequestNumber = async () => {
       core.debug(`GITHUB_SHA, ${GITHUB_SHA}`);
       core.debug(`mergeCommitSHA, ${mergeCommitSHA}`);
 
-      console.log({
+      core.debug({
         mergeCommitSHA,
       });
 
@@ -57,7 +57,7 @@ const getPullRequestNumber = async () => {
     });
   } catch (error) {
     core.debug(error);
-    console.log(error);
+    core.debug(error);
   }
 
   await core.exportVariable('PR_NUMBER', pullRequestNumber);
@@ -74,14 +74,14 @@ const findBranch = async () => {
 
   const currentBranch = (() => {
     for (let i = 0; i < openPullRequest.length; i += 1) {
-      console.log({
+      core.debug({
         condition: GITHUB_SHA === openPullRequest[i].pullRequest.merge_commit_sha,
       });
 
-      console.log(GITHUB_SHA);
-      console.log(openPullRequest[i].pullRequest.merge_commit_sha);
+      core.debug(GITHUB_SHA);
+      core.debug(openPullRequest[i].pullRequest.merge_commit_sha);
       if (GITHUB_SHA === openPullRequest[i].pullRequest.merge_commit_sha) {
-        console.log({
+        core.debug({
           inside: openPullRequest[i].pullRequest,
         });
         return openPullRequest[i].pullRequest.head.ref;
@@ -123,7 +123,7 @@ const run = async () => {
       body: history[0],
     })
     .catch((err) => {
-      console.log(err);
+      core.debug(err);
     });
 };
 
