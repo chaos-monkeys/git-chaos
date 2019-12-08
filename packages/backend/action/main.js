@@ -1,10 +1,7 @@
 const core = require("@actions/core");
 const Octokit = require("@octokit/rest");
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const GITHUB_SHA = process.env.GITHUB_SHA;
-const GIT_OWNER = process.env.GIT_OWNER;
-const GIT_REPO = process.env.GIT_REPO;
+const { GITHUB_TOKEN, GITHUB_SHA, GIT_OWNER, GIT_REPO } = process.env
 
 const octokit = new Octokit({
   auth: GITHUB_TOKEN
@@ -19,7 +16,7 @@ const checkRequiredEnv = () => {
 
 async function getPullRequestNumber() {
   let pullRequestNumber = 0;
-  core.debug(process.env)
+
   try {
     const openPullRequest = await octokit.pulls.list({
       owner: GIT_OWNER,
