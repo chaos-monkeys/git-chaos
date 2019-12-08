@@ -24,8 +24,8 @@ const getPullRequestNumber = async () => {
 
   try {
     const openPullRequest = await octokit.pulls.list({
-        owner: GIT_OWNER,
-  repo: GIT_REPO,
+      owner: GIT_OWNER,
+      repo: GIT_REPO,
       state: 'open',
     });
 
@@ -58,8 +58,8 @@ const findBranch = async () => {
   core.debug('inside findBranch');
 
   const openPullRequest = await octokit.pulls.list({
-      owner: GIT_OWNER,
-  repo: GIT_REPO,
+    owner: GIT_OWNER,
+    repo: GIT_REPO,
     state: 'open',
   });
 
@@ -67,11 +67,11 @@ const findBranch = async () => {
   const currentBranch = (() => {
     core.debug('entering findBranch iife');
 
-    core.debug(openPullRequest.length)
+    core.debug(openPullRequest.length);
 
-    core.debug(openPullRequest.length[i].pullRequest.merge_commit_sha)
-    core.debug('example branch name')
-    core.debug(openPullRequest.length[i].pullRequest.head.ref)
+    core.debug(openPullRequest.length[1].pullRequest.merge_commit_sha);
+    core.debug('example branch name');
+    core.debug(openPullRequest.length[1].pullRequest.head.ref);
 
     for (let i = 0; i < openPullRequest.length; i += 1) {
       core.debug(`condition: ${GITHUB_SHA === openPullRequest[i].pullRequest.merge_commit_sha}`);
@@ -96,8 +96,8 @@ const run = async () => {
 
   const history = await createHistory({
     octokit,
-      owner: GIT_OWNER,
-  repo: GIT_REPO,
+    owner: GIT_OWNER,
+    repo: GIT_REPO,
     envBranch: await findBranch(),
   });
 
@@ -107,8 +107,8 @@ const run = async () => {
 
   octokit.issues
     .createComment({
-        owner: GIT_OWNER,
-  repo: GIT_REPO,
+      owner: GIT_OWNER,
+      repo: GIT_REPO,
       issue_number: pullRequestNumber,
       body: history[0],
     })
