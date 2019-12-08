@@ -1,19 +1,16 @@
 require('dotenv').config();
 
-const { branch: envBranch } = require('./helpers/config');
 const { formatCommits } = require('./helpers/parsers');
-const { octokit, CONFIG, getCommits } = require('./helpers/github');
+const { getCommits } = require('./helpers/github');
 
-
-const run = async () => {
+const createHistory = async ({ octokit }) => {
   // get branch
   const { data: branch } = await octokit.repos.getBranch({
-    ...CONFIG,
     branch: envBranch,
   });
 
   // get detailed commits
-  const commits = await getCommits(branch.name);
+  const commits = await getCommits({ octokit, sha: branch.name });
 
   // clean it up!
   const formattedCommits = commits.map(formatCommits);
@@ -21,8 +18,6 @@ const run = async () => {
   return formattedCommits;
 };
 
-run();
-
 module.exports = {
-  run,
+  createHistory,
 };
