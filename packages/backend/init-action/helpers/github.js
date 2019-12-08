@@ -1,3 +1,4 @@
+const core = require('@actions/core');
 const querystring = require('querystring');
 
 
@@ -9,17 +10,19 @@ const getCommits = async ({
   // by using a query string that's the name of a branch - we can get all the commits
   // BUT the commits are missing some data, so we will need to re-get them one-by-one
   const getAllCommits = await octokit.paginate(
-    `GET /repos/:owner/:repo/commits?${qs}`,
-    {
+    `GET /repos/:owner/:repo/commits?${qs}`, {
       owner,
       repo,
     },
-  );
+  ).catch((e) => {
+    core.debug('getAllCommits');
+    core.debug(e);
+  });
 
   return Promise.all(
     // make the detailed requests one by one
     getAllCommits.map((commit) => octokit
-      .request(`GET /repos/:owner/:repo/commits/${commit.sha}`)
+      .request(`GET /repos/:owner/:repo/commits/${commit.sha}`, { owner, repo })
       .then((c) => c.data)),
   );
 };
