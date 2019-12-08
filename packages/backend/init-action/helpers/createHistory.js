@@ -1,13 +1,13 @@
 const core = require('@actions/core');
 
-const { formatCommits } = require('./helpers/parsers');
-const { getCommits } = require('./helpers/github');
+const { formatCommits } = require('./parsers');
+const { getCommits } = require('./github');
 
 const createHistory = async ({
   octokit,
   owner,
   repo,
-  envBranch,
+  branch: envBranch,
 }) => {
   // get branch
   const { data: branch } = await octokit.repos.getBranch({
@@ -18,11 +18,11 @@ const createHistory = async ({
     core.debug('getBranch');
     core.debug(JSON.stringify(owner));
     core.debug(JSON.stringify(repo));
-    core.debug(JSON.stringify(envBranch));
+    core.debug(JSON.stringify(branch));
     core.debug(JSON.stringify(e));
   });
 
-  core.debug(envBranch);
+  core.debug(branch);
   core.debug(branch);
 
   // get detailed commits

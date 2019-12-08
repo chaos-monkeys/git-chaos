@@ -1,25 +1,27 @@
 const core = require('@actions/core');
 const Octokit = require('@octokit/rest');
-const { createHistory } = require('./createHistory');
+const { createHistory } = require('./helpers/createHistory');
 
 // these envs come from the github action
 const { GITHUB_TOKEN } = process.env;
 const { GITHUB_SHA } = process.env;
-const { GIT_OWNER = 'chaos-monkeys' } = process.env;
-const { GIT_REPO = 'git-chaos' } = process.env;
-
-const octokit = new Octokit({
-  auth: GITHUB_TOKEN,
-});
+const { GIT_OWNER } = process.env;
+const { GIT_REPO } = process.env;
 
 
-const hasToken = () => {
-  if (GITHUB_TOKEN === null || GITHUB_TOKEN === undefined) {
-    core.warning(`Variable check failed: GITHUB_TOKEN: ${GITHUB_TOKEN}`);
-  }
+const getBranchName = async ({ octokit }) => {
+  const { data: pullRequests } = await octokit.pulls.list({
+    owner: GIT_OWNER,
+    repo: GIT_REPO,
+    state: 'open',
+  });
+
+  const branchName = pullRequests.forEach((pullRequest) => (GITHUB_SHA === pullRequest.merge_commit_sha ? pullRequest.head.ref : ''));
+
+  return branchName || core.setFailed('Unable to find branch');
 };
 
-const getPullRequestNumber = async () => {
+const getPullRequestNumber = async ({ octokit }) => {
   let pullRequestNumber = 0;
 
   try {
@@ -54,54 +56,27 @@ const getPullRequestNumber = async () => {
 };
 
 
-const findBranch = async () => {
-  const { data: openPullRequest } = await octokit.pulls.list({
-    owner: GIT_OWNER,
-    repo: GIT_REPO,
-    state: 'open',
-  });
-
-
-  const currentBranch = (() => {
-    for (let i = 0; i < openPullRequest.length; i += 1) {
-      if (GITHUB_SHA === openPullRequest[i].merge_commit_sha) {
-        core.debug(`head.ref ${openPullRequest[i].head.ref}`);
-        return openPullRequest[i].head.ref;
-      }
-    }
-  })();
-
-  core.debug(`currentBranch ${currentBranch}`);
-  return currentBranch;
-};
-
-
 const run = async () => {
-  hasToken();
-
-  const envBranch = await findBranch();
-  console.log(envBranch);
+  const octokit = new Octokit({
+    auth: GITHUB_TOKEN,
+  });
 
   const history = await createHistory({
     octokit,
     owner: GIT_OWNER,
     repo: GIT_REPO,
-    envBranch,
+    envBranch: await getBranchName({ octokit }),
   });
 
   core.debug(JSON.stringify(history));
 
 
-  // const commentMessage = core.getInput('message');
-  const pullRequestNumber = await getPullRequestNumber();
-  core.debug(`pullRequestNumber ${pullRequestNumber}`);
-
   octokit.issues
     .createComment({
       owner: GIT_OWNER,
       repo: GIT_REPO,
-      issue_number: pullRequestNumber,
-      body: 'u wot m8',
+      issue_number: await getPullRequestNumber({ octokit }),
+      body: JSON.stringify(history),
     })
     .catch((err) => {
       core.debug(err);
