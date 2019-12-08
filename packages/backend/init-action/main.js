@@ -5,8 +5,8 @@ const { createHistory } = require('./createHistory');
 // these envs come from the github action
 const { GITHUB_TOKEN } = process.env;
 const { GITHUB_SHA } = process.env;
-const { GIT_OWNER } = process.env;
-const { GIT_REPO } = process.env;
+const { GIT_OWNER = 'chaos-monkeys' } = process.env;
+const { GIT_REPO = 'git-chaos' } = process.env;
 
 const octokit = new Octokit({
   auth: GITHUB_TOKEN,
@@ -57,7 +57,7 @@ const getPullRequestNumber = async () => {
 const findBranch = async () => {
   core.debug('inside findBranch');
 
-  const openPullRequest = await octokit.pulls.list({
+  const { data: openPullRequest } = await octokit.pulls.list({
     owner: GIT_OWNER,
     repo: GIT_REPO,
     state: 'open',
@@ -68,18 +68,19 @@ const findBranch = async () => {
     core.debug('entering findBranch iife');
 
     core.debug(openPullRequest.length);
+    core.debug(openPullRequest);
 
-    core.debug(openPullRequest[1].pullRequest.merge_commit_sha);
+    core.debug(openPullRequest[1].merge_commit_sha);
     core.debug('example branch name');
-    core.debug(openPullRequest[1].pullRequest.head.ref);
+    core.debug(openPullRequest[1].head.ref);
 
     for (let i = 0; i < openPullRequest.length; i += 1) {
-      core.debug(`condition: ${GITHUB_SHA === openPullRequest[i].pullRequest.merge_commit_sha}`);
+      core.debug(`condition: ${GITHUB_SHA === openPullRequest[i].merge_commit_sha}`);
 
-      core.debug(openPullRequest[i].pullRequest.merge_commit_sha);
-      if (GITHUB_SHA === openPullRequest[i].pullRequest.merge_commit_sha) {
+      core.debug(openPullRequest[i].merge_commit_sha);
+      if (GITHUB_SHA === openPullRequest[i].merge_commit_sha) {
         core.debug(`inside: ${openPullRequest[i].pullRequest}`);
-        return openPullRequest[i].pullRequest.head.ref;
+        return openPullRequest[i].head.ref;
       }
     }
   })();
@@ -92,16 +93,17 @@ const findBranch = async () => {
 const run = async () => {
   hasToken();
 
-  // const commentMessage = core.getInput('message');
+  const envBranch = await findBranch();
 
   const history = await createHistory({
     octokit,
     owner: GIT_OWNER,
     repo: GIT_REPO,
-    envBranch: await findBranch(),
+    envBranch,
   });
 
 
+  // const commentMessage = core.getInput('message');
   const pullRequestNumber = await getPullRequestNumber();
   core.debug(`pullRequestNumber ${pullRequestNumber}`);
 
