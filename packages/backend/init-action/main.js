@@ -75,7 +75,7 @@ const run = async () => {
     octokit,
     owner: GIT_OWNER,
     repo: GIT_REPO,
-    envBranch: await getBranchName({ octokit }),
+    branch: await getBranchName({ octokit }),
   });
 
   core.debug(JSON.stringify(history));
