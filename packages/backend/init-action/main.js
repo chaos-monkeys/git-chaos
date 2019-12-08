@@ -8,6 +8,12 @@ const { GITHUB_SHA } = process.env;
 const { GIT_OWNER } = process.env;
 const { GIT_REPO } = process.env;
 
+// const GIT_OWNER = 'chaos-monkeys';
+// const GIT_REPO = 'git-chaos';
+// const BRANCH = 'feat/actions-and-workflows';
+// GITHUB_SHA;
+// const GITHUB_TOKEN = '6578ce586649b917a3a3b7000a5f324df979d216';
+
 const CONFIG = {
   owner: GIT_OWNER,
   repo: GIT_REPO,
@@ -40,6 +46,10 @@ const getPullRequestNumber = async () => {
       core.debug(`GITHUB_SHA, ${GITHUB_SHA}`);
       core.debug(`mergeCommitSHA, ${mergeCommitSHA}`);
 
+      console.log({
+        mergeCommitSHA,
+      });
+
 
       if (GITHUB_SHA === mergeCommitSHA) {
         pullRequestNumber = parseInt(pullRequest.number, 10);
@@ -64,7 +74,16 @@ const findBranch = async () => {
 
   const currentBranch = (() => {
     for (let i = 0; i < openPullRequest.length; i += 1) {
+      console.log({
+        condition: GITHUB_SHA === openPullRequest[i].pullRequest.merge_commit_sha,
+      });
+
+      console.log(GITHUB_SHA);
+      console.log(openPullRequest[i].pullRequest.merge_commit_sha);
       if (GITHUB_SHA === openPullRequest[i].pullRequest.merge_commit_sha) {
+        console.log({
+          inside: openPullRequest[i].pullRequest,
+        });
         return openPullRequest[i].pullRequest.head.ref;
       }
     }
@@ -86,7 +105,6 @@ const run = async () => {
   hasToken();
 
   // const commentMessage = core.getInput('message');
-
 
   const history = await createHistory({
     octokit,
