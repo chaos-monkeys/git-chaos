@@ -28,7 +28,7 @@ const getBranchName = async ({ octokit }) => {
   })();
 
 
-  return branchName[0] || core.setFailed('Unable to find branch');
+  return branchName || core.setFailed('Unable to find branch');
 };
 
 const getPullRequestNumber = async ({ octokit }) => {
