@@ -46,9 +46,9 @@ const getPullRequestNumber = async () => {
       core.debug(`GITHUB_SHA, ${GITHUB_SHA}`);
       core.debug(`mergeCommitSHA, ${mergeCommitSHA}`);
 
-      core.debug({
-        mergeCommitSHA,
-      });
+      core.debug(
+        `mergeCommitSHA : ${mergeCommitSHA}`,
+      );
 
 
       if (GITHUB_SHA === mergeCommitSHA) {
@@ -74,16 +74,14 @@ const findBranch = async () => {
 
   const currentBranch = (() => {
     for (let i = 0; i < openPullRequest.length; i += 1) {
-      core.debug({
-        condition: GITHUB_SHA === openPullRequest[i].pullRequest.merge_commit_sha,
-      });
+      core.debug(
+        `condition: ${GITHUB_SHA === openPullRequest[i].pullRequest.merge_commit_sha}`,
+      );
 
       core.debug(GITHUB_SHA);
       core.debug(openPullRequest[i].pullRequest.merge_commit_sha);
       if (GITHUB_SHA === openPullRequest[i].pullRequest.merge_commit_sha) {
-        core.debug({
-          inside: openPullRequest[i].pullRequest,
-        });
+        core.debug(`inside: ${openPullRequest[i].pullRequest}`);
         return openPullRequest[i].pullRequest.head.ref;
       }
     }
