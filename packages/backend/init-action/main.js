@@ -21,7 +21,6 @@ const octokit = new Octokit({
 const hasToken = () => {
   if (GITHUB_TOKEN === null || GITHUB_TOKEN === undefined) {
     core.warning(`Variable check failed: GITHUB_TOKEN: ${GITHUB_TOKEN}`);
-    core.setFailed(error.message);
   }
 };
 
@@ -60,6 +59,8 @@ const getPullRequestNumber = async () => {
 
 
 const findBranch = async () => {
+  core.debug('inside findBranch');
+
   const openPullRequest = await octokit.pulls.list({
     ...CONFIG,
     state: 'open',
@@ -67,6 +68,8 @@ const findBranch = async () => {
 
 
   const currentBranch = (() => {
+    core.debug('exiting findBranch iife');
+
     for (let i = 0; i < openPullRequest.length; i += 1) {
       core.debug(
         `condition: ${GITHUB_SHA === openPullRequest[i].pullRequest.merge_commit_sha}`,
@@ -81,6 +84,7 @@ const findBranch = async () => {
     }
   })();
 
+  core.debug('exiting findBranch');
   return currentBranch;
 };
 
