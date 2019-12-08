@@ -72,7 +72,6 @@ const run = async () => {
 
   // const commentMessage = core.getInput('message');
 
-  // const pullRequestNumber = await getPullRequestNumber();
 
   core.debug(`pullRequestNumber ${pullRequestNumber}`);
 
@@ -83,6 +82,8 @@ const run = async () => {
     repo: GIT_REPO,
     envBranch: findBranch()
   });
+
+  const pullRequestNumber = await getPullRequestNumber();
 
   octokit.issues
     .createComment({
