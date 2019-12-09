@@ -10,11 +10,13 @@ const {
   GITHUB_REPOSITORY,
   GITHUB_REF,
 } = process.env;
-
 const [GIT_OWNER, GIT_REPO] = GITHUB_REPOSITORY.split('/');
 
 
 const run = async () => {
+  core.debug(`GITHUB_REF: ${GITHUB_REF}`);
+
+
   const octokit = new Octokit({
     auth: GITHUB_TOKEN,
   });
