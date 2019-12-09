@@ -8,14 +8,14 @@ const {
   GITHUB_TOKEN,
   GITHUB_SHA,
   GITHUB_REPOSITORY,
-  // GITHUB_REF,
+  GITHUB_REF,
 } = process.env;
 const [GIT_OWNER, GIT_REPO] = GITHUB_REPOSITORY.split('/');
+const issueNumber = GITHUB_REF.split('/')[2];
 
 
 const run = async () => {
-  core.debug(`GITHUB_REF: ${GITHUB_REF}`);
-
+  core.debug(`issue_number: ${issueNumber}`);
 
   const octokit = new Octokit({
     auth: GITHUB_TOKEN,
@@ -42,7 +42,7 @@ const run = async () => {
     octokit,
     owner: GIT_OWNER,
     repo: GIT_REPO,
-    sha: GITHUB_SHA,
+    issue_number: issueNumber,
     // TODO: update with something less 'temporary'
     message: 'Hey Rob!',
   });
