@@ -1,22 +1,9 @@
 version: "3.7"
 
 services:
-  database:
-    container_name: git-chaos_database
-    image: postgres:11
-    environment:
-      POSTGRES_USER: demo_user
-      POSTGRES_PASSWORD: demo_pass
-      POSTGRES_DB: git-chaos
-    restart: always
-
   backend:
     container_name: git-chaos_backend
     build: ./packages/backend
-    depends_on:
-      - database
-    links:
-      - database
 
   frontend:
     container_name: git-chaos_frontend

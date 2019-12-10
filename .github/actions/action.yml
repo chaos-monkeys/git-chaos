@@ -1,0 +1,9 @@
+name: "leave-comment"
+description: "This runs and posts a comment on the PR"
+author: "chaos-monkeys"
+branding:
+  icon: "info"
+  color: "blue"
+runs:
+  using: "node12"
+  main: "../../packages/backend/init-action/main.js"
