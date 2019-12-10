@@ -1,0 +1,21 @@
+name: Hello World
+# Triggers on pull request changes
+on: [pull_request]
+
+jobs:
+  echo:
+    name: HelloWorld
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - run: npm install
+      - name: Leave Comment
+        uses: ./.github/actions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_OWNER: "chaos-monkeys"
+          GIT_REPO: "git-chaos"
+        with:
+          message: "Hello World from Github Action!"
