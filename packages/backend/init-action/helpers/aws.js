@@ -1,4 +1,4 @@
-const aws = require('aws-sdk');
+const S3 = require('aws-sdk/clients/s3');
 const core = require('@actions/core');
 
 const uploadHistory = async ({
@@ -7,7 +7,7 @@ const uploadHistory = async ({
   body,
   sha: Key,
 }) => {
-  const s3 = new aws.S3({
+  const s3 = new S3({
     accessKeyId,
     secretAccessKey,
   });
