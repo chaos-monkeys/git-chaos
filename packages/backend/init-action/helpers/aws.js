@@ -1,5 +1,9 @@
-const S3 = require('aws-sdk/clients/s3');
+const AWS = require('aws-sdk');
 const core = require('@actions/core');
+
+// TODO: figure out where this should go
+const BUCKET = 'gitchaos';
+
 
 const uploadHistory = async ({
   accessKeyId,
@@ -7,15 +11,15 @@ const uploadHistory = async ({
   body,
   sha: Key,
 }) => {
-  const s3 = new S3({
+  const s3 = new AWS.S3({
     accessKeyId,
     secretAccessKey,
   });
 
   await s3.upload({
-    Bucket: 'test',
-    Key,
+    Bucket: BUCKET,
     Body: JSON.stringify(body),
+    Key,
   }, (error, data) => {
     if (error) {
       core.setFailed(error.message);
