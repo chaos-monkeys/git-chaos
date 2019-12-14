@@ -13,7 +13,6 @@ jobs:
         with:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm install
       - name: Git Chaos PR
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
