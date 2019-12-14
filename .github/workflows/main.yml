@@ -15,5 +15,7 @@ jobs:
         uses: ./.github/actions
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTIONS_AWS_ACCESS_KEY: ${{ secrets.ACTIONS_AWS_ACCESS_KEY }}
+          ACTIONS_AWS_SECRET_KEY: ${{ secrets.ACTIONS_AWS_SECRET_KEY }}
         with:
           message: "Hello World from Github Action!"
