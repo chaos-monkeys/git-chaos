@@ -4,7 +4,6 @@ const { getCodeHistory, getBranchName } = require('./helpers/history');
 const { createComment } = require('./helpers/comment');
 const { uploadHistory } = require('./helpers/aws');
 
-
 // these envs come from the github action
 const {
   GITHUB_TOKEN,
