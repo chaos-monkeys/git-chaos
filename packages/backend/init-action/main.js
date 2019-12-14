@@ -11,8 +11,8 @@ const {
   GITHUB_SHA,
   GITHUB_REPOSITORY,
   GITHUB_REF,
-  ACTIONS_AWS_ACCESS_KEY,
-  ACTIONS_AWS_SECRET_KEY,
+  AWS_ACCESS_KEY,
+  AWS_SECRET_KEY,
 } = process.env;
 const [GIT_OWNER, GIT_REPO] = GITHUB_REPOSITORY.split('/');
 const issueNumber = GITHUB_REF.split('/')[2];
@@ -39,8 +39,8 @@ const run = async () => {
   });
 
   await uploadHistory({
-    accessKeyId: ACTIONS_AWS_ACCESS_KEY,
-    secretAccessKey: ACTIONS_AWS_SECRET_KEY,
+    accessKeyId: AWS_ACCESS_KEY,
+    secretAccessKey: AWS_SECRET_KEY,
     body: history,
     sha: GITHUB_SHA,
   });

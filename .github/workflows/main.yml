@@ -10,12 +10,12 @@ jobs:
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
-      - run: npm install
+      - run: npm ci
       - name: Leave Comment
         uses: ./.github/actions
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACTIONS_AWS_ACCESS_KEY: ${{ secrets.ACTIONS_AWS_ACCESS_KEY }}
-          ACTIONS_AWS_SECRET_KEY: ${{ secrets.ACTIONS_AWS_SECRET_KEY }}
+          AWS_ACCESS_KEY: ${{ secrets.ACTIONS_AWS_ACCESS_KEY }}
+          AWS_SECRET_KEY: ${{ secrets.ACTIONS_AWS_SECRET_KEY }}
         with:
           message: "Hello World from Github Action!"
