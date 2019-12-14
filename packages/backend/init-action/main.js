@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const Octokit = require('@octokit/rest');
 const { getCodeHistory, getBranchName } = require('./helpers/history');
 const { createComment } = require('./helpers/comment');
-const { uploadHistory } = require('./helpers/aws');
+// const { uploadHistory } = require('./helpers/aws');
 
 
 // these envs come from the github action
@@ -11,8 +11,8 @@ const {
   GITHUB_SHA,
   GITHUB_REPOSITORY,
   GITHUB_REF,
-  AWS_ACCESS_KEY,
-  AWS_SECRET_KEY,
+  // AWS_ACCESS_KEY,
+  // AWS_SECRET_KEY,
 } = process.env;
 const [GIT_OWNER, GIT_REPO] = GITHUB_REPOSITORY.split('/');
 const issueNumber = GITHUB_REF.split('/')[2];
@@ -38,12 +38,14 @@ const run = async () => {
     }),
   });
 
-  await uploadHistory({
-    accessKeyId: AWS_ACCESS_KEY,
-    secretAccessKey: AWS_SECRET_KEY,
-    body: history,
-    sha: GITHUB_SHA,
-  });
+  core.debug(JSON.stringify(history));
+
+  // await uploadHistory({
+  //   accessKeyId: AWS_ACCESS_KEY,
+  //   secretAccessKey: AWS_SECRET_KEY,
+  //   body: history,
+  //   sha: GITHUB_SHA,
+  // });
 
   return createComment({
     octokit,

@@ -1,6 +1,6 @@
-name: "Git Chaos PR"
-description: "Gets commits from a PR, saves it to S3, and posts a comment on the PR"
-author: "chaos-monkeys"
+name: Git Chaos PR
+description: Gets commits from a PR, saves it to S3, and posts a comment on the PR
+author: chaos-monkeys
 runs:
-  using: "node12"
-  main: "../../packages/backend/init-action/main.js"
+  using: node12
+  main: ../../packages/backend/init-action/main.js
