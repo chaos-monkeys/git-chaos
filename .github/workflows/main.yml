@@ -3,21 +3,21 @@ name: Hello World
 on: [pull_request]
 
 jobs:
-  name: Git Chaos PR
-  runs-on: ubuntu-latest
-
-  steps:
-    - uses: actions/checkout@v1
-      with:
-        fetch-depth: 1
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-        registry-url: 'https://registry.npmjs.org'
-    - run: npm install
-    - name: Git Chaos PR
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        AWS_ACCESS_KEY: ${{ secrets.ACTIONS_AWS_ACCESS_KEY }}
-        AWS_SECRET_KEY: ${{ secrets.ACTIONS_AWS_SECRET_KEY }}
-      uses: ./.github/actions
+  build:
+    name: Git Chaos PR
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm install
+      - name: Git Chaos PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AWS_ACCESS_KEY: ${{ secrets.ACTIONS_AWS_ACCESS_KEY }}
+          AWS_SECRET_KEY: ${{ secrets.ACTIONS_AWS_SECRET_KEY }}
+        uses: ./.github/actions
