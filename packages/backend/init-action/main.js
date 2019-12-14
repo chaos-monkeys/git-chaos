@@ -38,9 +38,7 @@ const run = async () => {
     }),
   });
 
-  core.debug(JSON.stringify(history));
-
-  await uploadHistory({
+  const path = uploadHistory({
     accessKeyId: AWS_ACCESS_KEY,
     secretAccessKey: AWS_SECRET_KEY,
     body: history,
@@ -53,7 +51,7 @@ const run = async () => {
     repo: GIT_REPO,
     issue_number: issueNumber,
     // TODO: update with something less 'temporary'
-    message: 'Hey Rob!',
+    message: `Git history uploaded to ${path}`,
   });
 };
 

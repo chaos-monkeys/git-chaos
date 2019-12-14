@@ -5,7 +5,7 @@ const core = require('@actions/core');
 const BUCKET = 'gitchaos';
 
 
-const uploadHistory = async ({
+const uploadHistory = ({
   accessKeyId,
   secretAccessKey,
   body,
@@ -16,7 +16,7 @@ const uploadHistory = async ({
     secretAccessKey,
   });
 
-  await s3.upload({
+  return s3.upload({
     Bucket: BUCKET,
     Body: JSON.stringify(body),
     Key,
@@ -25,7 +25,7 @@ const uploadHistory = async ({
       core.setFailed(error.message);
     }
 
-    core.debug(`File uploaded successfully at ${data.Location}`);
+    return data.Location;
   });
 };
 
