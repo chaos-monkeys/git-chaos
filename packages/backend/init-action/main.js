@@ -2,6 +2,7 @@ const core = require('@actions/core');
 const Octokit = require('@octokit/rest');
 const { getCodeHistory, getBranchName } = require('./helpers/history');
 const { createComment } = require('./helpers/comment');
+const { uploadHistory } = require('./helpers/aws');
 
 // these envs come from the github action
 const {
@@ -9,6 +10,8 @@ const {
   GITHUB_SHA,
   GITHUB_REPOSITORY,
   GITHUB_REF,
+  AWS_ACCESS_KEY,
+  AWS_SECRET_KEY,
 } = process.env;
 const [GIT_OWNER, GIT_REPO] = GITHUB_REPOSITORY.split('/');
 const issueNumber = GITHUB_REF.split('/')[2];
@@ -25,7 +28,7 @@ const run = async () => {
     octokit,
     owner: GIT_OWNER,
     repo: GIT_REPO,
-    // TODO: might be easier with GITHUB_REF?
+
     branch: await getBranchName({
       octokit,
       owner: GIT_OWNER,
@@ -34,9 +37,12 @@ const run = async () => {
     }),
   });
 
-  // TODO:add S3 upload here
-
-  core.debug(JSON.stringify(history));
+  const path = await uploadHistory({
+    accessKeyId: AWS_ACCESS_KEY,
+    secretAccessKey: AWS_SECRET_KEY,
+    body: history,
+    sha: GITHUB_SHA,
+  });
 
   return createComment({
     octokit,
@@ -44,7 +50,7 @@ const run = async () => {
     repo: GIT_REPO,
     issue_number: issueNumber,
     // TODO: update with something less 'temporary'
-    message: 'Hey Rob!',
+    message: `Git history uploaded to ${path}`,
   });
 };
 

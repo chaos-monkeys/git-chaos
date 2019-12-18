@@ -1,9 +1,6 @@
-name: "leave-comment"
-description: "This runs and posts a comment on the PR"
-author: "chaos-monkeys"
-branding:
-  icon: "info"
-  color: "blue"
+name: Git Chaos PR
+description: Gets commits from a PR, saves it to S3, and posts a comment on the PR
+author: chaos-monkeys
 runs:
   using: "node12"
-  main: "../../packages/backend/init-action/main.js"
+  main: "../../packages/backend/init-action/dist/index.js"
