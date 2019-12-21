@@ -1,21 +1,45 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Introduction from "../templates/introduction"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Chaos Monkeys!</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+import Nav from "../templates/nav"
 
-export default IndexPage
+const Index = () => {
+  return (
+    <Layout>
+      <Nav />
+      <Introduction />
+    </Layout>
+  )
+}
+
+export default Index
+
+// import { useStaticQuery, graphql } from "gatsby"
+// import Header from "../components/header"
+// import TextBackground from "../components/textBackground"
+// import Join from "../components/join"
+// import { AuthorImage, AuthorBio } from "../components/author"
+// const { rob, ollie } = data
+
+{
+  /* TODO: fix the hell outta that */
+}
+{
+  /* {/* <Header title={title} /> */
+}
+{
+  /* <h1>{description}</h1> */
+}
+{
+  /* <div>
+        <AuthorImage fluid={rob.childImageSha rp.fluid} />
+        <AuthorBio name="Rob" description="lorem" />
+      </div>
+      <div>
+        <AuthorBio name="Ollie" description="lorem" />
+        <AuthorImage fluid={ollie.childImageSharp.fluid} />
+      </div>
+      <Join /> */
+}

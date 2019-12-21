@@ -1,0 +1,22 @@
+@import './../styles/global/tokens/tokens.scss';
+
+.grid {
+    display: grid;
+    min-height: 50vh;
+    color: var(--light-text);
+    @include margin-left('m');
+    @include margin-top('m');
+    @include margin-bottom('m');
+}
+
+.description {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+    align-self: center;
+}
+
+.textBackground {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    align-self: center;
+}

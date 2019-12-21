@@ -1,0 +1,45 @@
+@import './tokens/tokens.scss';
+
+
+$textSizeTokens: map-get($tokens, 'textSize');
+@mixin font($size) {
+    font-size: map-get($textSizeTokens, $size);
+    line-height: calc(map-get($textSizeTokens, $size) * 1.4);
+}
+
+$textWeightTokens: map-get($tokens, 'textWeight');
+@mixin font-weight($weight) {
+    font-weight: map-get($textWeightTokens, $weight);
+}
+
+
+@mixin font-defaults() {
+    font-variant-numeric: oldstyle-nums;
+    -moz-font-feature-settings: "onum";
+    -webkit-font-feature-settings: "onum";
+    font-language-override: normal;
+    font-kerning: auto;
+    font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh";
+    font-synthesis: weight style;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin sans-serif() {
+    @include font-defaults;
+    font-family: 'montserrat', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+h1, h2, h3 {
+    @include sans-serif();
+}

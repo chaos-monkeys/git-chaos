@@ -1,0 +1,23 @@
+@import './../styles/global/typography.scss';
+@import './../styles/global/tokens/tokens.scss';
+
+.logo {
+    @include sans-serif;
+    @include font('m');
+    @include font-weight('bold');
+    line-height: 2.9rem;
+    letter-spacing: -0.15rem;
+    color: var(--light-text);
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        // FIXME: not convinced this works
+        text-decoration: under;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-color: var(--highlight);
+        text-decoration-thickness: 15px;
+    }
+}

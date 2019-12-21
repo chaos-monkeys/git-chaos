@@ -1,0 +1,116 @@
+// https://rangle.io/blog/mixin-design-tokens/
+
+$spaceMap: (
+    xxxs: 0.4rem,
+    xxs: 0.8rem,
+    xs: 1.2rem,
+    s: 1.6rem,
+    m: 2.4rem,
+    l: 3.2rem,
+    xl: 4.8rem,
+    xxl: 7.2rem,
+    xxxl: 9.6rem,
+    xxxxl: 12.0rem,
+);
+
+$textSizeMap: (
+    xxxs: 0.4rem,
+    xxs: 0.8rem,
+    xs: 1.2rem,
+    s: 1.6rem,
+    m: 2.4rem,
+    l: 3.2rem,
+    xl: 4.8rem,
+    xxl: 7.2rem,
+    xxxl: 9.6rem,
+    xxxxl: 12.0rem,
+);
+
+$textWeightsMap: (
+  x-light: 100,
+  light: 400,
+  bold: 700,
+  x-bold: 900,
+);
+
+$tokens: (
+  space: $spaceMap,
+  textSize: $textSizeMap,
+  textWeight: $textWeightsMap,
+);
+
+
+@function getSize($size) {
+  $spaceTokens: map-get($tokens, 'space');
+  @return map-get($spaceTokens, $size);
+}
+
+// padding
+@mixin padding($size) {
+  padding: getSize($size);
+}
+
+@mixin padding-top($size) {
+  padding-top: getSize($size);
+}
+
+@mixin padding-left($size) {
+  padding-left: getSize($size);
+}
+
+@mixin padding-right($size) {
+  padding-right: getSize($size);
+}
+
+@mixin padding-bottom($size) {
+  padding-bottom: getSize($size);
+}
+
+@mixin padding-top($size) {
+  padding-top: getSize($size);
+}
+
+@mixin padding-vertical($size) {
+  padding-top: getSize($size);
+  padding-bottom: getSize($size);
+}
+
+@mixin padding-horizontal($size) {
+  padding-right: getSize($size);
+  padding-left: getSize($size);
+}
+
+// margin
+@mixin margin($size) {
+  margin: getSize($size);
+}
+
+@mixin margin-top($size) {
+  margin-top: getSize($size);
+}
+
+@mixin margin-left($size) {
+  margin-left: getSize($size);
+}
+
+@mixin margin-right($size) {
+  margin-right: getSize($size);
+}
+
+@mixin margin-bottom($size) {
+  margin-bottom: getSize($size);
+}
+
+@mixin margin-top($size) {
+  margin-top: getSize($size);
+}
+
+@mixin margin-vertical($size) {
+  margin-top: getSize($size);
+  margin-bottom: getSize($size);
+}
+
+@mixin margin-horizontal($size) {
+  margin-right: getSize($size);
+  margin-left: getSize($size);
+}

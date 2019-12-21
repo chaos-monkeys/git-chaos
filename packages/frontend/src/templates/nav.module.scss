@@ -1,0 +1,10 @@
+@import './../styles/global/tokens/tokens.scss';
+
+nav {
+    display: grid
+}
+
+nav {
+    @include margin-left('m');
+    @include margin-top('m');
+}
