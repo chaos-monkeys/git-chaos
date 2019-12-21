@@ -1,7 +1,7 @@
 import React from "react";
 import { Router } from "@reach/router";
 import Layout from "../components/layout";
-import Route from "../temp/route";
+import Route from "../wip/route";
 
 const Git = () => (
   <Layout>
