@@ -18,6 +18,6 @@ module.exports = {
     "react/jsx-curly-newline": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-multi-spaces": "off",
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off",
   },
-}
+};

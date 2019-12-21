@@ -1,7 +1,7 @@
-import React from "react"
-import { Router } from "@reach/router"
-import Layout from "../components/layout"
-import Route from "../temp/route"
+import React from "react";
+import { Router } from "@reach/router";
+import Layout from "../components/layout";
+import Route from "../temp/route";
 
 const Git = () => (
   <Layout>
@@ -10,6 +10,6 @@ const Git = () => (
       <Route path="git/:sha" />
     </Router>
   </Layout>
-)
+);
 
-export default Git
+export default Git;

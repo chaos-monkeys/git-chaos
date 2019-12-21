@@ -1,3 +1,3 @@
-const classBuilder = (...classNames) => [...classNames].join(" ")
+const classBuilder = (...classNames) => [...classNames].join(" ");
 
-export default classBuilder
+export default classBuilder;

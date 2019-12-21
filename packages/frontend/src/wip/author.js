@@ -1,6 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Img from "gatsby-image"
+import React from "react";
+import PropTypes from "prop-types";
+import Img from "gatsby-image";
 
 const AuthorImage = fluid => (
   <>
@@ -8,7 +8,7 @@ const AuthorImage = fluid => (
       <Img fluid={fluid} />
     </div>
   </>
-)
+);
 
 const AuthorBio = ({ name, description }) => (
   <>
@@ -17,16 +17,16 @@ const AuthorBio = ({ name, description }) => (
       <p>{description}</p>
     </div>
   </>
-)
+);
 
 AuthorBio.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
-}
+};
 
 AuthorBio.defaultProps = {
   name: ``,
   description: "",
-}
+};
 
-export { AuthorImage, AuthorBio }
+export { AuthorImage, AuthorBio };

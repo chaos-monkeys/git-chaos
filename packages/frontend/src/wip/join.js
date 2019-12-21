@@ -1,7 +1,7 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
 const Join = () => {
-  const [email, setEmail] = useState("")
+  const [email, setEmail] = useState("");
 
   return (
     <>
@@ -17,7 +17,7 @@ const Join = () => {
         <button type="submit">Join our mailing list!</button>
       </form>
     </>
-  )
-}
+  );
+};
 
-export default Join
+export default Join;

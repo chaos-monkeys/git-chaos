@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/layout"
-import Introduction from "../templates/introduction"
+import Layout from "../components/layout";
+import Introduction from "../templates/introduction";
 
-import Nav from "../templates/nav"
+import Nav from "../templates/nav";
 
 const Index = () => {
   return (
@@ -11,10 +11,10 @@ const Index = () => {
       <Nav />
       <Introduction />
     </Layout>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
 
 // import { useStaticQuery, graphql } from "gatsby"
 // import Header from "../components/header"

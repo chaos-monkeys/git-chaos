@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const upperCaseAndSplit = title =>
   title
@@ -6,21 +6,21 @@ const upperCaseAndSplit = title =>
     .split(" ")
     .map(word => word.trim())
     .reduce((words, word, index, original) => {
-      const isLastWord = original.length - 1 === index
+      const isLastWord = original.length - 1 === index;
 
       // add a <br> if it's not the last word
       if (isLastWord) {
-        words.push(<>{word}</>)
+        words.push(<>{word}</>);
       } else {
         words.push(
           <>
             {word}
             <br />
-          </>
-        )
+          </>,
+        );
       }
 
-      return words
-    }, [])
+      return words;
+    }, []);
 
-export default upperCaseAndSplit
+export default upperCaseAndSplit;
