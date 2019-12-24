@@ -30,6 +30,8 @@
     }
   },
   "lint-staged": {
-    "dist/index.js": [ "git add" ]
+    "dist/index.js": [
+      "git add"
+    ]
   }
 }
