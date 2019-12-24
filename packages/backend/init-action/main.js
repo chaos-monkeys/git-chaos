@@ -41,7 +41,9 @@ const run = async () => {
   const reponseBuilder = {
     meta: {
       repo_name: GIT_REPO,
+      repo_owner: GIT_OWNER,
       start_time: getCurrentTimestamp(),
+      commit_sha: GITHUB_SHA,
     },
     history: history,
   };
