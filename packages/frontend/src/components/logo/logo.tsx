@@ -3,7 +3,12 @@ import { Link } from 'gatsby';
 import * as styles from './logo.module.scss';
 import { upperCaseAndBreak } from '../../utils/textFormatter';
 import classBuilder from '../../utils/classBuilder';
-import { BuildLogoProps, LogoProps } from './props';
+
+interface BuildLogoProps {
+  boxStyle: string;
+  headingStyle: string;
+  text: any[];
+}
 
 // TODO: add more flexibilty int he future by making these independently styleable by parent
 const BuildLogo = ({ boxStyle, headingStyle, text }: BuildLogoProps) => (
@@ -12,6 +17,15 @@ const BuildLogo = ({ boxStyle, headingStyle, text }: BuildLogoProps) => (
     <h1 className={classBuilder(styles.logo, headingStyle)}>{text}</h1>
   </div>
 );
+
+
+interface LogoProps {
+  linkStyle: string;
+  boxStyle: string;
+  headingStyle: string;
+  title: string;
+  isLink?: boolean;
+}
 
 const Logo = ({
   linkStyle, headingStyle, boxStyle, title, isLink,

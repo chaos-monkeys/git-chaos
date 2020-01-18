@@ -3,9 +3,16 @@ import { Link } from 'gatsby';
 import Logo from '../logo/logo';
 import classBuilder from '../../utils/classBuilder';
 
-import { SidebarProps } from './props';
-
 import * as styles from './sidebar.module.scss';
+
+interface SidebarProps {
+  linkStyle?: string;
+  boxStyle?: string;
+  headingStyle?: string;
+  sidebarStyle: string;
+  title: string;
+  open: boolean;
+}
 
 const Sidebar = ({
   linkStyle,

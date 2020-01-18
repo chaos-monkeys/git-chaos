@@ -1,7 +1,11 @@
 import React from 'react';
-import { OverlayProps } from './props';
 
 import * as styles from './overlay.module.scss';
+
+interface OverlayProps {
+  open: boolean,
+  setOpen: Function,
+}
 
 const Overlay = ({ open, setOpen }: OverlayProps) => (
   // the close action only needs to fire when the user clicks off the sidebar

@@ -7,6 +7,8 @@ import Sidebar from '../../components/sidebar/sidebar';
 import Overlay from '../../components/overlay/overlay';
 import * as styles from './nav.module.scss';
 
+const uuidv1 = require('uuid/v1');
+
 const ANIMATION_DELAY = 300;
 
 const Nav = () => {
