@@ -1,0 +1,36 @@
+@import './../styles/global/tokens/tokens.scss';
+
+$animationSpeed: 0.22s;
+
+.sidebar {
+    width: 100vw;
+    height: 100vh;
+    background: var(--primary);
+    z-index: 5000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    transform: translateX(100vw);
+    visibility: hidden;
+    transition: visibility $animationSpeed ease-in-out,
+                transform $animationSpeed ease-in-out;
+}
+
+.sidebar[open] {
+    visibility: visible;
+    transform: translateX(0vw);
+    transition: visibility $animationSpeed ease-in-out,
+                transform $animationSpeed ease-in-out;
+}
+
+.sidebar li {
+    color: var(--primary);
+}
+
+.logo {
+    @include padding-horizontal('m');
+    @include padding-top('m');
+
+    display: block;
+}

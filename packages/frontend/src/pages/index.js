@@ -2,14 +2,16 @@ import React from "react";
 
 import Layout from "../components/layout";
 import Introduction from "../templates/introduction";
+import Team from "../templates/team";
 
 import Nav from "../templates/nav";
 
 const Index = () => {
   return (
-    <Layout>
+    <Layout className="asdsadsasa">
       <Nav />
       <Introduction />
+      <Team />
     </Layout>
   );
 };
@@ -23,17 +25,13 @@ export default Index;
 // import { AuthorImage, AuthorBio } from "../components/author"
 // const { rob, ollie } = data
 
-{
-  /* TODO: fix the hell outta that */
-}
-{
-  /* {/* <Header title={title} /> */
-}
-{
-  /* <h1>{description}</h1> */
-}
-{
-  /* <div>
+/* TODO: fix the hell outta that */
+
+/* {/* <Header title={title} /> */
+
+/* <h1>{description}</h1> */
+
+/* <div>
         <AuthorImage fluid={rob.childImageSha rp.fluid} />
         <AuthorBio name="Rob" description="lorem" />
       </div>
@@ -42,4 +40,3 @@ export default Index;
         <AuthorImage fluid={ollie.childImageSharp.fluid} />
       </div>
       <Join /> */
-}

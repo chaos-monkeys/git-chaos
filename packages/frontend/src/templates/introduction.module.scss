@@ -2,7 +2,7 @@
 
 .grid {
     display: grid;
-    min-height: 50vh;
+    min-height: 25vh;
     color: var(--light-text);
     @include margin-left('m');
     @include margin-top('m');

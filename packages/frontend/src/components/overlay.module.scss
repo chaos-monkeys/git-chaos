@@ -1,0 +1,23 @@
+$animationSpeed: 0.22s;
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    z-index: 4999; // z-index needs to a value that's below sidebar
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: hidden;
+    opacity: 0;
+    pointer-events: none;
+    background: var(--main-bg-color);
+}
+
+.overlay[open] {
+    pointer-events: all;
+    display: block;
+    opacity: 0.8;
+    transition: opacity $animationSpeed linear;
+}

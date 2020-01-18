@@ -1,10 +1,35 @@
 @import './../styles/global/tokens/tokens.scss';
 
 nav {
-    display: grid
+    position: sticky;
+    top: 0;
+    display: inline-block;
+    width: min-content;
 }
 
-nav {
-    @include margin-left('m');
+.hamburger {
+    @include margin-horizontal('m');
     @include margin-top('m');
+    position: sticky;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: min-content;
+    position: absolute;
+    z-index: 10000;
+}
+
+
+.logo {
+    @include margin-horizontal('m');
+    @include margin-top('m');
+    display: grid;
+}
+
+// FIXME: is this a good way of doing this?
+// Rules in parent is separation of concerns, but feels weird
+.sidebar {
+    @media screen and (min-width: 1400px) {
+        width: 30%;
+    }
 }

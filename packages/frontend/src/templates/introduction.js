@@ -17,7 +17,7 @@ const Introduction = () => {
   `);
 
   const { description, background } = data.site.siteMetadata;
-  const backgroundText = `${background} `.repeat(5);
+  const backgroundText = `${background}\n`.repeat(5);
 
   return (
     <div className={styles.grid}>

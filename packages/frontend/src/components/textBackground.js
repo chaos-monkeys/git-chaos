@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./textBackground.module.scss";
-import upperCaseAndSplit from "../utils/textFormatter";
+import { upperCaseAndSplit } from "../utils/textFormatter";
 import classBuilder from "../utils/classBuilder";
 
 const TextBackground = ({ className, text }) => (
   <div className={classBuilder(styles.textBackground, className)}>
-    {upperCaseAndSplit(text)}
+    {upperCaseAndSplit(text, "\n", styles.textBackground_line)}
   </div>
 );
 
@@ -17,7 +17,7 @@ TextBackground.propTypes = {
 
 TextBackground.defaultProps = {
   text: ``,
-  className: {},
+  className: ``,
 };
 
 export default TextBackground;

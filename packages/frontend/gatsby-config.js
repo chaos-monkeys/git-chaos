@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Chaos Monkeys`,
     description: "Helping you build better",
-    background: "Chaos",
+    background: "Make chaos",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,6 +28,15 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /src/,
+        },
+      },
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

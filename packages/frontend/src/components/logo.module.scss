@@ -1,23 +1,42 @@
 @import './../styles/global/typography.scss';
 @import './../styles/global/tokens/tokens.scss';
 
-.logo {
-    @include sans-serif;
-    @include font('m');
-    @include font-weight('bold');
-    line-height: 2.9rem;
-    letter-spacing: -0.15rem;
-    color: var(--light-text);
+
+.link {
     text-decoration: none;
 
     &:hover,
     &:focus,
     &:active {
-        // FIXME: not convinced this works
-        text-decoration: under;
-        text-decoration-line: underline;
-        text-decoration-style: solid;
-        text-decoration-color: var(--highlight);
-        text-decoration-thickness: 15px;
+        // TODO: decide on colour palette
+        .box {
+            background-color: var(--highlight);
+        }
+
+        .logo {
+            color: var(--primary);
+        }
     }
+}
+
+
+.box {
+    @include margin-horizontal('m');
+    @include margin-top('m');
+    // TODO: is there a better way of doing this? (without splitting the element?)
+    // &::first-line and background hacks didn't work - as the background can't bleed over the line
+    width: 8.9rem;
+    height: 4.4rem;
+    padding: 0.1rem 0.125rem;
+    background-color: var(--primary);
+}
+
+.logo {
+    @include sans-serif;
+    @include font('m');
+    @include font-weight('bold');
+    line-height: 2.1rem;
+    letter-spacing: -0.15rem;
+    color: var(--light-text);
+    text-decoration: none;
 }
