@@ -15,7 +15,6 @@ interface SidebarProps {
 }
 
 const Sidebar = ({
-  linkStyle = '',
   boxStyle = '',
   headingStyle = '',
   sidebarStyle = '',
