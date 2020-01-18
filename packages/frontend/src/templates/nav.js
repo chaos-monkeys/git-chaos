@@ -39,13 +39,18 @@ const Nav = () => {
 
   return (
     <>
-      <nav className={styles.nav}>
-        <Logo title={title} isLink />
-      </nav>
+      <Logo title={title} parentStyle={{ link: styles.logoLink }} isLink />
+
       <nav className={styles.hamburger}>
         <Hamburger open={open} setOpen={setOpen} isAnimating={isAnimating} />
       </nav>
-      <Sidebar className={styles.sidebar} title={title} open={open} />
+{/*
+      <Sidebar
+        parentStyle={{ sidebar: styles.sidebar }}
+        title={title}
+        open={open}
+      /> */}
+
       <Overlay open={open} setOpen={setOpen} />
     </>
   );

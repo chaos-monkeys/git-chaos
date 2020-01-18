@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { upperCaseAndSplit } from "../utils/textFormatter";
+import { upperCaseAndSplit } from '../utils/textFormatter';
 
 const Header = ({ title }) => (
   <header>
@@ -14,7 +14,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  title: ``,
+  title: '',
 };
 
 export default Header;

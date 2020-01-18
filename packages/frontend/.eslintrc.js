@@ -1,23 +1,28 @@
 module.exports = {
-  parser: "babel-eslint",
-  extends: ["airbnb", "prettier"],
-  plugins: ["prettier"],
-  // FIXME: this feels gross
-  rules: {
-    "prettier/prettier": "error",
-    "react/jsx-closing-bracket-location": "off",
-    "react/jsx-closing-tag-location": "off",
-    "react/jsx-curly-spacing": "off",
-    "react/jsx-equals-spacing": "off",
-    "react/jsx-first-prop-new-line": "off",
-    "react/jsx-indent": "off",
-    "react/jsx-indent-props": "off",
-    "react/jsx-max-props-per-line": "off",
-    "react/jsx-tag-spacing": "off",
-    "react/jsx-wrap-multilines": "off",
-    "react/jsx-curly-newline": "off",
-    "react/jsx-one-expression-per-line": "off",
-    "react/jsx-props-no-multi-spaces": "off",
-    "react/jsx-filename-extension": "off",
-  },
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        'react/jsx-filename-extension': 0,
+    }
 };

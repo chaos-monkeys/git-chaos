@@ -7,9 +7,12 @@ import classBuilder from "../utils/classBuilder";
 import styles from "./sidebar.module.scss";
 
 // TODO: add as a graphql query!
-const Sidebar = ({ className, title, open }) => (
-  <aside className={classBuilder(className, styles.sidebar)} open={open}>
-    <Logo className={classBuilder(styles.logo, styles.link)} title={title} />
+const Sidebar = ({ parentStyle, title, open }) => (
+  <aside
+    className={classBuilder(styles.sidebar, parentStyle.sidebar)}
+    open={open}
+  >
+    <Logo className={styles.logo} title={title} />
 
     <ul>
       <li>

@@ -1,19 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "./hamburger.module.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './hamburger.module.scss';
 
-import OpenIcon from "../images/noun_banana_65208.svg";
-import CloseIcon from "../images/noun_banana_65209.svg";
+import OpenIcon from '../images/noun_banana_65208.svg';
+import CloseIcon from '../images/noun_banana_65209.svg';
 
-const openSidebar = ({ isAnimating, setOpen, open }) =>
-  !isAnimating ? setOpen(!open) : () => {};
+const openSidebar = ({ isAnimating, setOpen, open }) => (!isAnimating ? setOpen(!open) : () => {});
 
-const hamburgerIcon = open =>
-  open ? (
-    <OpenIcon className={styles.icon} />
-  ) : (
-    <CloseIcon className={styles.icon} />
-  );
+const hamburgerIcon = (open) => (open ? (
+  <OpenIcon className={styles.icon} />
+) : (
+  <CloseIcon className={styles.icon} />
+));
 
 const Hamburger = ({ open, setOpen, isAnimating }) => (
   <button

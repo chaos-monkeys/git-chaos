@@ -1,35 +1,36 @@
 module.exports = {
   siteMetadata: {
-    title: `Chaos Monkeys`,
-    description: "Helping you build better",
-    background: "Make chaos",
+    title: 'Chaos Monkeys',
+    description: 'Helping you build better',
+    background: 'Make chaos',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-sass',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        name: 'gatsby-starter-default',
+        short_name: 'starter',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
+    // `gatsby-plugin-typescript`,
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /src/,

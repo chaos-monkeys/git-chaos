@@ -1,8 +1,8 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import TextBackground from "../components/textBackground";
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import TextBackground from '../components/textBackground';
 
-import styles from "./introduction.module.scss";
+import styles from './introduction.module.scss';
 
 const Introduction = () => {
   const data = useStaticQuery(graphql`

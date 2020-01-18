@@ -1,0 +1,6 @@
+// if an element gets a border on focus/hover, and it doesn't have one normaly,
+// adding that border will nudge the element
+// add an invisible border to stop the nudge
+@mixin border-hack($borderSize: 1px) {
+    border: $borderSize solid transparent;
+}

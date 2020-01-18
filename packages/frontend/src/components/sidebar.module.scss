@@ -27,10 +27,3 @@ $animationSpeed: 0.22s;
 .sidebar li {
     color: var(--primary);
 }
-
-.logo {
-    @include padding-horizontal('m');
-    @include padding-top('m');
-
-    display: block;
-}
