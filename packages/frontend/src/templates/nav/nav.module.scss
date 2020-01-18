@@ -28,6 +28,10 @@ nav {
 // Rules in parent is separation of concerns, but feels weird
 .sidebar {
     @media screen and (min-width: 720px) {
+        width: 40%;
+    }
+
+    @media screen and (min-width: 1440px) {
         width: 30%;
     }
 }

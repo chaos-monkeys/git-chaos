@@ -13,17 +13,25 @@ $animationSpeed: 0.22s;
     position: absolute;
     transform: translateX(100vw);
     visibility: hidden;
-    transition: visibility $animationSpeed ease-in-out,
-                transform $animationSpeed ease-in-out;
+    transition: visibility $animationSpeed ease-in-out, transform $animationSpeed ease-in-out;
 }
 
 .sidebar[data-open="true"] {
     visibility: visible;
     transform: translateX(0vw);
-    transition: visibility $animationSpeed ease-in-out,
-                transform $animationSpeed ease-in-out;
 }
 
 .sidebar li {
     color: var(--primary);
+}
+
+.box {
+    @include margin('m');
+    background-color: var(--main-bg-color);
+}
+
+.heading {
+    @include margin('m');
+    color: var(--highlight);
+    display: inline-block;
 }

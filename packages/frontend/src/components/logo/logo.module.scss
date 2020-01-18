@@ -3,7 +3,6 @@
 
 $borderSize: 1px;
 
-
 .box {
     display: grid;
     grid-row: 1;
@@ -17,7 +16,7 @@ $borderSize: 1px;
     background-color: var(--primary);
 }
 
-.logo {
+.heading {
     @include sans-serif;
     @include font('m');
     @include font-weight('bold');
@@ -28,7 +27,6 @@ $borderSize: 1px;
     letter-spacing: -0.15rem;
     color: var(--light-text);
 }
-
 
 .link {
     @include border-hack($borderSize);
@@ -44,7 +42,7 @@ $borderSize: 1px;
             background-color: var(--highlight);
         }
 
-        .logo {
+        .heading {
             color: var(--primary);
         }
     }

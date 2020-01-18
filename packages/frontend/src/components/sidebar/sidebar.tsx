@@ -15,19 +15,20 @@ interface SidebarProps {
 }
 
 const Sidebar = ({
-  linkStyle,
-  boxStyle,
-  headingStyle,
-  sidebarStyle, title, open,
+  linkStyle = '',
+  boxStyle = '',
+  headingStyle = '',
+  sidebarStyle = '',
+  title,
+  open,
 }: SidebarProps) => (
   <aside
     className={classBuilder(styles.sidebar, sidebarStyle)}
     data-open={open}
   >
     <Logo
-      linkStyle={linkStyle}
-      boxStyle={boxStyle}
-      headingStyle={headingStyle}
+      boxStyle={classBuilder(styles.box, boxStyle)}
+      headingStyle={classBuilder(styles.heading, headingStyle)}
       title={title}
       isLink={false}
     />
@@ -52,14 +53,6 @@ const Sidebar = ({
     </ul>
   </aside>
 );
-
-// FIXME: does this do anything?
-Sidebar.defaultProps = {
-  linkStyle: '',
-  boxStyle: '',
-  headingStyle: '',
-  sidebarStyle: '',
-} as Partial<SidebarProps>;
 
 
 export default Sidebar;

@@ -14,21 +14,25 @@ interface BuildLogoProps {
 const BuildLogo = ({ boxStyle, headingStyle, text }: BuildLogoProps) => (
   <div className={styles.wrapper}>
     <div className={classBuilder(styles.box, boxStyle)} />
-    <h1 className={classBuilder(styles.logo, headingStyle)}>{text}</h1>
+    <h1 className={classBuilder(styles.heading, headingStyle)}>{text}</h1>
   </div>
 );
 
 
 interface LogoProps {
-  linkStyle: string;
-  boxStyle: string;
-  headingStyle: string;
+  linkStyle?: string;
+  boxStyle?: string;
+  headingStyle?: string;
   title: string;
   isLink?: boolean;
 }
 
 const Logo = ({
-  linkStyle, headingStyle, boxStyle, title, isLink,
+  linkStyle = '',
+  headingStyle = '',
+  boxStyle = '',
+  title,
+  isLink = false,
 }: LogoProps) => {
   const text = upperCaseAndBreak(title);
 
@@ -54,13 +58,5 @@ const Logo = ({
       });
   }
 };
-
-// FIXME: does this do anything?
-Logo.defaultProps = {
-  linkStyle: '',
-  boxStyle: '',
-  headingStyle: '',
-  isLink: false,
-} as Partial<LogoProps>;
 
 export default Logo;
