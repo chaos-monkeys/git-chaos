@@ -1,4 +1,4 @@
-@import './../styles/global/tokens/tokens.scss';
+@import '../../styles/global/tokens/tokens.scss';
 
 $animationSpeed: 0.22s;
 
@@ -17,7 +17,7 @@ $animationSpeed: 0.22s;
                 transform $animationSpeed ease-in-out;
 }
 
-.sidebar[open] {
+.sidebar[data-open="true"] {
     visibility: visible;
     transform: translateX(0vw);
     transition: visibility $animationSpeed ease-in-out,

@@ -1,20 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../components/layout";
-import Introduction from "../templates/introduction";
-import Team from "../templates/team";
+import Layout from '../components/layout';
+import Introduction from '../templates/introduction';
+import Team from '../templates/team';
 
-import Nav from "../templates/nav";
+import Nav from '../templates/nav/nav';
 
-const Index = () => {
-  return (
-    <Layout className="asdsadsasa">
-      <Nav />
-      <Introduction />
-      <Team />
-    </Layout>
-  );
-};
+const Index = () => (
+  <Layout>
+    <Nav />
+    <Introduction />
+    <Team />
+  </Layout>
+);
 
 export default Index;
 

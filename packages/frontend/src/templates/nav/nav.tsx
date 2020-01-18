@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import React, { useState, useEffect } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import Logo from "../components/logo";
-import Hamburger from "../components/hamburger";
-import Sidebar from "../components/sidebar";
-import Overlay from "../components/overlay";
-import styles from "./nav.module.scss";
+import Logo from '../../components/logo/logo';
+import Hamburger from '../../components/hamburger/hamburger';
+import Sidebar from '../../components/sidebar/sidebar';
+import Overlay from '../../components/overlay/overlay';
+import * as styles from './nav.module.scss';
 
 const ANIMATION_DELAY = 300;
 
@@ -39,17 +39,17 @@ const Nav = () => {
 
   return (
     <>
-      <Logo title={title} parentStyle={{ link: styles.logoLink }} isLink />
+      <Logo title={title} linkStyle={styles.logoLink} isLink />
 
-      <nav className={styles.hamburger}>
+      <nav>
         <Hamburger open={open} setOpen={setOpen} isAnimating={isAnimating} />
       </nav>
-{/*
+
       <Sidebar
-        parentStyle={{ sidebar: styles.sidebar }}
+        sidebarStyle={styles.sidebar}
         title={title}
         open={open}
-      /> */}
+      />
 
       <Overlay open={open} setOpen={setOpen} />
     </>

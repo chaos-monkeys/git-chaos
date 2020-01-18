@@ -1,31 +1,8 @@
-@import './../styles/global/typography.scss';
-@import './../styles/global/mixins.scss';
+@import '../../styles/global/typography.scss';
+@import '../../styles/global/mixins.scss';
 
 $borderSize: 1px;
 
-.link {
-    @include border-hack($borderSize);
-    text-decoration: none;
-    outline: none;
-
-    &:hover,
-    &:focus,
-    &:active {
-        border: $borderSize solid var(--highlight);
-
-        .box {
-            background-color: var(--highlight);
-        }
-
-        .logo {
-            color: var(--primary);
-        }
-    }
-}
-
-.wrapper {
-    display: grid;
-}
 
 .box {
     display: grid;
@@ -50,4 +27,29 @@ $borderSize: 1px;
     line-height: 2.1rem;
     letter-spacing: -0.15rem;
     color: var(--light-text);
+}
+
+
+.link {
+    @include border-hack($borderSize);
+    text-decoration: none;
+    outline: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border: $borderSize solid var(--highlight);
+
+        .box {
+            background-color: var(--highlight);
+        }
+
+        .logo {
+            color: var(--primary);
+        }
+    }
+}
+
+.wrapper {
+    display: grid;
 }

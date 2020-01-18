@@ -1,4 +1,4 @@
-@import './../styles/global/mixins.scss';
+@import '../../styles/global/mixins.scss';
 
 $borderSize: 1px;
 
@@ -11,17 +11,17 @@ $borderSize: 1px;
     margin: 0;
     background: none;
 
+    // removes dotted line on firefox button focus - only acceptable due to background pop on focus
+    &::-moz-focus-inner {
+        border: 0;
+    }
+
     &:hover,
     &:focus,
     &:active {
         border: $borderSize solid var(--highlight);
         outline: none;
         cursor: pointer;
-    }
-
-    // removes dotted line on firefox button focus - only acceptable due to background pop on focus
-    &::-moz-focus-inner {
-        border: 0;
     }
 }
 

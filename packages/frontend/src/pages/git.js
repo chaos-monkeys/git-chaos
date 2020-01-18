@@ -1,7 +1,7 @@
 import React from "react";
 import { Router } from "@reach/router";
 import Layout from "../components/layout";
-import Nav from "../templates/nav";
+import Nav from "../templates/nav/nav";
 import Route from "../wip/route";
 
 const Git = () => (

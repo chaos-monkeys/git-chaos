@@ -1,7 +1,7 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import { AuthorImage, AuthorBio } from "../wip/author";
+import { AuthorImage, AuthorBio } from '../wip/author';
 
 const Team = () => {
   const data = useStaticQuery(graphql`
@@ -25,7 +25,6 @@ const Team = () => {
 
   const { rob, ollie } = data;
 
-  console.log(rob);
 
   return (
     <div>

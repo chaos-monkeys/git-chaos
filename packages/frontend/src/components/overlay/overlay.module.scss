@@ -15,7 +15,7 @@ $animationSpeed: 0.22s;
     background: var(--main-bg-color);
 }
 
-.overlay[open] {
+.overlay[data-open="true"] {
     pointer-events: all;
     display: block;
     opacity: 0.8;
