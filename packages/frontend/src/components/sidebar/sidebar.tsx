@@ -5,6 +5,17 @@ import classBuilder from '../../utils/classBuilder';
 
 import * as styles from './sidebar.module.scss';
 
+interface link {
+  url: string,
+  name: string,
+}
+
+const createLinks = (links: Array<link>) => links.map((item) => (
+  <li>
+    <Link to={item.url}>{item.name}</Link>
+  </li>
+));
+
 interface SidebarProps {
   linkStyle?: string;
   boxStyle?: string;
@@ -12,6 +23,7 @@ interface SidebarProps {
   sidebarStyle: string;
   title: string;
   open: boolean;
+  links: Array<link>;
 }
 
 const Sidebar = ({
@@ -20,6 +32,7 @@ const Sidebar = ({
   sidebarStyle = '',
   title,
   open,
+  links,
 }: SidebarProps) => (
   <aside
     className={classBuilder(styles.sidebar, sidebarStyle)}
@@ -32,23 +45,8 @@ const Sidebar = ({
       isLink={false}
     />
 
-    {/* TODO: add as a graphql query! */}
     <ul>
-      <li>
-        <Link to="/">
-            Meet the team
-        </Link>
-      </li>
-      <li>
-        <Link to="/">
-            Posts
-        </Link>
-      </li>
-      <li>
-        <Link to="/">
-            Git chaos
-        </Link>
-      </li>
+      {createLinks(links)}
     </ul>
   </aside>
 );

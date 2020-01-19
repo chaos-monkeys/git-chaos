@@ -3,6 +3,20 @@ module.exports = {
     title: 'Chaos Monkeys',
     description: 'Helping you build better',
     background: 'Make chaos',
+    sidebar: [
+      {
+        name: 'Meet the team',
+        url: '/meet-the-team',
+      },
+      {
+        name: 'Posts',
+        url: '/posts',
+      },
+      {
+        name: 'Git Chaos',
+        url: '/git-chaos',
+      },
+    ],
   },
   plugins: [
     'gatsby-plugin-react-helmet',

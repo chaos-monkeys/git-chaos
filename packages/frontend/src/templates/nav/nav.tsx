@@ -15,12 +15,16 @@ const Nav = () => {
       site {
         siteMetadata {
           title
+          sidebar {
+            url
+            name
+          }
         }
       }
     }
   `);
 
-  const { title } = data.site.siteMetadata;
+  const { title, sidebar: links } = data.site.siteMetadata;
 
   const [open, setOpen] = useState(false);
   const [isAnimating, setAnimating] = useState(false);
@@ -49,6 +53,7 @@ const Nav = () => {
         sidebarStyle={styles.sidebar}
         title={title}
         open={open}
+        links={links}
       />
 
       <Overlay open={open} setOpen={setOpen} />
