@@ -1,4 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap');
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/montserrat-v14-latin-regular.eot');
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+        url('../../fonts/montserrat-v14-latin-regular.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat-v14-latin-regular.woff2') format('woff2'),
+        url('../../fonts/montserrat-v14-latin-regular.woff') format('woff'),
+        url('../../fonts/montserrat-v14-latin-regular.ttf') format('truetype'),
+        url('../../fonts/montserrat-v14-latin-regular.svg#Montserrat') format('svg');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../../fonts/montserrat-v14-latin-900.eot');
+    src: local('Montserrat Black'), local('Montserrat-Black'),
+        url('../../fonts/montserrat-v14-latin-900.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat-v14-latin-900.woff2') format('woff2'),
+        url('../../fonts/montserrat-v14-latin-900.woff') format('woff'),
+        url('../../fonts/montserrat-v14-latin-900.ttf') format('truetype'),
+        url('../../fonts/montserrat-v14-latin-900.svg#Montserrat') format('svg');
+}
 
 html,
 body {
@@ -17,12 +41,12 @@ body {
     --primary: #fb5158;
     --highlight: #FFF638;
 
-    /* shades */
-// --main-main-bg-color: #8C92AD;
-// --main-main-bg-color: #595C6E;
-// --main-main-bg-color: #1B1C21;
-// --main-main-bg-color: #292B33;
-// --main-main-bg-color: #292B33;
+
+    // --main-main-bg-color: #8C92AD;
+    // --main-main-bg-color: #595C6E;
+    // --main-main-bg-color: #1B1C21;
+    // --main-main-bg-color: #292B33;
+    // --main-main-bg-color: #292B33;
     background-color: var(--main-bg-color);
 }
 
@@ -54,7 +78,7 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     min-height: 50vh;
-    /* background: lightblue; */
+
 }
 
 
