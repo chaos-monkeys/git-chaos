@@ -10,14 +10,12 @@ interface BuildLogoProps {
   text: any[];
 }
 
-// TODO: add more flexibilty int he future by making these independently styleable by parent
 const BuildLogo = ({ boxStyle, headingStyle, text }: BuildLogoProps) => (
   <div className={styles.wrapper}>
     <div className={classBuilder(styles.box, boxStyle)} />
     <h1 className={classBuilder(styles.heading, headingStyle)}>{text}</h1>
   </div>
 );
-
 
 interface LogoProps {
   linkStyle?: string;

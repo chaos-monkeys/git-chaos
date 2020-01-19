@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Chaos Monkeys',
     description: 'Helping you build better',
+    author: 'Chaos Monkeys',
     background: 'Make chaos',
     sidebar: [
       {
