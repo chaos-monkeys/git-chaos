@@ -39,6 +39,7 @@ module.exports = {
         background_color: '#1a1b20',
         theme_color: '#1a1b20',
         display: 'minimal-ui',
+        // TODO: decide on favicon
         icon: 'src/images/favicons/favicon.png', // This path is relative to the root of the site.
       },
     },
