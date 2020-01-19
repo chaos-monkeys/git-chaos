@@ -1,9 +1,9 @@
 import React from 'react';
 import * as styles from './hamburger.module.scss';
 
-// FIXME: SOMEHOW not using modules stops a path error with typescript and svgs (and all non-code assets?)
-const OpenIcon = require('../../images/noun_banana_65208.inline.svg');
-const CloseIcon = require('../../images/noun_banana_65209.inline.svg');
+// FIXME: SOMEHOW require stops a path error with typescript and svg (and all non-code assets?)
+const OpenIcon = require('../../images/icons/open.inline.svg');
+const CloseIcon = require('../../images/icons/closed.inline.svg');
 
 const openSidebar = (isAnimating: boolean, setOpen: Function, open: boolean) => (
   !isAnimating ? setOpen(!open) : () => { }

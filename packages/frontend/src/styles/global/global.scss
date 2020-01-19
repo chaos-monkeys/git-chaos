@@ -1,3 +1,6 @@
+@import './mixins.scss';
+
+
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
@@ -69,8 +72,21 @@ body {
 
 
 
+button,
+a {
+    @include border-hack(1px);
 
+    &::-moz-focus-inner {
+        border: 0;
+    }
 
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+        border: 1px solid var(--highlight);
+    }
+}
 
 
 .grid {

@@ -1,4 +1,5 @@
 @import '../../styles/global/tokens/tokens.scss';
+@import '../../styles/global/typography.scss';
 
 $animationSpeed: 0.22s;
 
@@ -11,9 +12,9 @@ $animationSpeed: 0.22s;
     right: 0;
     bottom: 0;
     position: absolute;
-    transform: translateX(50vw); // default to be overwritten
+    transform: translateX(100vw);
     visibility: hidden; // stops tab navigation to offscreen element
-    transition: visibility $animationSpeed ease-in-out, transform $animationSpeed ease-in-out;
+    transition: visibility $animationSpeed linear, transform $animationSpeed linear;
 }
 
 .sidebar[data-open="true"] {
@@ -21,8 +22,28 @@ $animationSpeed: 0.22s;
     transform: translateX(0vw);
 }
 
+.sidebar ul {
+    @include margin-horizontal('m');
+    list-style: none;
+    padding-left: 0;
+}
+
 .sidebar li {
+    @include margin-bottom('s');
     color: var(--primary);
+
+    &:last-of-type {
+        margin-bottom: none;
+    }
+}
+
+.sidebar li a {
+    @include font-weight('bold');
+    @include sans-serif;
+    @include font('m');
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--highlight);
 }
 
 .box {

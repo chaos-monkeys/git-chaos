@@ -7,13 +7,13 @@ $borderSize: 1px;
     display: grid;
     grid-row: 1;
     grid-column: 1;
+    background-color: var(--primary);
     // TODO: is there a better way of doing this? (without splitting the element?)
     // &::first-line and background hacks didn't work - as the background can't bleed over the line
     // _could_ be a gross js thing
     width: 8.9rem;
     height: 4.3rem;
     padding: 0.1rem 0.125rem;
-    background-color: var(--primary);
 }
 
 .heading {
@@ -29,15 +29,12 @@ $borderSize: 1px;
 }
 
 .link {
-    @include border-hack($borderSize);
     text-decoration: none;
     outline: none;
 
     &:hover,
     &:focus,
     &:active {
-        border: $borderSize solid var(--highlight);
-
         .box {
             background-color: var(--highlight);
         }
