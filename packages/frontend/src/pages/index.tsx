@@ -1,8 +1,9 @@
 import React from 'react';
 
 import Layout from '../components/layout';
-import Introduction from '../templates/introduction';
-import Team from '../templates/team';
+import Introduction from '../templates/introduction/introduction';
+import Team from '../templates/team/team';
+
 
 import Nav from '../templates/nav/nav';
 

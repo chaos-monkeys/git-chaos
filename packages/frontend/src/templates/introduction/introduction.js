@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import TextBackground from '../components/textBackground/textBackground';
+import TextBackground from '../../components/textBackground/textBackground';
 
 import * as styles from './introduction.module.scss';
 
@@ -21,8 +21,13 @@ const Introduction = () => {
 
   return (
     <div className={styles.grid}>
-      <h2 className={styles.description}>{description}</h2>
-      <TextBackground className={styles.textBackground} text={backgroundText} />
+      <div>
+        <h2 className={styles.description}>{description}</h2>
+        <TextBackground className={styles.textBackground} text={backgroundText} />
+      </div>
+      <div>
+        <h2>{description}</h2>
+      </div>
     </div>
   );
 };

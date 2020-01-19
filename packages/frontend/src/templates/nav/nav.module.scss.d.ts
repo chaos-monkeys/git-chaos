@@ -1,2 +1,2 @@
-export const logoLink: string;
+export const link: string;
 export const sidebar: string;

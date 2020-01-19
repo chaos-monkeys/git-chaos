@@ -39,7 +39,7 @@ const Nav = () => {
 
   return (
     <>
-      <Logo title={title} linkStyle={styles.logoLink} isLink />
+      <Logo title={title} linkStyle={styles.link} isLink />
 
       <nav>
         <Hamburger open={open} setOpen={setOpen} isAnimating={isAnimating} />

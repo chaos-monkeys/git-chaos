@@ -1,15 +1,13 @@
-@import './../styles/global//tokens/tokens.scss';
+@import './../../styles/global//tokens/tokens.scss';
 
 .grid {
     display: grid;
     min-height: 25vh;
     color: var(--light-text);
-    @include margin-left('m');
-    @include margin-top('m');
-    @include margin-bottom('m');
 }
 
 .description {
+    @include margin-left('m');
     grid-row: 1 / span 1;
     grid-column: 1 / span 2;
     align-self: center;
