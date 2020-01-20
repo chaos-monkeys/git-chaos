@@ -26,13 +26,7 @@ nav {
 // FIXME: is this a good way of doing this?
 // Rules in parent is separation of concerns, but feels weird
 .sidebar {
-    @media screen and (min-width: 720px) {
-        width: 40vw;
-        transform: translateX(40vw);
-    }
-
-    @media screen and (min-width: 1440px) {
-        width: 30vw;
-        transform: translateX(30vw);
+    @media screen and (min-width: 768px) {
+        width: 50%;
     }
 }
