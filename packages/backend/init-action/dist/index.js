@@ -15246,6 +15246,9 @@ const getCollaborators = async ({ octokit, owner, repo }) => {
       core.setFailed(error.message);
     });
 
+  core.debug("------");
+  core.debug(projectCollaborators);
+
   return projectCollaborators.reduce((allCollaborators, collaborator) => {
     allCollaborators[collaborator.id] = {
       username: collaborator.login,
