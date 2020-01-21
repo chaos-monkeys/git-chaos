@@ -3,6 +3,7 @@ const Octokit = require('@octokit/rest');
 const { getCodeHistory, getBranchName } = require('./helpers/history');
 const { createComment } = require('./helpers/comment');
 const { uploadHistory } = require('./helpers/aws');
+const { getCurrentTimestamp } = require('./helpers/utils');
 
 // these envs come from the github action
 const {
@@ -37,10 +38,22 @@ const run = async () => {
     }),
   });
 
+  const reponseBuilder = {
+    meta: {
+      repo_name: GIT_REPO,
+      repo_owner: GIT_OWNER,
+      start_time: getCurrentTimestamp(),
+      commit_sha: GITHUB_SHA,
+    },
+    history: history,
+  };
+
+  core.debug(`response_builder: ${reponseBuilder.meta}`);
+
   const path = await uploadHistory({
     accessKeyId: AWS_ACCESS_KEY,
     secretAccessKey: AWS_SECRET_KEY,
-    body: history,
+    body: reponseBuilder,
     sha: GITHUB_SHA,
   });
 
