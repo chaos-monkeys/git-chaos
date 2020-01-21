@@ -47,7 +47,7 @@ const run = async () => {
       start_time: getCurrentTimestamp(),
       commit_sha: GITHUB_SHA
     },
-    collaborators: getCollaborators(),
+    collaborators: getCollaborators(octokit, owner, repo),
     historyIndex: historyIndex,
     history: history
   };
