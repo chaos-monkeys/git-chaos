@@ -4,6 +4,15 @@ import boto3
 
 s3 = boto3.client('s3')
 
+# TODO: Find all authors in the Pull Request
+
+
+def extract_authors(data):
+    return {
+        'statusCode': 200,
+        'body': json.dumps('returned from extract_authors data')
+    }
+
 
 def lambda_handler(event, context):
 
