@@ -9015,7 +9015,7 @@ const { getCodeHistory, getBranchName } = __webpack_require__(630);
 const { createComment } = __webpack_require__(210);
 const { uploadHistory } = __webpack_require__(623);
 const { getCollaborators } = __webpack_require__(522);
-const { getCurrentTimestamp } = __webpack_require__(400);
+const { getCurrentTimestamp, buildHistoryIndex } = __webpack_require__(400);
 
 // these envs come from the github action
 const {
