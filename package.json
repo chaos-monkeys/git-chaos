@@ -1,0 +1,19 @@
+{
+  "name": "git-chaos-action",
+  "version": "1.0.0",
+  "description": "Action dependencies for git-chaos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "index.js"
+  },
+  "author": "Chaos Monkeys",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@octokit/rest": "^16.35.0"
+  },
+  "devDependencies": {
+    "lint-staged": "^9.5.0"
+  }
+}
