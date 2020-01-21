@@ -4,7 +4,7 @@ const { getCodeHistory, getBranchName } = require("./helpers/history");
 const { createComment } = require("./helpers/comment");
 const { uploadHistory } = require("./helpers/aws");
 const { getCollaborators } = require("./helpers/collaborators");
-const { getCurrentTimestamp } = require("./helpers/utils");
+const { getCurrentTimestamp, buildHistoryIndex } = require("./helpers/utils");
 
 // these envs come from the github action
 const {
