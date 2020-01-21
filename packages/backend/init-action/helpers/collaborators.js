@@ -8,7 +8,7 @@ const getCollaborators = async ({ octokit, owner, repo }) => {
       core.setFailed(error.message);
     });
 
-  projectCollaborators.reduce((allCollaborators, collaborator) => {
+  return projectCollaborators.reduce((allCollaborators, collaborator) => {
     allCollaborators[collaborator.id] = {
       username: collaborator.login,
       avatar_url: collaborator.avatar_url,
@@ -16,8 +16,6 @@ const getCollaborators = async ({ octokit, owner, repo }) => {
     };
     return allCollaborators;
   }, {});
-
-  return allCollaborators;
 };
 
 module.exports = {
