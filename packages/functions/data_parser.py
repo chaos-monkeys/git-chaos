@@ -1,7 +1,12 @@
 import json
+import logging
 import boto3
 
-s3 = boto3.client('s3')
+s3 = boto3.client(
+    's3',
+    aws_access_key_id=ACCESS_KEY,
+    aws_secret_access_key=SECRET_KEY,
+)
 
 
 def lambda_handler(event, context):
@@ -21,5 +26,5 @@ def lambda_handler(event, context):
 
     return {
         'statusCode': 200,
-        'body': json.dumps('Hello world Lambda!')
+        'body': json.dumps(json_data)
     }

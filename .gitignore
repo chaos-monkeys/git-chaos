@@ -145,3 +145,5 @@ Temporary Items
 
 #python folders
 .venv
+.idea
+__pycache__
