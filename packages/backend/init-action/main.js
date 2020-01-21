@@ -1,9 +1,10 @@
-const core = require('@actions/core');
-const Octokit = require('@octokit/rest');
-const { getCodeHistory, getBranchName } = require('./helpers/history');
-const { createComment } = require('./helpers/comment');
-const { uploadHistory } = require('./helpers/aws');
-const { getCurrentTimestamp } = require('./helpers/utils');
+const core = require("@actions/core");
+const Octokit = require("@octokit/rest");
+const { getCodeHistory, getBranchName } = require("./helpers/history");
+const { createComment } = require("./helpers/comment");
+const { uploadHistory } = require("./helpers/aws");
+const { getCollaborators } = require("./helpers/collaborators");
+const { getCurrentTimestamp } = require("./helpers/utils");
 
 // these envs come from the github action
 const {
@@ -12,17 +13,16 @@ const {
   GITHUB_REPOSITORY,
   GITHUB_REF,
   AWS_ACCESS_KEY,
-  AWS_SECRET_KEY,
+  AWS_SECRET_KEY
 } = process.env;
-const [GIT_OWNER, GIT_REPO] = GITHUB_REPOSITORY.split('/');
-const issueNumber = GITHUB_REF.split('/')[2];
-
+const [GIT_OWNER, GIT_REPO] = GITHUB_REPOSITORY.split("/");
+const issueNumber = GITHUB_REF.split("/")[2];
 
 const run = async () => {
   core.debug(`issue_number: ${issueNumber}`);
 
   const octokit = new Octokit({
-    auth: GITHUB_TOKEN,
+    auth: GITHUB_TOKEN
   });
 
   const history = await getCodeHistory({
@@ -34,18 +34,22 @@ const run = async () => {
       octokit,
       owner: GIT_OWNER,
       repo: GIT_REPO,
-      sha: GITHUB_SHA,
-    }),
+      sha: GITHUB_SHA
+    })
   });
+
+  const historyIndex = buildHistoryIndex(history);
 
   const reponseBuilder = {
     meta: {
       repo_name: GIT_REPO,
       repo_owner: GIT_OWNER,
       start_time: getCurrentTimestamp(),
-      commit_sha: GITHUB_SHA,
+      commit_sha: GITHUB_SHA
     },
-    history: history,
+    collaborators: getCollaborators(),
+    historyIndex: historyIndex,
+    history: history
   };
 
   core.debug(`response_builder: ${reponseBuilder.meta}`);
@@ -54,7 +58,7 @@ const run = async () => {
     accessKeyId: AWS_ACCESS_KEY,
     secretAccessKey: AWS_SECRET_KEY,
     body: reponseBuilder,
-    sha: GITHUB_SHA,
+    sha: GITHUB_SHA
   });
 
   return createComment({
@@ -63,7 +67,7 @@ const run = async () => {
     repo: GIT_REPO,
     issue_number: issueNumber,
     // TODO: update with something less 'temporary'
-    message: `Git history uploaded to ${path}`,
+    message: `Git history uploaded to ${path}`
   });
 };
 
