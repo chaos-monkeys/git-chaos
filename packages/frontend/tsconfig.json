@@ -1,6 +1,7 @@
 {
   "include": [
-    "./src/**/*"
+    "./src/**/*",
+    "setup-test-env.ts"
   ],
   "compilerOptions": {
     "jsx": "react",
