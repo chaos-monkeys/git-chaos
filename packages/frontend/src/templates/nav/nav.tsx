@@ -39,7 +39,7 @@ const Nav = () => {
     }, ANIMATION_DELAY);
 
     return () => clearTimeout(timer);
-  }, [open, setOpen]);
+  }, []);
 
   return (
     <>

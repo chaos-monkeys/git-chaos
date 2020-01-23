@@ -2,12 +2,14 @@
 
 
 $textSizeTokens: map-get($tokens, 'textSize');
+
 @mixin font($size) {
     font-size: map-get($textSizeTokens, $size);
     line-height: calc(map-get($textSizeTokens, $size) * 1.4);
 }
 
 $textWeightTokens: map-get($tokens, 'textWeight');
+
 @mixin font-weight($weight) {
     font-weight: map-get($textWeightTokens, $weight);
 }
@@ -28,7 +30,19 @@ $textWeightTokens: map-get($tokens, 'textWeight');
 
 @mixin sans-serif() {
     @include font-defaults;
-    font-family: 'montserrat', sans-serif;
+    // font-family: 'montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin serif() {
+    @include font-defaults;
+    font-family: 'Esteban', serif;
+}
+
+@mixin mono() {
+    @include font-defaults;
+
+    font-family: 'jetbrains_monoregular', monospace;
 }
 
 html {
@@ -40,6 +54,8 @@ body {
     font-size: 1.6rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     @include sans-serif();
 }

@@ -4,22 +4,20 @@
 $animationSpeed: 0.22s;
 
 .sidebar {
-    width: 100vw;
     height: 100vh;
     background: var(--primary);
     z-index: 5000;
     top: 0;
     right: 0;
-    bottom: 0;
-    position: absolute;
-    transform: translateX(100vw);
+    position: fixed;
+    transform: translate3d(100%, 0, 0);
     visibility: hidden; // stops tab navigation to offscreen element
     transition: visibility $animationSpeed linear, transform $animationSpeed linear;
 }
 
 .sidebar[data-open="true"] {
     visibility: visible;
-    transform: translateX(0vw);
+    transform: translate3d(0, 0, 0);
 }
 
 .sidebar ul {
@@ -29,21 +27,36 @@ $animationSpeed: 0.22s;
 }
 
 .sidebar li {
-    @include margin-bottom('s');
-    color: var(--primary);
-
-    &:last-of-type {
-        margin-bottom: none;
-    }
+    margin-bottom: 1rem;
 }
 
 .sidebar li a {
-    @include font-weight('bold');
-    @include sans-serif;
-    @include font('m');
+    // font-weight: 900;
+    // @include mono;
+    // @include font('l');
+    // text-decoration: none;
+    // letter-spacing: -0.075em;
+    color: var(--main-bg-color);
     text-decoration: none;
-    text-transform: uppercase;
-    color: var(--highlight);
+    // text-decoration-color: var(--highlight);
+    // text-decoration-thickness: 0.5rem;
+    // : 0.5rem solid var(--highlight);
+
+
+    // .textBackground {
+        @include sans-serif;
+        @include font('l');
+        @include font-weight('x-bold');
+        text-transform: uppercase;
+        // line-height: 7.4rem;
+        // letter-spacing: -0.5rem;
+        // overflow: hidden;
+        // user-select: none;
+        // opacity: 1;
+        // color: transparent;
+        // -webkit-text-stroke: 0.5px var(--main-bg-color);
+
+    // }
 }
 
 .box {

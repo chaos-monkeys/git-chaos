@@ -1,3 +1,4 @@
+export const vignette: string;
+export const grid: string;
+export const grunge: string;
 export const textBackground: string;
-export const textBackground_line: string;
-export const textBackgroundLine: string;

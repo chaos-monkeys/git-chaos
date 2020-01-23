@@ -4,15 +4,8 @@ module.exports = {
     description: 'Helping you build better',
     author: 'Chaos Monkeys',
     background: 'Make chaos',
+
     sidebar: [
-      {
-        name: 'Meet the team',
-        url: '/meet-the-team',
-      },
-      {
-        name: 'Posts',
-        url: '/posts',
-      },
       {
         name: 'Git Chaos',
         url: '/git-chaos',
@@ -21,6 +14,13 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/content/posts`,
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -39,8 +39,7 @@ module.exports = {
         background_color: '#1a1b20',
         theme_color: '#1a1b20',
         display: 'minimal-ui',
-        // TODO: decide on favicon
-        icon: 'src/images/favicons/favicon.png', // This path is relative to the root of the site.
+        icon: 'src/images/favicons/favicon.png', // TODO: decide on favicon
       },
     },
     {
@@ -51,9 +50,10 @@ module.exports = {
         },
       },
     },
+    'gatsby-plugin-preact',
+    'gatsby-plugin-mdx',
     'gatsby-plugin-typescript',
     'gatsby-plugin-scss-typescript',
-    'gatsby-plugin-preact',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

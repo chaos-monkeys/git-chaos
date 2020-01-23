@@ -8,9 +8,9 @@ $spacer: 'm';
 }
 
 .link {
-    @include margin($spacer);
     @extend %sticky;
-    display: inline-block;
+    position: absolute;
+    left: getSize($spacer);
 }
 
 nav {
