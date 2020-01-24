@@ -10,26 +10,27 @@ import * as styles from './nav.module.scss';
 const ANIMATION_DELAY = 300;
 
 const Nav = () => {
+
   const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          sidebar {
-            url
-            name
-          }
+  query {
+    site {
+      siteMetadata {
+        title
+        sidebar {
+          url
+          name
         }
       }
     }
+  }
   `);
 
   const { title, sidebar: links } = data.site.siteMetadata;
 
-  const [open, setOpen] = useState(false);
+
+  // when the sidebar is opening or closing set is animating to true
   const [isAnimating, setAnimating] = useState(false);
 
-  // when the sidebar opening or closing set is animating to true
   // isAnimating is used inside the components to stop the component receiving further events
   useEffect(() => {
     setAnimating(true);
@@ -46,17 +47,16 @@ const Nav = () => {
       <Logo title={title} linkStyle={styles.link} isLink />
 
       <nav>
-        <Hamburger open={open} setOpen={setOpen} isAnimating={isAnimating} />
+        <Hamburger isAnimating={isAnimating} />
       </nav>
 
       <Sidebar
         sidebarStyle={styles.sidebar}
         title={title}
-        open={open}
         links={links}
       />
 
-      <Overlay open={open} setOpen={setOpen} />
+      <Overlay />
     </>
   );
 };

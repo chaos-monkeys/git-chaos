@@ -1,37 +1,39 @@
 @import '../../styles/global/typography.scss';
 @import '../../styles/global/mixins.scss';
 
-$borderSize: 1px;
-
+// FIXME: make an actual logo instead of this nonsense
 .box {
     display: grid;
     grid-row: 1;
     grid-column: 1;
     background-color: var(--primary);
+    position: absolute;
+    z-index: 1000;
     // TODO: is there a better way of doing this? (without splitting the element?)
     // &::first-line and background hacks didn't work - as the background can't bleed over the line
     // _could_ be a gross js thing
-    width: 8.7rem;
+    width: 9.1rem;
     height: 4.2rem;
-    padding: 0.1rem 0.125rem;
-    position: absolute;
-    z-index: 1000;
+    margin: -0rem -0rem;
 }
+
 
 .heading {
     @include sans-serif;
     @include font('m');
     @include font-weight('x-bold');
-    display: grid;
+    display: inline;
     grid-row: 1;
     grid-column: 1;
     line-height: 2rem;
-    letter-spacing: -0.15rem;
-    color: var(--light-text);
-    padding-right: 0.2rem; // gross, but helps with logo detail
+    letter-spacing: -0.10rem;
+    color: var(--highlight);
     z-index: 1001;
     position: absolute;
+    padding: 0.05rem;
+    padding-right: 0.3rem; // gross, but helps with logo detail
 }
+
 
 .link {
     text-decoration: none;
@@ -46,11 +48,6 @@ $borderSize: 1px;
 
         .heading {
             color: var(--primary);
-            border: 1px solid var(--highlight);
         }
     }
-}
-
-.wrapper {
-    display: grid;
 }

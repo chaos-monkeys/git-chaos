@@ -5,6 +5,7 @@ $animationSpeed: 0.22s;
 
 .sidebar {
     height: 100vh;
+    width: 100vw;
     background: var(--primary);
     z-index: 5000;
     top: 0;
@@ -28,40 +29,41 @@ $animationSpeed: 0.22s;
 
 .sidebar li {
     margin-bottom: 1rem;
+    margin-top: 100px;
 }
 
 .sidebar li a {
+    @include sans-serif;
+    @include font('l');
+    @include font-weight('x-bold');
+    color: var(--main-bg);
+    text-decoration: none;
+    text-transform: uppercase;
+    // letter-spacing: -0.075em;
     // font-weight: 900;
     // @include mono;
     // @include font('l');
     // text-decoration: none;
-    // letter-spacing: -0.075em;
-    color: var(--main-bg-color);
-    text-decoration: none;
     // text-decoration-color: var(--highlight);
     // text-decoration-thickness: 0.5rem;
     // : 0.5rem solid var(--highlight);
 
 
     // .textBackground {
-        @include sans-serif;
-        @include font('l');
-        @include font-weight('x-bold');
-        text-transform: uppercase;
-        // line-height: 7.4rem;
-        // letter-spacing: -0.5rem;
-        // overflow: hidden;
-        // user-select: none;
-        // opacity: 1;
-        // color: transparent;
-        // -webkit-text-stroke: 0.5px var(--main-bg-color);
+    // line-height: 7.4rem;
+    // letter-spacing: -0.5rem;
+    // overflow: hidden;
+    // user-select: none;
+    // opacity: 1;
+    // color: transparent;
+    // -webkit-text-stroke: 0.5px var(--main-bg);
 
     // }
 }
 
 .box {
     @include margin('m');
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg);
 }
 
 .heading {

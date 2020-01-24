@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import * as styles from './logo.module.scss';
-import { upperCaseAndBreak } from '../../utils/textFormatter';
+import upperCaseAndBreak from '../../utils/textFormatter';
 import classBuilder from '../../utils/classBuilder';
 
 interface BuildLogoProps {
@@ -11,10 +11,10 @@ interface BuildLogoProps {
 }
 
 const BuildLogo = ({ boxStyle, headingStyle, text }: BuildLogoProps) => (
-  <div className={styles.wrapper}>
+  <>
     <div className={classBuilder(styles.box, boxStyle)} />
     <h1 className={classBuilder(styles.heading, headingStyle)}>{text}</h1>
-  </div>
+  </>
 );
 
 interface LogoProps {
@@ -38,7 +38,8 @@ const Logo = ({
     case isLink:
       return (
         <Link
-          className={classBuilder(styles.link, linkStyle)}
+          // className={classBuilder(styles.link, linkStyle)}
+          className={classBuilder(linkStyle, styles.link)}
           to="/"
         >
           {BuildLogo({

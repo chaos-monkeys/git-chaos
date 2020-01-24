@@ -1,7 +1,7 @@
 // FIXME: make this into a separate copmponnet?
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
-import TextBackground from '../../components/textBackground/textBackground';
+import Tile from '../../components/tile/tile';
 import * as styles from './introduction.module.scss';
 
 const BIG_NUM = 40; // FIXME: make dynamic
@@ -35,8 +35,8 @@ const Introduction = () => {
 
   return (
     // TOOD: add text ally stuff and arias
-    <Link to={slug} className={styles.textBackgroundLink}>
-      <TextBackground className={styles.textBackground} text={backgroundText} />
+    <Link to={slug} className={styles.tileLink}>
+      <Tile className={styles.tile} text={backgroundText} />
       <h1 className={styles.title}>{title}</h1>
       <h3 className={styles.author}>{`By ${author}`}</h3>
     </Link>

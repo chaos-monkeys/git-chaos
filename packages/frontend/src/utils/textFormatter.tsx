@@ -4,12 +4,6 @@ const uuidv1 = require('uuid/v1');
 
 
 // TODO: cleanup + rethink - it be gross
-const upperCaseAndSplitIntoDivs = (title: string, splitCharacter: string = '', className?: string) => title
-  .toUpperCase()
-  .trim()
-  .split(splitCharacter)
-  .map((line) => <div key={uuidv1()} className={className}>{line}</div>);
-
 const upperCaseAndBreak = (title: string) => title
   .toUpperCase()
   .trim()
@@ -31,4 +25,4 @@ const upperCaseAndBreak = (title: string) => title
     return words;
   }, []);
 
-export { upperCaseAndSplitIntoDivs, upperCaseAndBreak };
+export default upperCaseAndBreak;

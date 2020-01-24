@@ -1,8 +1,8 @@
 import React from 'react';
-import * as styles from './textBackground.module.scss';
+import * as styles from './tile.module.scss';
 import classBuilder from '../../utils/classBuilder';
 
-const TextBackground = ({ className}:
+const Tile = ({ className}:
   {
     className: string,
     text: string,
@@ -10,10 +10,10 @@ const TextBackground = ({ className}:
     <>
       <div className={classBuilder(styles.grid, className)}>
         <div className={styles.grunge} />
-        <div className={styles.textBackground} />
+        <div className={styles.tile} />
         <div className={styles.vignette} />
       </div>
     </>
 );
 
-export default TextBackground;
+export default Tile;

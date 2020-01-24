@@ -1,0 +1,19 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.team {
+    background-color: var(--text-bg);
+}
+
+
+// FIXME: figure out how tablet and desktop words
+// @media (min-width: 768px) {
+//     .grid {
+//         grid-template-rows: 1;
+//         grid-template-columns: 1fr 1fr;
+//         margin: 0 20vw;
+//     }
+// }

@@ -7,8 +7,8 @@ module.exports = {
 
     sidebar: [
       {
-        name: 'Git Chaos',
-        url: '/git-chaos',
+        name: 'Posts',
+        url: '/blog',
       },
     ],
   },

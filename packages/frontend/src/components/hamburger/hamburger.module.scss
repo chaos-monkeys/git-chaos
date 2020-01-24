@@ -3,12 +3,9 @@
 $borderSize: 1px;
 
 .hamburger {
-    height: 3.5rem;
-    width: 3.5rem;
-    z-index: 10000;
-    padding: 0.25rem;
-    margin: 0;
-    background: none;
+    height: 4rem;
+    width: 4rem;
+    background: var(--primary);
 
     // removes dotted line on firefox button focus - only acceptable due to background pop on focus
     &::-moz-focus-inner {
