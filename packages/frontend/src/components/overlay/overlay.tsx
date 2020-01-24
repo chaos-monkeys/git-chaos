@@ -15,7 +15,11 @@ const Overlay = () => {
     <div
       className={styles.overlay}
       data-open={sidebar.open}
-      onClick={() => toggleSidebar({ isAnimating: false, state: sidebar, dispatch })}
+      onClick={() => toggleSidebar({
+        isAnimating: false,
+        isOpen: sidebar.open,
+        dispatch
+      })}
     />
   )
 }
