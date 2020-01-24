@@ -1,0 +1,9 @@
+const OPEN_SIDEBAR = "OPEN_SIDEBAR";
+const CLOSE_SIDEBAR = "CLOSE_SIDEBAR";
+
+const ACTIONS = {
+  OPEN_SIDEBAR,
+  CLOSE_SIDEBAR,
+};
+
+export default ACTIONS;

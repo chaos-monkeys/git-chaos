@@ -1,19 +1,19 @@
-import React from 'react'
+import React, { useReducer, createContext, useContext } from 'react'
+import ACTION from './actions'
 
-type Action = { type: "OPEN_SIDEBAR" } | { type: "CLOSE_SIDEBAR" }
+// FIXME: make this dynamic! this is such shit!
+type Action = { type: 'OPEN_SIDEBAR' } | { type: 'CLOSE_SIDEBAR' }
+type State = { sidebar: { open: boolean } }
 type Dispatch = (action: Action) => void
-type State = { sidebar: { open: false, isAnimating: false } }
 type AppProviderProps = { children: React.ReactNode }
 
-const AppStateContext = React.createContext<State | undefined>(undefined)
-const AppDispatchContext = React.createContext<Dispatch | undefined>(undefined)
+const AppStateContext = createContext<State | undefined>(undefined)
+const AppDispatchContext = createContext<Dispatch | undefined>(undefined)
 
 
-function AppReducer(state: State, action: Action) {
+function appReducer(state: State, action: Action) {
   switch (action.type) {
-    case "OPEN_SIDEBAR": {
-      console.log('OPEN_SIDEBAR');
-
+    case ACTION.OPEN_SIDEBAR: {
       return {
         ...state,
         sidebar: {
@@ -23,9 +23,7 @@ function AppReducer(state: State, action: Action) {
       }
     }
 
-    case "CLOSE_SIDEBAR": {
-      console.log('CLOSE_SIDEBAR');
-
+    case ACTION.CLOSE_SIDEBAR: {
       return {
         ...state,
         sidebar: {
@@ -41,9 +39,11 @@ function AppReducer(state: State, action: Action) {
   }
 }
 
-
 function AppProvider({ children }: AppProviderProps) {
-  const [state, dispatch] = React.useReducer(AppReducer, { sidebar: { open: false } })
+  const initialState: State = { sidebar: { open: false } };
+
+  const [state, dispatch] = useReducer(appReducer, initialState)
+
   return (
     <AppStateContext.Provider value={state}>
       <AppDispatchContext.Provider value={dispatch}>
@@ -54,7 +54,7 @@ function AppProvider({ children }: AppProviderProps) {
 }
 
 function useAppState() {
-  const context = React.useContext(AppStateContext)
+  const context = useContext(AppStateContext)
   if (context === undefined) {
     throw new Error('useCountState must be used within a CountProvider')
   }
@@ -62,7 +62,7 @@ function useAppState() {
 }
 
 function useAppDispatch() {
-  const context = React.useContext(AppDispatchContext)
+  const context = useContext(AppDispatchContext)
   if (context === undefined) {
     throw new Error('useCountDispatch must be used within a CountProvider')
   }
@@ -70,7 +70,4 @@ function useAppDispatch() {
 }
 
 
-
 export { AppProvider, useAppState, useAppDispatch }
-
-

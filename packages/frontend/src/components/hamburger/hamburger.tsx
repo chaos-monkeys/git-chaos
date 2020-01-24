@@ -25,7 +25,11 @@ const Hamburger = ({ isAnimating }: { isAnimating: boolean }) => {
       aria-label="Menu"
       aria-expanded={sidebar.open}
       className={styles.hamburger}
-      onClick={() => toggleSidebar({isAnimating, state: sidebar, dispatch })}
+      onClick={() => toggleSidebar({
+        isAnimating,
+        isOpen: sidebar.open,
+        dispatch
+      })}
     >
       {hamburgerIcon(sidebar.open)}
     </button>

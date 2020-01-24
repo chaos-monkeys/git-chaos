@@ -1,15 +1,19 @@
-import { OPEN_SIDEBAR, CLOSE_SIDEBAR } from '../context/actionTypes';
+import ACTIONS from '../context/actions';
 
 
-const toggleSidebar = ({ isAnimating, state, dispatch }) => {
-    const isOpen = state.open;
+interface ToggleSidebar {
+    isAnimating: boolean,
+    isOpen: boolean
+    dispatch: Function,
+}
 
-
+const toggleSidebar = ({ isAnimating, isOpen, dispatch }: ToggleSidebar) => {
+    // if it's already animating, don't do anything at all!
     if (!isAnimating) {
-        if (!isOpen) {
-            dispatch({ type: OPEN_SIDEBAR })
+        if (isOpen) {
+            dispatch({ type: ACTIONS.CLOSE_SIDEBAR })
         } else {
-            dispatch({ type: CLOSE_SIDEBAR })
+            dispatch({ type: ACTIONS.OPEN_SIDEBAR })
         }
     }
 }
