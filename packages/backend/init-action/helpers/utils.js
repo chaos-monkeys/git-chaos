@@ -1,13 +1,10 @@
 const getCurrentTimestamp = () => Math.round(new Date().getTime() / 1000);
 
 const buildHistoryIndex = history => {
-  history.reduce(
-    (historyIndex, val, idx) => ({
-      ...historyIndex,
-      [val.sha]: idx
-    }),
-    {}
-  );
+  return history.reduce((historyIndex, val, idx) => {
+    historyIndex[val.sha] = idx;
+    return historyIndex;
+  }, {});
 };
 
 module.exports = {
