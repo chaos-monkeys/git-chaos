@@ -14,7 +14,7 @@ const Introduction = () => {
           background
         }
       }
-      mdx(id: {eq: "72a13f9d-65bf-52a5-aea7-46b5e90867cd"}) {
+      mdx(id: {eq: "cb860182-7282-5fb6-890a-34a4df5d2b8e"}) {
         fields {
           slug
         }
@@ -22,6 +22,7 @@ const Introduction = () => {
           title
           author
         }
+        id
       }
     }
   `);
