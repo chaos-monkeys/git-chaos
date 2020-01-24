@@ -10307,13 +10307,10 @@ AWS.util.memoizedProperty(AWS, 'endpointCache', function() {
 const getCurrentTimestamp = () => Math.round(new Date().getTime() / 1000);
 
 const buildHistoryIndex = history => {
-  history.reduce(
-    (historyIndex, val, idx) => ({
-      ...historyIndex,
-      [val.sha]: idx
-    }),
-    {}
-  );
+  return history.reduce((historyIndex, val, idx) => {
+    historyIndex[val.sha] = idx;
+    return historyIndex;
+  }, {});
 };
 
 module.exports = {
@@ -15245,9 +15242,6 @@ const getCollaborators = async ({ octokit, owner, repo }) => {
       core.debug("getCollaborators");
       core.setFailed(error.message);
     });
-
-  core.debug("------");
-  core.debug(projectCollaborators);
 
   return projectCollaborators.reduce((allCollaborators, collaborator) => {
     allCollaborators[collaborator.id] = {
