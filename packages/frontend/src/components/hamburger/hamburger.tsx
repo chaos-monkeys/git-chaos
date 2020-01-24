@@ -1,7 +1,7 @@
 import React from 'react';
 import * as styles from './hamburger.module.scss';
 import { useAppState, useAppDispatch } from '../../context/appContext'
-import toggleSidebar from '../../hooks/toggleSidebar'
+import toggleSidebar from '../../utils/toggleSidebar'
 
 // NOTE: SOMEHOW require stops a path error with typescript and svg (and all non-code assets?)
 const OpenIcon = require('../../images/icons/open.inline.svg');
@@ -23,6 +23,7 @@ const Hamburger = ({ isAnimating }: { isAnimating: boolean }) => {
     <button
       type="button"
       aria-label="Menu"
+      data-open={sidebar.open}
       aria-expanded={sidebar.open}
       className={styles.hamburger}
       onClick={() => toggleSidebar({

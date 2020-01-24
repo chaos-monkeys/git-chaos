@@ -19,6 +19,10 @@ $borderSize: 1px;
     }
 }
 
+.hamburger[data-open="true"] {
+    background: var(--main-bg);
+}
+
 .icon {
     fill: var(--highlight);
     width: 100%;

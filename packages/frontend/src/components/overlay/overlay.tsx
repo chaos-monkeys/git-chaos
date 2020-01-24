@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAppState, useAppDispatch } from '../../context/appContext'
-import toggleSidebar from '../../hooks/toggleSidebar'
+import toggleSidebar from '../../utils/toggleSidebar'
 
 import * as styles from './overlay.module.scss';
 
