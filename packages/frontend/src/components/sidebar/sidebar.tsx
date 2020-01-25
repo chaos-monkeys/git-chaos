@@ -6,13 +6,15 @@ import { useAppState } from '../../context/appContext'
 
 import * as styles from './sidebar.module.scss';
 
+const uuidv1 = require('uuid/v1');
+
 interface link {
   url: string,
   name: string,
 }
 
 const createLinks = (links: Array<link>) => links.map((item) => (
-  <li>
+  <li key={uuidv1()}>
     <Link to={item.url}>{item.name}</Link>
   </li>
 ));
