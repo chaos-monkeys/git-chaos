@@ -1,6 +1,5 @@
 import ACTIONS from '../context/actions';
 
-
 interface ToggleSidebar {
     isAnimating: boolean,
     isOpen: boolean
@@ -17,7 +16,5 @@ const toggleSidebar = ({ isAnimating, isOpen, dispatch }: ToggleSidebar) => {
         }
     }
 }
-
-
 
 export default toggleSidebar;
