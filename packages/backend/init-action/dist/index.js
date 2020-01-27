@@ -9051,6 +9051,9 @@ const run = async () => {
 
   const historyIndex = buildHistoryIndex(history);
 
+  core.debug("Debugging history index");
+  core.debug(historyIndex);
+
   const reponseBuilder = {
     meta: {
       repo_name: GIT_REPO,
@@ -15243,6 +15246,32 @@ const getCollaborators = async ({ octokit, owner, repo }) => {
       core.setFailed(error.message);
     });
 
+  const collaboratorInformation = projectCollaborators.map(collaborator =>
+    octokit
+      .request(`GET /users/${collaborator}`)
+      .then(c => c.data)
+      .catch(error => {
+        core.debug("collaboratorInformation");
+        core.setFailed(error.message);
+      })
+  );
+
+  (await Promise.all(collaboratorInformation)).reduce(
+    (allCollaborators, collaborator) => {
+      allCollaborators[collaborator.id] = {
+        username: collaborator.login,
+        name: collaborator.name,
+        avatar_url: collaborator.avatar_url,
+        html_url: collaborator.html_url,
+        company: collaborator.company,
+        blog: collaborator.blog,
+        location: collaborator.location
+      };
+      return allCollaborators;
+    },
+    {}
+  );
+
   return projectCollaborators.reduce((allCollaborators, collaborator) => {
     allCollaborators[collaborator.id] = {
       username: collaborator.login,
@@ -17342,37 +17371,38 @@ AWS.util.mixin(AWS.Request, AWS.SequentialExecutor);
 /* 604 */
 /***/ (function(module) {
 
-const parseFiles = (commit) => commit.files.map((file) => ({
-  filename: file.filename,
-  status: file.status,
-  additions: file.additions,
-  deletions: file.deletions,
-  changes: file.changes,
-  raw_url: file.raw_url,
-}));
+const parseFiles = commit =>
+  commit.files.map(file => ({
+    filename: file.filename,
+    status: file.status,
+    additions: file.additions,
+    deletions: file.deletions,
+    changes: file.changes,
+    raw_url: file.raw_url
+  }));
 
-const parseStats = (commit) => commit.stats;
+const parseStats = commit => commit.stats;
 
-const parseMessage = (commit) => commit.commit.message;
+const parseMessage = commit => commit.commit.message;
 
-const parseUrl = (commit) => commit.commit.url;
+const parseUrl = commit => commit.commit.url;
 
-const parseAuthor = (commit) => commit.author;
+const parseAuthor = commit => commit.author;
 
-const parseCommitter = (commit) => commit.committer;
+const parseCommitter = commit => commit.committer.id;
 
-const formatCommits = (commit) => ({
+const formatCommits = commit => ({
   sha: commit.sha,
   author: parseAuthor(commit),
   committer: parseCommitter(commit),
   files: parseFiles(commit),
   stats: parseStats(commit),
   message: parseMessage(commit),
-  url: parseUrl(commit),
+  url: parseUrl(commit)
 });
 
 module.exports = {
-  formatCommits,
+  formatCommits
 };
 
 
