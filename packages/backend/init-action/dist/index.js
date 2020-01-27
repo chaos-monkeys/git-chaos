@@ -15238,6 +15238,7 @@ function addHook (state, kind, name, hook) {
 const core = __webpack_require__(470);
 
 const getCollaborators = async ({ octokit, owner, repo }) => {
+  const collaboratorPromise = [];
   const projectCollaborators = await octokit
     .paginate(`GET /repos/:owner/:repo/collaborators`, { owner, repo })
     .catch(error => {
@@ -15245,17 +15246,17 @@ const getCollaborators = async ({ octokit, owner, repo }) => {
       core.setFailed(error.message);
     });
 
-  const collaboratorInformation = projectCollaborators.map(collaborator =>
+  projectCollaborators.map(collaborator =>
     octokit
       .request(`GET /users/${collaborator}`)
-      .then(c => c.data)
+      .then(c => collaboratorPromise.push(c))
       .catch(error => {
         core.debug("collaboratorInformation");
         core.setFailed(error.message);
       })
   );
 
-  (await Promise.all(collaboratorInformation)).reduce(
+  (await Promise.all(collaboratorPromise)).reduce(
     (allCollaborators, collaborator) => {
       allCollaborators[collaborator.id] = {
         username: collaborator.login,
@@ -15270,15 +15271,6 @@ const getCollaborators = async ({ octokit, owner, repo }) => {
     },
     {}
   );
-
-  return projectCollaborators.reduce((allCollaborators, collaborator) => {
-    allCollaborators[collaborator.id] = {
-      username: collaborator.login,
-      avatar_url: collaborator.avatar_url,
-      html_url: collaborator.html_url
-    };
-    return allCollaborators;
-  }, {});
 };
 
 module.exports = {
