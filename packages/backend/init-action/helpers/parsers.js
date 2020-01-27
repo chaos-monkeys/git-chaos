@@ -17,7 +17,7 @@ const parseUrl = commit => commit.commit.url;
 const parseAuthor = commit => commit.author;
 
 const parseCommitter = commit =>
-  Object.keys(commit.committer) ? commit.committer.id : {};
+  Object.keys(commit.committer || {}) > 0 ? commit.committer.id : null;
 
 const formatCommits = commit => ({
   sha: commit.sha,
