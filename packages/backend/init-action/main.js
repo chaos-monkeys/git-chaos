@@ -40,7 +40,6 @@ const run = async () => {
 
   const historyIndex = buildHistoryIndex(history);
 
-  core.debug("Debugging history index");
   core.debug(historyIndex);
 
   const reponseBuilder = {
