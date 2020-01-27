@@ -16,19 +16,10 @@ const {
   AWS_SECRET_KEY
 } = process.env;
 
-core.debug(GITHUB_TOKEN);
-core.debug(GITHUB_SHA);
-core.debug(GITHUB_REPOSITORY);
-core.debug(GITHUB_REF);
-core.debug(AWS_ACCESS_KEY);
-core.debug(AWS_SECRET_KEY);
-
 const [GIT_OWNER, GIT_REPO] = GITHUB_REPOSITORY.split("/");
 const issueNumber = GITHUB_REF.split("/")[2];
 
 const run = async () => {
-  core.debug(`issue_number: ${issueNumber}`);
-
   const octokit = new Octokit({
     auth: GITHUB_TOKEN
   });
@@ -37,7 +28,6 @@ const run = async () => {
     octokit,
     owner: GIT_OWNER,
     repo: GIT_REPO,
-
     branch: await getBranchName({
       octokit,
       owner: GIT_OWNER,
