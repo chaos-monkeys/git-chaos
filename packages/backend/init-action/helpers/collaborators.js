@@ -12,7 +12,7 @@ const getCollaborators = async ({ octokit, owner, repo }) => {
   projectCollaborators.map(collaborator =>
     octokit
       .request(`GET /users/${collaborator}`)
-      .then(c => collaboratorPromise.push(c))
+      .then(c => collaboratorPromise.push(c.data))
       .catch(error => {
         core.debug("collaboratorInformation");
         core.setFailed(error.message);
