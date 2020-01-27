@@ -15,6 +15,14 @@ const {
   AWS_ACCESS_KEY,
   AWS_SECRET_KEY
 } = process.env;
+
+core.debug(GITHUB_TOKEN);
+core.debug(GITHUB_SHA);
+core.debug(GITHUB_REPOSITORY);
+core.debug(GITHUB_REF);
+core.debug(AWS_ACCESS_KEY);
+core.debug(AWS_SECRET_KEY);
+
 const [GIT_OWNER, GIT_REPO] = GITHUB_REPOSITORY.split("/");
 const issueNumber = GITHUB_REF.split("/")[2];
 
