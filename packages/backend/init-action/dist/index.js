@@ -6282,7 +6282,7 @@ module.exports = AWS.CognitoIdentity;
 /* 215 */
 /***/ (function(module) {
 
-module.exports = {"_args":[["@octokit/rest@16.35.2","/Users/robert/Documents/Development/git-chaos/packages/backend/init-action"]],"_from":"@octokit/rest@16.35.2","_id":"@octokit/rest@16.35.2","_inBundle":false,"_integrity":"sha512-iijaNZpn9hBpUdh8YdXqNiWazmq4R1vCUsmxpBB0kCQ0asHZpCx+HNs22eiHuwYKRhO31ZSAGBJLi0c+3XHaKQ==","_location":"/@octokit/rest","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"@octokit/rest@16.35.2","name":"@octokit/rest","escapedName":"@octokit%2frest","scope":"@octokit","rawSpec":"16.35.2","saveSpec":null,"fetchSpec":"16.35.2"},"_requiredBy":["/"],"_resolved":"https://registry.npmjs.org/@octokit/rest/-/rest-16.35.2.tgz","_spec":"16.35.2","_where":"/Users/robert/Documents/Development/git-chaos/packages/backend/init-action","author":{"name":"Gregor Martynus","url":"https://github.com/gr2m"},"bugs":{"url":"https://github.com/octokit/rest.js/issues"},"bundlesize":[{"path":"./dist/octokit-rest.min.js.gz","maxSize":"33 kB"}],"contributors":[{"name":"Mike de Boer","email":"info@mikedeboer.nl"},{"name":"Fabian Jakobs","email":"fabian@c9.io"},{"name":"Joe Gallo","email":"joe@brassafrax.com"},{"name":"Gregor Martynus","url":"https://github.com/gr2m"}],"dependencies":{"@octokit/request":"^5.2.0","@octokit/request-error":"^1.0.2","atob-lite":"^2.0.0","before-after-hook":"^2.0.0","btoa-lite":"^1.0.0","deprecation":"^2.0.0","lodash.get":"^4.4.2","lodash.set":"^4.3.2","lodash.uniq":"^4.5.0","octokit-pagination-methods":"^1.1.0","once":"^1.4.0","universal-user-agent":"^4.0.0"},"description":"GitHub REST API client for Node.js","devDependencies":{"@gimenete/type-writer":"^0.1.3","@octokit/fixtures-server":"^5.0.6","@octokit/graphql":"^4.2.0","@types/node":"^12.0.0","bundlesize":"^0.18.0","chai":"^4.1.2","compression-webpack-plugin":"^3.0.0","cypress":"^3.0.0","glob":"^7.1.2","http-proxy-agent":"^2.1.0","lodash.camelcase":"^4.3.0","lodash.merge":"^4.6.1","lodash.upperfirst":"^4.3.1","mkdirp":"^0.5.1","mocha":"^6.0.0","mustache":"^3.0.0","nock":"^11.3.3","npm-run-all":"^4.1.2","nyc":"^14.0.0","prettier":"^1.14.2","proxy":"^1.0.0","semantic-release":"^15.0.0","sinon":"^7.2.4","sinon-chai":"^3.0.0","sort-keys":"^4.0.0","string-to-arraybuffer":"^1.0.0","string-to-jsdoc-comment":"^1.0.0","typescript":"^3.3.1","webpack":"^4.0.0","webpack-bundle-analyzer":"^3.0.0","webpack-cli":"^3.0.0"},"files":["index.js","index.d.ts","lib","plugins"],"homepage":"https://github.com/octokit/rest.js#readme","keywords":["octokit","github","rest","api-client"],"license":"MIT","name":"@octokit/rest","nyc":{"ignore":["test"]},"publishConfig":{"access":"public"},"release":{"publish":["@semantic-release/npm",{"path":"@semantic-release/github","assets":["dist/*","!dist/*.map.gz"]}]},"repository":{"type":"git","url":"git+https://github.com/octokit/rest.js.git"},"scripts":{"build":"npm-run-all build:*","build:browser":"npm-run-all build:browser:*","build:browser:development":"webpack --mode development --entry . --output-library=Octokit --output=./dist/octokit-rest.js --profile --json > dist/bundle-stats.json","build:browser:production":"webpack --mode production --entry . --plugin=compression-webpack-plugin --output-library=Octokit --output-path=./dist --output-filename=octokit-rest.min.js --devtool source-map","build:ts":"npm run -s update-endpoints:typescript","coverage":"nyc report --reporter=html && open coverage/index.html","generate-bundle-report":"webpack-bundle-analyzer dist/bundle-stats.json --mode=static --no-open --report dist/bundle-report.html","lint":"prettier --check '{lib,plugins,scripts,test}/**/*.{js,json,ts}' 'docs/*.{js,json}' 'docs/src/**/*' index.js README.md package.json","lint:fix":"prettier --write '{lib,plugins,scripts,test}/**/*.{js,json,ts}' 'docs/*.{js,json}' 'docs/src/**/*' index.js README.md package.json","postvalidate:ts":"tsc --noEmit --target es6 test/typescript-validate.ts","prebuild:browser":"mkdirp dist/","pretest":"npm run -s lint","prevalidate:ts":"npm run -s build:ts","start-fixtures-server":"octokit-fixtures-server","test":"nyc mocha test/mocha-node-setup.js \"test/*/**/*-test.js\"","test:browser":"cypress run --browser chrome","update-endpoints":"npm-run-all update-endpoints:*","update-endpoints:code":"node scripts/update-endpoints/code","update-endpoints:fetch-json":"node scripts/update-endpoints/fetch-json","update-endpoints:typescript":"node scripts/update-endpoints/typescript","validate:ts":"tsc --target es6 --noImplicitAny index.d.ts"},"types":"index.d.ts","version":"16.35.2"};
+module.exports = {"_args":[["@octokit/rest@16.35.2","/Users/robert/Documents/Projects/git-chaos/packages/backend/init-action"]],"_from":"@octokit/rest@16.35.2","_id":"@octokit/rest@16.35.2","_inBundle":false,"_integrity":"sha512-iijaNZpn9hBpUdh8YdXqNiWazmq4R1vCUsmxpBB0kCQ0asHZpCx+HNs22eiHuwYKRhO31ZSAGBJLi0c+3XHaKQ==","_location":"/@octokit/rest","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"@octokit/rest@16.35.2","name":"@octokit/rest","escapedName":"@octokit%2frest","scope":"@octokit","rawSpec":"16.35.2","saveSpec":null,"fetchSpec":"16.35.2"},"_requiredBy":["/"],"_resolved":"https://registry.npmjs.org/@octokit/rest/-/rest-16.35.2.tgz","_spec":"16.35.2","_where":"/Users/robert/Documents/Projects/git-chaos/packages/backend/init-action","author":{"name":"Gregor Martynus","url":"https://github.com/gr2m"},"bugs":{"url":"https://github.com/octokit/rest.js/issues"},"bundlesize":[{"path":"./dist/octokit-rest.min.js.gz","maxSize":"33 kB"}],"contributors":[{"name":"Mike de Boer","email":"info@mikedeboer.nl"},{"name":"Fabian Jakobs","email":"fabian@c9.io"},{"name":"Joe Gallo","email":"joe@brassafrax.com"},{"name":"Gregor Martynus","url":"https://github.com/gr2m"}],"dependencies":{"@octokit/request":"^5.2.0","@octokit/request-error":"^1.0.2","atob-lite":"^2.0.0","before-after-hook":"^2.0.0","btoa-lite":"^1.0.0","deprecation":"^2.0.0","lodash.get":"^4.4.2","lodash.set":"^4.3.2","lodash.uniq":"^4.5.0","octokit-pagination-methods":"^1.1.0","once":"^1.4.0","universal-user-agent":"^4.0.0"},"description":"GitHub REST API client for Node.js","devDependencies":{"@gimenete/type-writer":"^0.1.3","@octokit/fixtures-server":"^5.0.6","@octokit/graphql":"^4.2.0","@types/node":"^12.0.0","bundlesize":"^0.18.0","chai":"^4.1.2","compression-webpack-plugin":"^3.0.0","cypress":"^3.0.0","glob":"^7.1.2","http-proxy-agent":"^2.1.0","lodash.camelcase":"^4.3.0","lodash.merge":"^4.6.1","lodash.upperfirst":"^4.3.1","mkdirp":"^0.5.1","mocha":"^6.0.0","mustache":"^3.0.0","nock":"^11.3.3","npm-run-all":"^4.1.2","nyc":"^14.0.0","prettier":"^1.14.2","proxy":"^1.0.0","semantic-release":"^15.0.0","sinon":"^7.2.4","sinon-chai":"^3.0.0","sort-keys":"^4.0.0","string-to-arraybuffer":"^1.0.0","string-to-jsdoc-comment":"^1.0.0","typescript":"^3.3.1","webpack":"^4.0.0","webpack-bundle-analyzer":"^3.0.0","webpack-cli":"^3.0.0"},"files":["index.js","index.d.ts","lib","plugins"],"homepage":"https://github.com/octokit/rest.js#readme","keywords":["octokit","github","rest","api-client"],"license":"MIT","name":"@octokit/rest","nyc":{"ignore":["test"]},"publishConfig":{"access":"public"},"release":{"publish":["@semantic-release/npm",{"path":"@semantic-release/github","assets":["dist/*","!dist/*.map.gz"]}]},"repository":{"type":"git","url":"git+https://github.com/octokit/rest.js.git"},"scripts":{"build":"npm-run-all build:*","build:browser":"npm-run-all build:browser:*","build:browser:development":"webpack --mode development --entry . --output-library=Octokit --output=./dist/octokit-rest.js --profile --json > dist/bundle-stats.json","build:browser:production":"webpack --mode production --entry . --plugin=compression-webpack-plugin --output-library=Octokit --output-path=./dist --output-filename=octokit-rest.min.js --devtool source-map","build:ts":"npm run -s update-endpoints:typescript","coverage":"nyc report --reporter=html && open coverage/index.html","generate-bundle-report":"webpack-bundle-analyzer dist/bundle-stats.json --mode=static --no-open --report dist/bundle-report.html","lint":"prettier --check '{lib,plugins,scripts,test}/**/*.{js,json,ts}' 'docs/*.{js,json}' 'docs/src/**/*' index.js README.md package.json","lint:fix":"prettier --write '{lib,plugins,scripts,test}/**/*.{js,json,ts}' 'docs/*.{js,json}' 'docs/src/**/*' index.js README.md package.json","postvalidate:ts":"tsc --noEmit --target es6 test/typescript-validate.ts","prebuild:browser":"mkdirp dist/","pretest":"npm run -s lint","prevalidate:ts":"npm run -s build:ts","start-fixtures-server":"octokit-fixtures-server","test":"nyc mocha test/mocha-node-setup.js \"test/*/**/*-test.js\"","test:browser":"cypress run --browser chrome","update-endpoints":"npm-run-all update-endpoints:*","update-endpoints:code":"node scripts/update-endpoints/code","update-endpoints:fetch-json":"node scripts/update-endpoints/fetch-json","update-endpoints:typescript":"node scripts/update-endpoints/typescript","validate:ts":"tsc --target es6 --noImplicitAny index.d.ts"},"types":"index.d.ts","version":"16.35.2"};
 
 /***/ }),
 /* 216 */,
@@ -9014,7 +9014,8 @@ const Octokit = __webpack_require__(0);
 const { getCodeHistory, getBranchName } = __webpack_require__(630);
 const { createComment } = __webpack_require__(210);
 const { uploadHistory } = __webpack_require__(623);
-const { getCurrentTimestamp } = __webpack_require__(400);
+const { getCollaborators } = __webpack_require__(522);
+const { getCurrentTimestamp, buildHistoryIndex } = __webpack_require__(400);
 
 // these envs come from the github action
 const {
@@ -9023,17 +9024,16 @@ const {
   GITHUB_REPOSITORY,
   GITHUB_REF,
   AWS_ACCESS_KEY,
-  AWS_SECRET_KEY,
+  AWS_SECRET_KEY
 } = process.env;
-const [GIT_OWNER, GIT_REPO] = GITHUB_REPOSITORY.split('/');
-const issueNumber = GITHUB_REF.split('/')[2];
-
+const [GIT_OWNER, GIT_REPO] = GITHUB_REPOSITORY.split("/");
+const issueNumber = GITHUB_REF.split("/")[2];
 
 const run = async () => {
   core.debug(`issue_number: ${issueNumber}`);
 
   const octokit = new Octokit({
-    auth: GITHUB_TOKEN,
+    auth: GITHUB_TOKEN
   });
 
   const history = await getCodeHistory({
@@ -9045,25 +9045,35 @@ const run = async () => {
       octokit,
       owner: GIT_OWNER,
       repo: GIT_REPO,
-      sha: GITHUB_SHA,
-    }),
+      sha: GITHUB_SHA
+    })
   });
+
+  const historyIndex = buildHistoryIndex(history);
 
   const reponseBuilder = {
     meta: {
       repo_name: GIT_REPO,
       repo_owner: GIT_OWNER,
       start_time: getCurrentTimestamp(),
-      commit_sha: GITHUB_SHA,
+      commit_sha: GITHUB_SHA
     },
-    history: history,
+    collaborators: await getCollaborators({
+      octokit,
+      owner: GIT_OWNER,
+      repo: GIT_REPO
+    }),
+    historyIndex: historyIndex,
+    history: history
   };
+
+  core.debug(`response_builder: ${reponseBuilder.meta}`);
 
   const path = await uploadHistory({
     accessKeyId: AWS_ACCESS_KEY,
     secretAccessKey: AWS_SECRET_KEY,
     body: reponseBuilder,
-    sha: GITHUB_SHA,
+    sha: GITHUB_SHA
   });
 
   return createComment({
@@ -9072,7 +9082,7 @@ const run = async () => {
     repo: GIT_REPO,
     issue_number: issueNumber,
     // TODO: update with something less 'temporary'
-    message: `Git history uploaded to ${path}`,
+    message: `Git history uploaded to ${path}`
   });
 };
 
@@ -10294,10 +10304,18 @@ AWS.util.memoizedProperty(AWS, 'endpointCache', function() {
 /* 400 */
 /***/ (function(module) {
 
-const getCurrentTimestamp = () => Math.round((new Date()).getTime() / 1000);
+const getCurrentTimestamp = () => Math.round(new Date().getTime() / 1000);
+
+const buildHistoryIndex = history => {
+  return history.reduce((historyIndex, val, idx) => {
+    historyIndex[val.sha] = idx;
+    return historyIndex;
+  }, {});
+};
 
 module.exports = {
-    getCurrentTimestamp,
+  getCurrentTimestamp,
+  buildHistoryIndex
 };
 
 
@@ -15212,7 +15230,35 @@ function addHook (state, kind, name, hook) {
 /* 519 */,
 /* 520 */,
 /* 521 */,
-/* 522 */,
+/* 522 */
+/***/ (function(module, __unusedexports, __webpack_require__) {
+
+const core = __webpack_require__(470);
+
+const getCollaborators = async ({ octokit, owner, repo }) => {
+  const projectCollaborators = await octokit
+    .paginate(`GET /repos/:owner/:repo/collaborators`, { owner, repo })
+    .catch(error => {
+      core.debug("getCollaborators");
+      core.setFailed(error.message);
+    });
+
+  return projectCollaborators.reduce((allCollaborators, collaborator) => {
+    allCollaborators[collaborator.id] = {
+      username: collaborator.login,
+      avatar_url: collaborator.avatar_url,
+      html_url: collaborator.html_url
+    };
+    return allCollaborators;
+  }, {});
+};
+
+module.exports = {
+  getCollaborators
+};
+
+
+/***/ }),
 /* 523 */
 /***/ (function(module, __unusedexports, __webpack_require__) {
 
@@ -18839,22 +18885,19 @@ const core = __webpack_require__(470);
 const { formatCommits } = __webpack_require__(604);
 const { getCommits } = __webpack_require__(393);
 
-const getBranchName = async ({
-  octokit,
-  owner,
-  repo,
-  sha,
-}) => {
+const getBranchName = async ({ octokit, owner, repo, sha }) => {
   // FIXME: this _will_ not be appropriate in the future, but will work for now
   // get all the open prs
-  const { data: pullRequests } = await octokit.pulls.list({
-    owner,
-    repo,
-    state: 'open',
-  }).catch((error) => {
-    core.debug('pullRequests');
-    core.setFailed(error.message);
-  });
+  const { data: pullRequests } = await octokit.pulls
+    .list({
+      owner,
+      repo,
+      state: "open"
+    })
+    .catch(error => {
+      core.debug("pullRequests");
+      core.setFailed(error.message);
+    });
 
   const branchName = (() => {
     for (let i = 0; i < pullRequests.length; i += 1) {
@@ -18863,26 +18906,22 @@ const getBranchName = async ({
         return pullRequests[i].head.ref;
       }
     }
-    return '';
+    return "";
   })();
 
-  return branchName || core.setFailed('Unable to find branch');
+  return branchName || core.setFailed("Unable to find branch");
 };
 
-const getCodeHistory = async ({
-  octokit,
-  owner,
-  repo,
-  branch: envBranch,
-}) => {
+const getCodeHistory = async ({ octokit, owner, repo, branch: envBranch }) => {
   // get branch
   const { data: branch } = await octokit.repos
     .getBranch({
       owner,
       repo,
-      branch: envBranch,
-    }).catch((error) => {
-      core.debug('getBranch');
+      branch: envBranch
+    })
+    .catch(error => {
+      core.debug("getBranch");
       core.setFailed(error.message);
     });
 
@@ -18891,9 +18930,9 @@ const getCodeHistory = async ({
     octokit,
     owner,
     repo,
-    sha: branch.name,
-  }).catch((error) => {
-    core.debug('getCommits');
+    sha: branch.name
+  }).catch(error => {
+    core.debug("getCommits");
     core.setFailed(error.message);
   });
 
@@ -18903,7 +18942,7 @@ const getCodeHistory = async ({
 
 module.exports = {
   getCodeHistory,
-  getBranchName,
+  getBranchName
 };
 
 
