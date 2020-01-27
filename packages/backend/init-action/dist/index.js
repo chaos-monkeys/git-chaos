@@ -15248,7 +15248,7 @@ const getCollaborators = async ({ octokit, owner, repo }) => {
 
   projectCollaborators.map(collaborator =>
     octokit
-      .request(`GET /users/${collaborator}`)
+      .request(`GET /users/${collaborator.login}`)
       .then(c => collaboratorPromise.push(c.data))
       .catch(error => {
         core.debug("collaboratorInformation");
