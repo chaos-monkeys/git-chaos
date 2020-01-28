@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
-    "start:local": "NODE_ENV=local node -r dotenv/config main.js",
+    "start:local": "node -r dotenv/config main.js",
     "build": "ncc build main.js"
   },
   "author": "",

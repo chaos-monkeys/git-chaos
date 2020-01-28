@@ -38,9 +38,6 @@ const run = async () => {
 
   const historyIndex = buildHistoryIndex(history);
 
-  core.debug("Debugging history index");
-  core.debug(historyIndex);
-
   const reponseBuilder = {
     meta: {
       repo_name: GIT_REPO,
@@ -56,8 +53,6 @@ const run = async () => {
     historyIndex: historyIndex,
     history: history
   };
-
-  core.debug(`response_builder: ${reponseBuilder.meta}`);
 
   const path = await uploadHistory({
     accessKeyId: AWS_ACCESS_KEY,
