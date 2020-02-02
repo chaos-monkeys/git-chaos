@@ -1,0 +1,3233 @@
+`{
+  "meta": {
+    "repo_name": "git-chaos",
+    "repo_owner": "chaos-monkeys",
+    "start_time": 1580668280,
+    "commit_sha": "637688c86452b0be187d03e1f22925ed7c9384ee"
+  },
+  "collaborators": {
+    "3811773": {
+      "username": "pxlprfct",
+      "name": "Ollie Williams",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3811773?v=4",
+      "html_url": "https://github.com/pxlprfct",
+      "company": "IBM",
+      "blog": "ollie.work",
+      "location": "London, UK"
+    },
+    "5066994": {
+      "username": "robalaban",
+      "name": "Robert Balaban",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+      "html_url": "https://github.com/robalaban",
+      "company": "IBM ",
+      "blog": "https://robertbalaban.com",
+      "location": "London, United Kingdom"
+    },
+    "55034205": {
+      "username": "admin-chaosmonkeys",
+      "name": null,
+      "avatar_url": "https://avatars0.githubusercontent.com/u/55034205?v=4",
+      "html_url": "https://github.com/admin-chaosmonkeys",
+      "company": null,
+      "blog": "",
+      "location": null
+    }
+  },
+  "historyIndex": {
+    "6d49eeca1a2f29fa8ae645139cee8fa65eab7b04": 0,
+    "894bdcdc72a2a2cb7769073115e59de8bd81f4e5": 1,
+    "fd66775913a0ac08eb8df6f3a951486b93cb2b5b": 2,
+    "31da5fecae0cc59b3e7523f0d7d29bee33ca449b": 3,
+    "c5b8136f820df45a216b6639c7e6c4f3311e8b5d": 4,
+    "34f7b4c949dca360e434f124c1261ee030d20dbd": 5,
+    "bc8b91fa1e1c59653af0bea68b3ce430088b9f29": 6,
+    "68aafec23d2986503b9d50670f8264ba92885f29": 7,
+    "4f41846e8376bc4f23b26b1adb9c75ca76bdc1b9": 8,
+    "2c3340ea79d9d2e12381ed687d1f14f1885dbcb9": 9,
+    "636d35ada98ce8a33baf5d8cd74e7491e77bc9a9": 10,
+    "68d8c80d2a78c99ddc290314bdbc09e54c24e61f": 11,
+    "5b6a6e61c2d76b11e07ca602a93b89504e3f01bd": 12,
+    "cde0b77f7e24fd965b699522f5810355ecc69d35": 13,
+    "8f7769a2d04839d6aeaf17512fb4d1aa8259b193": 14,
+    "5272adc2e1755d0fce2f633ad01ce3b9160fb1f5": 15,
+    "77f4a87d033f8143ad6c78f83734337e52f8a8c5": 16,
+    "3984b018cd4ce1114e3148684da82f89f75fcfbf": 17,
+    "1122474f14c517859d2bcaa807fed291383a45ea": 18,
+    "ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1": 19,
+    "d14e29f862c41ba7a511a088fffe020e73231072": 20,
+    "e533f01200209cbf2ec80adca4fee4a3b9172e21": 21,
+    "9260a1858c646109bc5c864f4050362ed81e8946": 22,
+    "efc833cbdacf669eaa5fa425d8e5fd6c57b6986a": 23,
+    "1064c25d61ba51731e8a879693685dfe388c9ea3": 24,
+    "19608ad2ed008f4c481f40c3094f35b81f50c908": 25,
+    "8713067c083854f089b9a777a37a867345c28080": 26,
+    "3851f2d3afc5b325d64548de27dd25dee2d242c5": 27,
+    "a66ac8618d2639345f950b876df4c527b805a0ee": 28,
+    "22de4bcc07c98490d93d46dfabf6d8c743a8a2b5": 29,
+    "a256282301a228e7e3d2d447d0bfc11c7e1edb0a": 30,
+    "9d4ded065fe1112e111e54e9bc214ae97fffaf5d": 31,
+    "993f33f36cc5a1028f2a51add967f342f892c530": 32,
+    "5fbfee12a52c822f93b4d0b3d081beeb31398914": 33,
+    "f76da974e5f7b6ca79a502fa6046df0da29d5404": 34,
+    "da82967b0e4e5c86849a31878d8da00e7382e36d": 35,
+    "a17af727c788d7e5347561b4fc59d776126570ba": 36,
+    "1d03183247c67683292b666f3ff119b2c059d812": 37,
+    "20f88400f3f2e183f07792d5a16e32dc83deb75e": 38,
+    "e87d64a2a65f386a8786b190802f20f10379439a": 39,
+    "c8385a29da7fe710a015395e55c1c7d027820eec": 40,
+    "6478cf882b808386f3b638e1a8c3a02965f4cdb6": 41,
+    "5593b937b5ea9d4ac26e68b555d8d72bcc9fca15": 42,
+    "9a6d294d64ff074189899a13c3b87ca778ad2ba0": 43,
+    "2f8b2cdd7dfb65c68d69c07599120d350fa522bb": 44,
+    "aac9e3672bda2aa33c966bf304440f37e998c904": 45,
+    "fe9a51d1b6988a6f52aea394603a6270eccc21e8": 46,
+    "44654bf5260c714550ac8732e48665d0580fd272": 47
+  },
+  "history": [
+    {
+      "sha": "6d49eeca1a2f29fa8ae645139cee8fa65eab7b04",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [],
+      "stats": {
+        "total": 0,
+        "additions": 0,
+        "deletions": 0
+      },
+      "message": "Merge branch 'feat/collaborator-detailed-information' of github.com:chaos-monkeys/git-chaos into feat/collaborator-detailed-information",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/6d49eeca1a2f29fa8ae645139cee8fa65eab7b04"
+    },
+    {
+      "sha": "894bdcdc72a2a2cb7769073115e59de8bd81f4e5",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/backend/init-action/dist/index.js",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 7,
+          "changes": 9,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/894bdcdc72a2a2cb7769073115e59de8bd81f4e5/packages/backend/init-action/dist/index.js"
+        }
+      ],
+      "stats": {
+        "total": 9,
+        "additions": 2,
+        "deletions": 7
+      },
+      "message": "Merged with upstream",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/894bdcdc72a2a2cb7769073115e59de8bd81f4e5"
+    },
+    {
+      "sha": "fd66775913a0ac08eb8df6f3a951486b93cb2b5b",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "additions": 0,
+          "deletions": 2,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/fd66775913a0ac08eb8df6f3a951486b93cb2b5b/README.md"
+        },
+        {
+          "filename": "package.json",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 1,
+          "changes": 3,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/fd66775913a0ac08eb8df6f3a951486b93cb2b5b/package.json"
+        },
+        {
+          "filename": "packages/backend/init-action/.env.sample",
+          "status": "added",
+          "additions": 6,
+          "deletions": 0,
+          "changes": 6,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/fd66775913a0ac08eb8df6f3a951486b93cb2b5b/packages/backend/init-action/.env.sample"
+        },
+        {
+          "filename": "packages/backend/init-action/main.js",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 7,
+          "changes": 9,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/fd66775913a0ac08eb8df6f3a951486b93cb2b5b/packages/backend/init-action/main.js"
+        },
+        {
+          "filename": "packages/backend/init-action/package-lock.json",
+          "status": "modified",
+          "additions": 6,
+          "deletions": 0,
+          "changes": 6,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/fd66775913a0ac08eb8df6f3a951486b93cb2b5b/packages/backend/init-action/package-lock.json"
+        },
+        {
+          "filename": "packages/backend/init-action/package.json",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 0,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/fd66775913a0ac08eb8df6f3a951486b93cb2b5b/packages/backend/init-action/package.json"
+        }
+      ],
+      "stats": {
+        "total": 28,
+        "additions": 18,
+        "deletions": 10
+      },
+      "message": "Logging Github_ref",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/fd66775913a0ac08eb8df6f3a951486b93cb2b5b"
+    },
+    {
+      "sha": "31da5fecae0cc59b3e7523f0d7d29bee33ca449b",
+      "author": {
+        "login": "pxlprfct",
+        "id": 3811773,
+        "node_id": "MDQ6VXNlcjM4MTE3NzM=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/3811773?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pxlprfct",
+        "html_url": "https://github.com/pxlprfct",
+        "followers_url": "https://api.github.com/users/pxlprfct/followers",
+        "following_url": "https://api.github.com/users/pxlprfct/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pxlprfct/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pxlprfct/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pxlprfct/subscriptions",
+        "organizations_url": "https://api.github.com/users/pxlprfct/orgs",
+        "repos_url": "https://api.github.com/users/pxlprfct/repos",
+        "events_url": "https://api.github.com/users/pxlprfct/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pxlprfct/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 19864447,
+      "files": [
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "additions": 0,
+          "deletions": 2,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/31da5fecae0cc59b3e7523f0d7d29bee33ca449b/README.md"
+        },
+        {
+          "filename": "package.json",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 1,
+          "changes": 3,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/31da5fecae0cc59b3e7523f0d7d29bee33ca449b/package.json"
+        },
+        {
+          "filename": "packages/backend/init-action/.env.sample",
+          "status": "added",
+          "additions": 6,
+          "deletions": 0,
+          "changes": 6,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/31da5fecae0cc59b3e7523f0d7d29bee33ca449b/packages/backend/init-action/.env.sample"
+        },
+        {
+          "filename": "packages/backend/init-action/main.js",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 7,
+          "changes": 8,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/31da5fecae0cc59b3e7523f0d7d29bee33ca449b/packages/backend/init-action/main.js"
+        },
+        {
+          "filename": "packages/backend/init-action/package-lock.json",
+          "status": "modified",
+          "additions": 6,
+          "deletions": 0,
+          "changes": 6,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/31da5fecae0cc59b3e7523f0d7d29bee33ca449b/packages/backend/init-action/package-lock.json"
+        },
+        {
+          "filename": "packages/backend/init-action/package.json",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 0,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/31da5fecae0cc59b3e7523f0d7d29bee33ca449b/packages/backend/init-action/package.json"
+        }
+      ],
+      "stats": {
+        "total": 27,
+        "additions": 17,
+        "deletions": 10
+      },
+      "message": "Merge branch 'master' into feat/collaborator-detailed-information",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/31da5fecae0cc59b3e7523f0d7d29bee33ca449b"
+    },
+    {
+      "sha": "c5b8136f820df45a216b6639c7e6c4f3311e8b5d",
+      "author": {
+        "login": "pxlprfct",
+        "id": 3811773,
+        "node_id": "MDQ6VXNlcjM4MTE3NzM=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/3811773?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pxlprfct",
+        "html_url": "https://github.com/pxlprfct",
+        "followers_url": "https://api.github.com/users/pxlprfct/followers",
+        "following_url": "https://api.github.com/users/pxlprfct/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pxlprfct/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pxlprfct/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pxlprfct/subscriptions",
+        "organizations_url": "https://api.github.com/users/pxlprfct/orgs",
+        "repos_url": "https://api.github.com/users/pxlprfct/repos",
+        "events_url": "https://api.github.com/users/pxlprfct/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pxlprfct/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 19864447,
+      "files": [
+        {
+          "filename": "package.json",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 1,
+          "changes": 3,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/c5b8136f820df45a216b6639c7e6c4f3311e8b5d/package.json"
+        },
+        {
+          "filename": "packages/backend/init-action/.env.sample",
+          "status": "added",
+          "additions": 6,
+          "deletions": 0,
+          "changes": 6,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/c5b8136f820df45a216b6639c7e6c4f3311e8b5d/packages/backend/init-action/.env.sample"
+        },
+        {
+          "filename": "packages/backend/init-action/main.js",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 8,
+          "changes": 9,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/c5b8136f820df45a216b6639c7e6c4f3311e8b5d/packages/backend/init-action/main.js"
+        },
+        {
+          "filename": "packages/backend/init-action/package-lock.json",
+          "status": "modified",
+          "additions": 6,
+          "deletions": 0,
+          "changes": 6,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/c5b8136f820df45a216b6639c7e6c4f3311e8b5d/packages/backend/init-action/package-lock.json"
+        },
+        {
+          "filename": "packages/backend/init-action/package.json",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 0,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/c5b8136f820df45a216b6639c7e6c4f3311e8b5d/packages/backend/init-action/package.json"
+        }
+      ],
+      "stats": {
+        "total": 26,
+        "additions": 17,
+        "deletions": 9
+      },
+      "message": "Added dot env and allowed application to be run locally (#20)\\n\\n* added env debugs\\r\\n\\r\\n* added dotenv\\r\\n\\r\\n* removed unneeded env var\\r\\n\\r\\n* removed unused node env",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/c5b8136f820df45a216b6639c7e6c4f3311e8b5d"
+    },
+    {
+      "sha": "34f7b4c949dca360e434f124c1261ee030d20dbd",
+      "author": {
+        "login": "pxlprfct",
+        "id": 3811773,
+        "node_id": "MDQ6VXNlcjM4MTE3NzM=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/3811773?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pxlprfct",
+        "html_url": "https://github.com/pxlprfct",
+        "followers_url": "https://api.github.com/users/pxlprfct/followers",
+        "following_url": "https://api.github.com/users/pxlprfct/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pxlprfct/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pxlprfct/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pxlprfct/subscriptions",
+        "organizations_url": "https://api.github.com/users/pxlprfct/orgs",
+        "repos_url": "https://api.github.com/users/pxlprfct/repos",
+        "events_url": "https://api.github.com/users/pxlprfct/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pxlprfct/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "additions": 0,
+          "deletions": 2,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/34f7b4c949dca360e434f124c1261ee030d20dbd/README.md"
+        }
+      ],
+      "stats": {
+        "total": 2,
+        "additions": 0,
+        "deletions": 2
+      },
+      "message": "Removed netlify badge - as no longer connected :) (#21)",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/34f7b4c949dca360e434f124c1261ee030d20dbd"
+    },
+    {
+      "sha": "bc8b91fa1e1c59653af0bea68b3ce430088b9f29",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/backend/init-action/dist/index.js",
+          "status": "modified",
+          "additions": 3,
+          "deletions": 1,
+          "changes": 4,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/bc8b91fa1e1c59653af0bea68b3ce430088b9f29/packages/backend/init-action/dist/index.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/parsers.js",
+          "status": "modified",
+          "additions": 3,
+          "deletions": 1,
+          "changes": 4,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/bc8b91fa1e1c59653af0bea68b3ce430088b9f29/packages/backend/init-action/helpers/parsers.js"
+        }
+      ],
+      "stats": {
+        "total": 8,
+        "additions": 6,
+        "deletions": 2
+      },
+      "message": "Fixing with Ollie method",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/bc8b91fa1e1c59653af0bea68b3ce430088b9f29"
+    },
+    {
+      "sha": "68aafec23d2986503b9d50670f8264ba92885f29",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/backend/init-action/dist/index.js",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/68aafec23d2986503b9d50670f8264ba92885f29/packages/backend/init-action/dist/index.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/collaborators.js",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/68aafec23d2986503b9d50670f8264ba92885f29/packages/backend/init-action/helpers/collaborators.js"
+        }
+      ],
+      "stats": {
+        "total": 4,
+        "additions": 2,
+        "deletions": 2
+      },
+      "message": "Fix last plz",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/68aafec23d2986503b9d50670f8264ba92885f29"
+    },
+    {
+      "sha": "4f41846e8376bc4f23b26b1adb9c75ca76bdc1b9",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/backend/init-action/dist/index.js",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/4f41846e8376bc4f23b26b1adb9c75ca76bdc1b9/packages/backend/init-action/dist/index.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/collaborators.js",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/4f41846e8376bc4f23b26b1adb9c75ca76bdc1b9/packages/backend/init-action/helpers/collaborators.js"
+        }
+      ],
+      "stats": {
+        "total": 4,
+        "additions": 2,
+        "deletions": 2
+      },
+      "message": "Fix",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/4f41846e8376bc4f23b26b1adb9c75ca76bdc1b9"
+    },
+    {
+      "sha": "2c3340ea79d9d2e12381ed687d1f14f1885dbcb9",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/backend/init-action/dist/index.js",
+          "status": "modified",
+          "additions": 4,
+          "deletions": 12,
+          "changes": 16,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/2c3340ea79d9d2e12381ed687d1f14f1885dbcb9/packages/backend/init-action/dist/index.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/collaborators.js",
+          "status": "modified",
+          "additions": 4,
+          "deletions": 12,
+          "changes": 16,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/2c3340ea79d9d2e12381ed687d1f14f1885dbcb9/packages/backend/init-action/helpers/collaborators.js"
+        }
+      ],
+      "stats": {
+        "total": 32,
+        "additions": 8,
+        "deletions": 24
+      },
+      "message": "Pushed to promise array",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/2c3340ea79d9d2e12381ed687d1f14f1885dbcb9"
+    },
+    {
+      "sha": "636d35ada98ce8a33baf5d8cd74e7491e77bc9a9",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/backend/init-action/dist/index.js",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/636d35ada98ce8a33baf5d8cd74e7491e77bc9a9/packages/backend/init-action/dist/index.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/parsers.js",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/636d35ada98ce8a33baf5d8cd74e7491e77bc9a9/packages/backend/init-action/helpers/parsers.js"
+        }
+      ],
+      "stats": {
+        "total": 4,
+        "additions": 2,
+        "deletions": 2
+      },
+      "message": "Trying js magic",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/636d35ada98ce8a33baf5d8cd74e7491e77bc9a9"
+    },
+    {
+      "sha": "68d8c80d2a78c99ddc290314bdbc09e54c24e61f",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/backend/init-action/dist/index.js",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/68d8c80d2a78c99ddc290314bdbc09e54c24e61f/packages/backend/init-action/dist/index.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/parsers.js",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/68d8c80d2a78c99ddc290314bdbc09e54c24e61f/packages/backend/init-action/helpers/parsers.js"
+        }
+      ],
+      "stats": {
+        "total": 4,
+        "additions": 2,
+        "deletions": 2
+      },
+      "message": "Forced object creation",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/68d8c80d2a78c99ddc290314bdbc09e54c24e61f"
+    },
+    {
+      "sha": "5b6a6e61c2d76b11e07ca602a93b89504e3f01bd",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/backend/init-action/dist/index.js",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 3,
+          "changes": 4,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/5b6a6e61c2d76b11e07ca602a93b89504e3f01bd/packages/backend/init-action/dist/index.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/parsers.js",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 3,
+          "changes": 4,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/5b6a6e61c2d76b11e07ca602a93b89504e3f01bd/packages/backend/init-action/helpers/parsers.js"
+        }
+      ],
+      "stats": {
+        "total": 8,
+        "additions": 2,
+        "deletions": 6
+      },
+      "message": "Modified into Object keys check",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/5b6a6e61c2d76b11e07ca602a93b89504e3f01bd"
+    },
+    {
+      "sha": "cde0b77f7e24fd965b699522f5810355ecc69d35",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/backend/init-action/dist/index.js",
+          "status": "modified",
+          "additions": 4,
+          "deletions": 1,
+          "changes": 5,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/cde0b77f7e24fd965b699522f5810355ecc69d35/packages/backend/init-action/dist/index.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/parsers.js",
+          "status": "modified",
+          "additions": 4,
+          "deletions": 1,
+          "changes": 5,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/cde0b77f7e24fd965b699522f5810355ecc69d35/packages/backend/init-action/helpers/parsers.js"
+        }
+      ],
+      "stats": {
+        "total": 10,
+        "additions": 8,
+        "deletions": 2
+      },
+      "message": "Fixing parser with committer id",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/cde0b77f7e24fd965b699522f5810355ecc69d35"
+    },
+    {
+      "sha": "8f7769a2d04839d6aeaf17512fb4d1aa8259b193",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/backend/init-action/dist/index.js",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 2,
+          "changes": 3,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/8f7769a2d04839d6aeaf17512fb4d1aa8259b193/packages/backend/init-action/dist/index.js"
+        },
+        {
+          "filename": "packages/backend/init-action/main.js",
+          "status": "modified",
+          "additions": 0,
+          "deletions": 1,
+          "changes": 1,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/8f7769a2d04839d6aeaf17512fb4d1aa8259b193/packages/backend/init-action/main.js"
+        }
+      ],
+      "stats": {
+        "total": 4,
+        "additions": 1,
+        "deletions": 3
+      },
+      "message": "Removed debuggin info",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/8f7769a2d04839d6aeaf17512fb4d1aa8259b193"
+    },
+    {
+      "sha": "5272adc2e1755d0fce2f633ad01ce3b9160fb1f5",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/backend/init-action/helpers/parsers.js",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/5272adc2e1755d0fce2f633ad01ce3b9160fb1f5/packages/backend/init-action/helpers/parsers.js"
+        }
+      ],
+      "stats": {
+        "total": 2,
+        "additions": 1,
+        "deletions": 1
+      },
+      "message": "Fixed parser for null committers",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/5272adc2e1755d0fce2f633ad01ce3b9160fb1f5"
+    },
+    {
+      "sha": "77f4a87d033f8143ad6c78f83734337e52f8a8c5",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/backend/init-action/dist/index.js",
+          "status": "modified",
+          "additions": 46,
+          "deletions": 16,
+          "changes": 62,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/77f4a87d033f8143ad6c78f83734337e52f8a8c5/packages/backend/init-action/dist/index.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/collaborators.js",
+          "status": "modified",
+          "additions": 26,
+          "deletions": 0,
+          "changes": 26,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/77f4a87d033f8143ad6c78f83734337e52f8a8c5/packages/backend/init-action/helpers/collaborators.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/parsers.js",
+          "status": "modified",
+          "additions": 17,
+          "deletions": 16,
+          "changes": 33,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/77f4a87d033f8143ad6c78f83734337e52f8a8c5/packages/backend/init-action/helpers/parsers.js"
+        }
+      ],
+      "stats": {
+        "total": 121,
+        "additions": 89,
+        "deletions": 32
+      },
+      "message": "Built project",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/77f4a87d033f8143ad6c78f83734337e52f8a8c5"
+    },
+    {
+      "sha": "3984b018cd4ce1114e3148684da82f89f75fcfbf",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 19864447,
+      "files": [
+        {
+          "filename": ".gitignore",
+          "status": "modified",
+          "additions": 48,
+          "deletions": 1,
+          "changes": 49,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3984b018cd4ce1114e3148684da82f89f75fcfbf/.gitignore"
+        },
+        {
+          "filename": "example/s3gitlog.json",
+          "status": "added",
+          "additions": 2680,
+          "deletions": 0,
+          "changes": 2680,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3984b018cd4ce1114e3148684da82f89f75fcfbf/example/s3gitlog.json"
+        },
+        {
+          "filename": "packages/backend/init-action/dist/index.js",
+          "status": "modified",
+          "additions": 84,
+          "deletions": 45,
+          "changes": 129,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3984b018cd4ce1114e3148684da82f89f75fcfbf/packages/backend/init-action/dist/index.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/collaborators.js",
+          "status": "added",
+          "additions": 23,
+          "deletions": 0,
+          "changes": 23,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3984b018cd4ce1114e3148684da82f89f75fcfbf/packages/backend/init-action/helpers/collaborators.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/history.js",
+          "status": "modified",
+          "additions": 25,
+          "deletions": 32,
+          "changes": 57,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3984b018cd4ce1114e3148684da82f89f75fcfbf/packages/backend/init-action/helpers/history.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/metadata.js",
+          "status": "added",
+          "additions": 12,
+          "deletions": 0,
+          "changes": 12,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3984b018cd4ce1114e3148684da82f89f75fcfbf/packages/backend/init-action/helpers/metadata.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/utils.js",
+          "status": "modified",
+          "additions": 10,
+          "deletions": 2,
+          "changes": 12,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3984b018cd4ce1114e3148684da82f89f75fcfbf/packages/backend/init-action/helpers/utils.js"
+        },
+        {
+          "filename": "packages/backend/init-action/main.js",
+          "status": "modified",
+          "additions": 28,
+          "deletions": 17,
+          "changes": 45,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3984b018cd4ce1114e3148684da82f89f75fcfbf/packages/backend/init-action/main.js"
+        },
+        {
+          "filename": "packages/functions/.env.example",
+          "status": "added",
+          "additions": 2,
+          "deletions": 0,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3984b018cd4ce1114e3148684da82f89f75fcfbf/packages/functions/.env.example"
+        },
+        {
+          "filename": "packages/functions/data_parser.py",
+          "status": "modified",
+          "additions": 28,
+          "deletions": 1,
+          "changes": 29,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3984b018cd4ce1114e3148684da82f89f75fcfbf/packages/functions/data_parser.py"
+        },
+        {
+          "filename": "packages/functions/data_parser_test.py",
+          "status": "added",
+          "additions": 34,
+          "deletions": 0,
+          "changes": 34,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3984b018cd4ce1114e3148684da82f89f75fcfbf/packages/functions/data_parser_test.py"
+        },
+        {
+          "filename": "packages/functions/modules/__init__.py",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3984b018cd4ce1114e3148684da82f89f75fcfbf/packages/functions/modules/__init__.py"
+        },
+        {
+          "filename": "packages/functions/modules/author/__init__.py",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3984b018cd4ce1114e3148684da82f89f75fcfbf/packages/functions/modules/author/__init__.py"
+        },
+        {
+          "filename": "packages/functions/requirements.txt",
+          "status": "modified",
+          "additions": 8,
+          "deletions": 0,
+          "changes": 8,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3984b018cd4ce1114e3148684da82f89f75fcfbf/packages/functions/requirements.txt"
+        }
+      ],
+      "stats": {
+        "total": 3080,
+        "additions": 2982,
+        "deletions": 98
+      },
+      "message": "Preparing dataset in which to later do the operations  (#17)\\n\\n* Add python lambda function support and makefile to manage the process\\r\\n\\r\\n* Add boto3 for AWS management\\r\\n\\r\\n* Add function to connect to bucket\\r\\n\\r\\n* Add jupyter notebook\\r\\n\\r\\n* Add correct s3gitlog\\r\\n\\r\\n* Adds python testing and modules\\r\\n\\r\\n* Add history index and collaborators to return object\\r\\n\\r\\n* Add new compiled version\\r\\n\\r\\n* Adds buildHistoryIndex import\\r\\n\\r\\n* Adds new compiled version\\r\\n\\r\\n* Passed octokit on to collaborator query\\r\\n\\r\\n* Compiled new version\\r\\n\\r\\n* Object for octokit, owner and repo\\r\\n\\r\\n* returns reduce\\r\\n\\r\\n* debugging\\r\\n\\r\\n* debugging with await\\r\\n\\r\\n* Removed jupyter / ipython / modified .gitignore\\r\\n\\r\\n* Re-wrote history to match previous code style / (maybe/work)\\r\\n\\r\\n* Debugging",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/3984b018cd4ce1114e3148684da82f89f75fcfbf"
+    },
+    {
+      "sha": "1122474f14c517859d2bcaa807fed291383a45ea",
+      "author": {
+        "login": "pxlprfct",
+        "id": 3811773,
+        "node_id": "MDQ6VXNlcjM4MTE3NzM=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/3811773?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pxlprfct",
+        "html_url": "https://github.com/pxlprfct",
+        "followers_url": "https://api.github.com/users/pxlprfct/followers",
+        "following_url": "https://api.github.com/users/pxlprfct/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pxlprfct/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pxlprfct/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pxlprfct/subscriptions",
+        "organizations_url": "https://api.github.com/users/pxlprfct/orgs",
+        "repos_url": "https://api.github.com/users/pxlprfct/repos",
+        "events_url": "https://api.github.com/users/pxlprfct/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pxlprfct/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/frontend/.gitignore",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 69,
+          "changes": 69,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/.gitignore"
+        },
+        {
+          "filename": "packages/frontend/.nvmrc",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 1,
+          "changes": 1,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/.nvmrc"
+        },
+        {
+          "filename": "packages/frontend/.prettierignore",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 4,
+          "changes": 4,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/.prettierignore"
+        },
+        {
+          "filename": "packages/frontend/.prettierrc",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 7,
+          "changes": 7,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/.prettierrc"
+        },
+        {
+          "filename": "packages/frontend/README.md",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 97,
+          "changes": 97,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/README.md"
+        },
+        {
+          "filename": "packages/frontend/gatsby-browser.js",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 7,
+          "changes": 7,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/gatsby-browser.js"
+        },
+        {
+          "filename": "packages/frontend/gatsby-config.js",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 34,
+          "changes": 34,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/gatsby-config.js"
+        },
+        {
+          "filename": "packages/frontend/gatsby-node.js",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 7,
+          "changes": 7,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/gatsby-node.js"
+        },
+        {
+          "filename": "packages/frontend/gatsby-ssr.js",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 7,
+          "changes": 7,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/gatsby-ssr.js"
+        },
+        {
+          "filename": "packages/frontend/package-lock.json",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 16626,
+          "changes": 16626,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/package-lock.json"
+        },
+        {
+          "filename": "packages/frontend/package.json",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 44,
+          "changes": 44,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/package.json"
+        },
+        {
+          "filename": "packages/frontend/src/components/header.js",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 42,
+          "changes": 42,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/src/components/header.js"
+        },
+        {
+          "filename": "packages/frontend/src/components/image.js",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 32,
+          "changes": 32,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/src/components/image.js"
+        },
+        {
+          "filename": "packages/frontend/src/components/layout.css",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 622,
+          "changes": 622,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/src/components/layout.css"
+        },
+        {
+          "filename": "packages/frontend/src/components/layout.js",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 52,
+          "changes": 52,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/src/components/layout.js"
+        },
+        {
+          "filename": "packages/frontend/src/components/seo.js",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 88,
+          "changes": 88,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/src/components/seo.js"
+        },
+        {
+          "filename": "packages/frontend/src/images/gatsby-astronaut.png",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/src/images/gatsby-astronaut.png"
+        },
+        {
+          "filename": "packages/frontend/src/images/gatsby-icon.png",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/src/images/gatsby-icon.png"
+        },
+        {
+          "filename": "packages/frontend/src/pages/404.js",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 14,
+          "changes": 14,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/src/pages/404.js"
+        },
+        {
+          "filename": "packages/frontend/src/pages/index.js",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 21,
+          "changes": 21,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/src/pages/index.js"
+        },
+        {
+          "filename": "packages/frontend/src/pages/page-2.js",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 16,
+          "changes": 16,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/frontend/src/pages/page-2.js"
+        }
+      ],
+      "stats": {
+        "total": 17790,
+        "additions": 0,
+        "deletions": 17790
+      },
+      "message": "removed frontend! (#18)",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/1122474f14c517859d2bcaa807fed291383a45ea"
+    },
+    {
+      "sha": "ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 3811773,
+      "files": [
+        {
+          "filename": "example/git-chaos.txt",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 1110,
+          "changes": 1110,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/d14e29f862c41ba7a511a088fffe020e73231072/example/git-chaos.txt"
+        },
+        {
+          "filename": "example/mysa-carbon-log.txt",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 15493,
+          "changes": 15493,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/d14e29f862c41ba7a511a088fffe020e73231072/example/mysa-carbon-log.txt"
+        },
+        {
+          "filename": "example/mysa-log.txt",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 54950,
+          "changes": 54950,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/d14e29f862c41ba7a511a088fffe020e73231072/example/mysa-log.txt"
+        },
+        {
+          "filename": "package-lock.json",
+          "status": "added",
+          "additions": 1425,
+          "deletions": 0,
+          "changes": 1425,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/package-lock.json"
+        },
+        {
+          "filename": "packages/backend/init-action/dist/index.js",
+          "status": "modified",
+          "additions": 24,
+          "deletions": 3,
+          "changes": 27,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/backend/init-action/dist/index.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/utils.js",
+          "status": "added",
+          "additions": 5,
+          "deletions": 0,
+          "changes": 5,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/backend/init-action/helpers/utils.js"
+        },
+        {
+          "filename": "packages/backend/init-action/main.js",
+          "status": "modified",
+          "additions": 14,
+          "deletions": 1,
+          "changes": 15,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/backend/init-action/main.js"
+        },
+        {
+          "filename": "packages/backend/init-action/package.json",
+          "status": "modified",
+          "additions": 3,
+          "deletions": 1,
+          "changes": 4,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1/packages/backend/init-action/package.json"
+        }
+      ],
+      "stats": {
+        "total": 73029,
+        "additions": 1471,
+        "deletions": 71558
+      },
+      "message": "Feat/metadata (#16)\\n\\n* Removed example folder as we can generate new ones\\r\\n\\r\\n* Added meta filed to aws upload\\r\\n\\r\\n* Add meta field in response object sent to AWS\\r\\n\\r\\n* Debugging responseBuilder\\r\\n\\r\\n* Removed debugger, retrying test\\r\\n\\r\\n* Add debug back",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/ec41f46a31b20ee3df34bb3e5ffdf9b42f7782d1"
+    },
+    {
+      "sha": "d14e29f862c41ba7a511a088fffe020e73231072",
+      "author": {
+        "login": "pxlprfct",
+        "id": 3811773,
+        "node_id": "MDQ6VXNlcjM4MTE3NzM=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/3811773?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pxlprfct",
+        "html_url": "https://github.com/pxlprfct",
+        "followers_url": "https://api.github.com/users/pxlprfct/followers",
+        "following_url": "https://api.github.com/users/pxlprfct/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pxlprfct/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pxlprfct/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pxlprfct/subscriptions",
+        "organizations_url": "https://api.github.com/users/pxlprfct/orgs",
+        "repos_url": "https://api.github.com/users/pxlprfct/repos",
+        "events_url": "https://api.github.com/users/pxlprfct/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pxlprfct/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": ".github/actions/action.yml",
+          "status": "modified",
+          "additions": 4,
+          "deletions": 7,
+          "changes": 11,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/d14e29f862c41ba7a511a088fffe020e73231072/.github/actions/action.yml"
+        },
+        {
+          "filename": ".github/workflows/main.yml",
+          "status": "modified",
+          "additions": 6,
+          "deletions": 10,
+          "changes": 16,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/d14e29f862c41ba7a511a088fffe020e73231072/.github/workflows/main.yml"
+        },
+        {
+          "filename": "package.json",
+          "status": "modified",
+          "additions": 3,
+          "deletions": 0,
+          "changes": 3,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/d14e29f862c41ba7a511a088fffe020e73231072/package.json"
+        },
+        {
+          "filename": "packages/backend/init-action/dist/index.js",
+          "status": "added",
+          "additions": 34006,
+          "deletions": 0,
+          "changes": 34006,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/d14e29f862c41ba7a511a088fffe020e73231072/packages/backend/init-action/dist/index.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/aws.js",
+          "status": "added",
+          "additions": 31,
+          "deletions": 0,
+          "changes": 31,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/d14e29f862c41ba7a511a088fffe020e73231072/packages/backend/init-action/helpers/aws.js"
+        },
+        {
+          "filename": "packages/backend/init-action/main.js",
+          "status": "modified",
+          "additions": 11,
+          "deletions": 5,
+          "changes": 16,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/d14e29f862c41ba7a511a088fffe020e73231072/packages/backend/init-action/main.js"
+        },
+        {
+          "filename": "packages/backend/init-action/package-lock.json",
+          "status": "modified",
+          "additions": 1438,
+          "deletions": 4668,
+          "changes": 6106,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/d14e29f862c41ba7a511a088fffe020e73231072/packages/backend/init-action/package-lock.json"
+        },
+        {
+          "filename": "packages/backend/init-action/package.json",
+          "status": "modified",
+          "additions": 17,
+          "deletions": 5,
+          "changes": 22,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/d14e29f862c41ba7a511a088fffe020e73231072/packages/backend/init-action/package.json"
+        }
+      ],
+      "stats": {
+        "total": 40211,
+        "additions": 35516,
+        "deletions": 4695
+      },
+      "message": "Adding S3 fileupload (#14)\\n\\n* removed hardcoded git repo values to check if it works without\\r\\n\\r\\n* added s3 credentials and upload code\\r\\n\\r\\n* pushing alteration to check why aws fails to install\\r\\n\\r\\n* changed to ci to see if it's a weird package issue\\r\\n\\r\\n* updated workflow file\\r\\n\\r\\n* added actions/setup-node@v1\\r\\n\\r\\n* added build\\r\\n\\r\\n* removed AWS temporarily\\r\\n\\r\\n* uncommented aws code\\r\\n\\r\\n* commented out all code except AWS to check if race condition\\r\\n\\r\\n* Revert \\"commented out all code except AWS to check if race condition\\"\\r\\n\\r\\nThis reverts commit efed9d53511936215a4e9b5f2f2b4339aed440b6.\\r\\n\\r\\n* added correct bucket path\\r\\n\\r\\n* removed unused dependencies\\r\\n\\r\\n* trying workflow style commands\\r\\n\\r\\n* fixed path?\\r\\n\\r\\n* added zeit\\r\\n\\r\\n* added dist to gitignore\\r\\n\\r\\n* removed dist\\r\\n\\r\\n* fixed .gitignores\\r\\n\\r\\n* added husky prepush build command\\r\\n\\r\\n* readded dist folder...\\r\\n\\r\\n* changed comment text\\r\\n\\r\\n* changed husky hook\\r\\n\\r\\n* updated path comment\\r\\n\\r\\n* updated index\\r\\n\\r\\n* Fixed lint staged\\r\\n\\r\\n* checking autobuld\\r\\n\\r\\n* removed setup node (incase it's not needed)",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/d14e29f862c41ba7a511a088fffe020e73231072"
+    },
+    {
+      "sha": "e533f01200209cbf2ec80adca4fee4a3b9172e21",
+      "author": {
+        "login": "pxlprfct",
+        "id": 3811773,
+        "node_id": "MDQ6VXNlcjM4MTE3NzM=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/3811773?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pxlprfct",
+        "html_url": "https://github.com/pxlprfct",
+        "followers_url": "https://api.github.com/users/pxlprfct/followers",
+        "following_url": "https://api.github.com/users/pxlprfct/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pxlprfct/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pxlprfct/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pxlprfct/subscriptions",
+        "organizations_url": "https://api.github.com/users/pxlprfct/orgs",
+        "repos_url": "https://api.github.com/users/pxlprfct/repos",
+        "events_url": "https://api.github.com/users/pxlprfct/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pxlprfct/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/e533f01200209cbf2ec80adca4fee4a3b9172e21/README.md"
+        }
+      ],
+      "stats": {
+        "total": 2,
+        "additions": 1,
+        "deletions": 1
+      },
+      "message": "removed travis status (#15)",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/e533f01200209cbf2ec80adca4fee4a3b9172e21"
+    },
+    {
+      "sha": "9260a1858c646109bc5c864f4050362ed81e8946",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 3811773,
+      "files": [
+        {
+          "filename": ".editorconfig",
+          "status": "modified",
+          "additions": 5,
+          "deletions": 1,
+          "changes": 6,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/9260a1858c646109bc5c864f4050362ed81e8946/.editorconfig"
+        },
+        {
+          "filename": ".gitignore",
+          "status": "modified",
+          "additions": 7,
+          "deletions": 1,
+          "changes": 8,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/9260a1858c646109bc5c864f4050362ed81e8946/.gitignore"
+        },
+        {
+          "filename": "packages/functions/Makefile",
+          "status": "added",
+          "additions": 18,
+          "deletions": 0,
+          "changes": 18,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/9260a1858c646109bc5c864f4050362ed81e8946/packages/functions/Makefile"
+        },
+        {
+          "filename": "packages/functions/data_parser.py",
+          "status": "added",
+          "additions": 8,
+          "deletions": 0,
+          "changes": 8,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/9260a1858c646109bc5c864f4050362ed81e8946/packages/functions/data_parser.py"
+        },
+        {
+          "filename": "packages/functions/requirements.txt",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/9260a1858c646109bc5c864f4050362ed81e8946/packages/functions/requirements.txt"
+        }
+      ],
+      "stats": {
+        "total": 40,
+        "additions": 38,
+        "deletions": 2
+      },
+      "message": "Add python lambda function support and makefile to manage the process (#13)",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/9260a1858c646109bc5c864f4050362ed81e8946"
+    },
+    {
+      "sha": "efc833cbdacf669eaa5fa425d8e5fd6c57b6986a",
+      "author": {
+        "login": "pxlprfct",
+        "id": 3811773,
+        "node_id": "MDQ6VXNlcjM4MTE3NzM=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/3811773?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pxlprfct",
+        "html_url": "https://github.com/pxlprfct",
+        "followers_url": "https://api.github.com/users/pxlprfct/followers",
+        "following_url": "https://api.github.com/users/pxlprfct/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pxlprfct/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pxlprfct/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pxlprfct/subscriptions",
+        "organizations_url": "https://api.github.com/users/pxlprfct/orgs",
+        "repos_url": "https://api.github.com/users/pxlprfct/repos",
+        "events_url": "https://api.github.com/users/pxlprfct/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pxlprfct/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 19864447,
+      "files": [
+        {
+          "filename": ".github/PULL_REQUEST_TEMPLATE.MD",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/.github/PULL_REQUEST_TEMPLATE.MD"
+        },
+        {
+          "filename": ".github/actions/action.yml",
+          "status": "added",
+          "additions": 9,
+          "deletions": 0,
+          "changes": 9,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/.github/actions/action.yml"
+        },
+        {
+          "filename": ".github/workflows/main.yml",
+          "status": "added",
+          "additions": 21,
+          "deletions": 0,
+          "changes": 21,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/.github/workflows/main.yml"
+        },
+        {
+          "filename": ".travis.yml",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 4,
+          "changes": 4,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/.travis.yml"
+        },
+        {
+          "filename": "docker-compose.yml",
+          "status": "modified",
+          "additions": 0,
+          "deletions": 13,
+          "changes": 13,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/docker-compose.yml"
+        },
+        {
+          "filename": "package.json",
+          "status": "added",
+          "additions": 16,
+          "deletions": 0,
+          "changes": 16,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/package.json"
+        },
+        {
+          "filename": "packages/backend/Dockerfile",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 24,
+          "changes": 24,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/backend/Dockerfile"
+        },
+        {
+          "filename": "packages/backend/app/app.go",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 15,
+          "changes": 15,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/backend/app/app.go"
+        },
+        {
+          "filename": "packages/backend/app/app_test.go",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 25,
+          "changes": 25,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/backend/app/app_test.go"
+        },
+        {
+          "filename": "packages/backend/init-action/.eslintrc.js",
+          "status": "added",
+          "additions": 6,
+          "deletions": 0,
+          "changes": 6,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/packages/backend/init-action/.eslintrc.js"
+        },
+        {
+          "filename": "packages/backend/init-action/.gitignore",
+          "status": "added",
+          "additions": 110,
+          "deletions": 0,
+          "changes": 110,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/packages/backend/init-action/.gitignore"
+        },
+        {
+          "filename": "packages/backend/init-action/.nvmrc",
+          "status": "added",
+          "additions": 1,
+          "deletions": 0,
+          "changes": 1,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/packages/backend/init-action/.nvmrc"
+        },
+        {
+          "filename": "packages/backend/init-action/.vscode/launch.json",
+          "status": "added",
+          "additions": 23,
+          "deletions": 0,
+          "changes": 23,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/packages/backend/init-action/.vscode/launch.json"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/comment.js",
+          "status": "added",
+          "additions": 20,
+          "deletions": 0,
+          "changes": 20,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/packages/backend/init-action/helpers/comment.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/commits.js",
+          "status": "added",
+          "additions": 36,
+          "deletions": 0,
+          "changes": 36,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/packages/backend/init-action/helpers/commits.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/history.js",
+          "status": "added",
+          "additions": 71,
+          "deletions": 0,
+          "changes": 71,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/packages/backend/init-action/helpers/history.js"
+        },
+        {
+          "filename": "packages/backend/init-action/helpers/parsers.js",
+          "status": "added",
+          "additions": 32,
+          "deletions": 0,
+          "changes": 32,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/packages/backend/init-action/helpers/parsers.js"
+        },
+        {
+          "filename": "packages/backend/init-action/main.js",
+          "status": "added",
+          "additions": 51,
+          "deletions": 0,
+          "changes": 51,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/packages/backend/init-action/main.js"
+        },
+        {
+          "filename": "packages/backend/init-action/package-lock.json",
+          "status": "added",
+          "additions": 6176,
+          "deletions": 0,
+          "changes": 6176,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/packages/backend/init-action/package-lock.json"
+        },
+        {
+          "filename": "packages/backend/init-action/package.json",
+          "status": "added",
+          "additions": 23,
+          "deletions": 0,
+          "changes": 23,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a/packages/backend/init-action/package.json"
+        }
+      ],
+      "stats": {
+        "total": 6678,
+        "additions": 6596,
+        "deletions": 82
+      },
+      "message": "Init action rework (#12)\\n\\n* added branch puller from github action",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/efc833cbdacf669eaa5fa425d8e5fd6c57b6986a"
+    },
+    {
+      "sha": "1064c25d61ba51731e8a879693685dfe388c9ea3",
+      "author": {
+        "login": "pxlprfct",
+        "id": 3811773,
+        "node_id": "MDQ6VXNlcjM4MTE3NzM=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/3811773?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pxlprfct",
+        "html_url": "https://github.com/pxlprfct",
+        "followers_url": "https://api.github.com/users/pxlprfct/followers",
+        "following_url": "https://api.github.com/users/pxlprfct/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pxlprfct/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pxlprfct/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pxlprfct/subscriptions",
+        "organizations_url": "https://api.github.com/users/pxlprfct/orgs",
+        "repos_url": "https://api.github.com/users/pxlprfct/repos",
+        "events_url": "https://api.github.com/users/pxlprfct/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pxlprfct/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": ".gitignore",
+          "status": "modified",
+          "additions": 31,
+          "deletions": 6,
+          "changes": 37,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/.gitignore"
+        },
+        {
+          "filename": "packages/frontend/.gitignore",
+          "status": "added",
+          "additions": 69,
+          "deletions": 0,
+          "changes": 69,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/.gitignore"
+        },
+        {
+          "filename": "packages/frontend/.nvmrc",
+          "status": "added",
+          "additions": 1,
+          "deletions": 0,
+          "changes": 1,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/.nvmrc"
+        },
+        {
+          "filename": "packages/frontend/.prettierignore",
+          "status": "added",
+          "additions": 4,
+          "deletions": 0,
+          "changes": 4,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/.prettierignore"
+        },
+        {
+          "filename": "packages/frontend/.prettierrc",
+          "status": "added",
+          "additions": 7,
+          "deletions": 0,
+          "changes": 7,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/.prettierrc"
+        },
+        {
+          "filename": "packages/frontend/Dockerfile",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 8,
+          "changes": 8,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/19608ad2ed008f4c481f40c3094f35b81f50c908/packages/frontend/Dockerfile"
+        },
+        {
+          "filename": "packages/frontend/README.md",
+          "status": "added",
+          "additions": 97,
+          "deletions": 0,
+          "changes": 97,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/README.md"
+        },
+        {
+          "filename": "packages/frontend/elm.json",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 24,
+          "changes": 24,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/19608ad2ed008f4c481f40c3094f35b81f50c908/packages/frontend/elm.json"
+        },
+        {
+          "filename": "packages/frontend/gatsby-browser.js",
+          "status": "added",
+          "additions": 7,
+          "deletions": 0,
+          "changes": 7,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/gatsby-browser.js"
+        },
+        {
+          "filename": "packages/frontend/gatsby-config.js",
+          "status": "added",
+          "additions": 34,
+          "deletions": 0,
+          "changes": 34,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/gatsby-config.js"
+        },
+        {
+          "filename": "packages/frontend/gatsby-node.js",
+          "status": "added",
+          "additions": 7,
+          "deletions": 0,
+          "changes": 7,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/gatsby-node.js"
+        },
+        {
+          "filename": "packages/frontend/gatsby-ssr.js",
+          "status": "added",
+          "additions": 7,
+          "deletions": 0,
+          "changes": 7,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/gatsby-ssr.js"
+        },
+        {
+          "filename": "packages/frontend/index.html",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 4387,
+          "changes": 4387,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/19608ad2ed008f4c481f40c3094f35b81f50c908/packages/frontend/index.html"
+        },
+        {
+          "filename": "packages/frontend/package-lock.json",
+          "status": "modified",
+          "additions": 16442,
+          "deletions": 496,
+          "changes": 16938,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/package-lock.json"
+        },
+        {
+          "filename": "packages/frontend/package.json",
+          "status": "modified",
+          "additions": 39,
+          "deletions": 12,
+          "changes": 51,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/package.json"
+        },
+        {
+          "filename": "packages/frontend/src/Main.elm",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 5,
+          "changes": 5,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/19608ad2ed008f4c481f40c3094f35b81f50c908/packages/frontend/src/Main.elm"
+        },
+        {
+          "filename": "packages/frontend/src/components/header.js",
+          "status": "added",
+          "additions": 42,
+          "deletions": 0,
+          "changes": 42,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/src/components/header.js"
+        },
+        {
+          "filename": "packages/frontend/src/components/image.js",
+          "status": "added",
+          "additions": 32,
+          "deletions": 0,
+          "changes": 32,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/src/components/image.js"
+        },
+        {
+          "filename": "packages/frontend/src/components/layout.css",
+          "status": "added",
+          "additions": 622,
+          "deletions": 0,
+          "changes": 622,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/src/components/layout.css"
+        },
+        {
+          "filename": "packages/frontend/src/components/layout.js",
+          "status": "added",
+          "additions": 52,
+          "deletions": 0,
+          "changes": 52,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/src/components/layout.js"
+        },
+        {
+          "filename": "packages/frontend/src/components/seo.js",
+          "status": "added",
+          "additions": 88,
+          "deletions": 0,
+          "changes": 88,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/src/components/seo.js"
+        },
+        {
+          "filename": "packages/frontend/src/images/gatsby-astronaut.png",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/src/images/gatsby-astronaut.png"
+        },
+        {
+          "filename": "packages/frontend/src/images/gatsby-icon.png",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/src/images/gatsby-icon.png"
+        },
+        {
+          "filename": "packages/frontend/src/pages/404.js",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0,
+          "changes": 14,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/src/pages/404.js"
+        },
+        {
+          "filename": "packages/frontend/src/pages/index.js",
+          "status": "added",
+          "additions": 21,
+          "deletions": 0,
+          "changes": 21,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/src/pages/index.js"
+        },
+        {
+          "filename": "packages/frontend/src/pages/page-2.js",
+          "status": "added",
+          "additions": 16,
+          "deletions": 0,
+          "changes": 16,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1064c25d61ba51731e8a879693685dfe388c9ea3/packages/frontend/src/pages/page-2.js"
+        }
+      ],
+      "stats": {
+        "total": 22570,
+        "additions": 17632,
+        "deletions": 4938
+      },
+      "message": "Replaced elm for gatsby! (#9)\\n\\n* replaced elm for gatsby starter\\r\\n\\r\\n* testing gatsby build\\r\\n\\r\\n* another test\\r\\n\\r\\n* removed license\\r\\n\\r\\n* added netlify gitignore for netlify cli",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/1064c25d61ba51731e8a879693685dfe388c9ea3"
+    },
+    {
+      "sha": "19608ad2ed008f4c481f40c3094f35b81f50c908",
+      "author": {
+        "login": "pxlprfct",
+        "id": 3811773,
+        "node_id": "MDQ6VXNlcjM4MTE3NzM=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/3811773?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pxlprfct",
+        "html_url": "https://github.com/pxlprfct",
+        "followers_url": "https://api.github.com/users/pxlprfct/followers",
+        "following_url": "https://api.github.com/users/pxlprfct/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pxlprfct/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pxlprfct/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pxlprfct/subscriptions",
+        "organizations_url": "https://api.github.com/users/pxlprfct/orgs",
+        "repos_url": "https://api.github.com/users/pxlprfct/repos",
+        "events_url": "https://api.github.com/users/pxlprfct/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pxlprfct/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "example/git-chaos.txt",
+          "status": "added",
+          "additions": 1110,
+          "deletions": 0,
+          "changes": 1110,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/19608ad2ed008f4c481f40c3094f35b81f50c908/example/git-chaos.txt"
+        },
+        {
+          "filename": "example/mysa-carbon-log.txt",
+          "status": "added",
+          "additions": 15493,
+          "deletions": 0,
+          "changes": 15493,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/19608ad2ed008f4c481f40c3094f35b81f50c908/example/mysa-carbon-log.txt"
+        },
+        {
+          "filename": "example/mysa-log.txt",
+          "status": "added",
+          "additions": 54950,
+          "deletions": 0,
+          "changes": 54950,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/19608ad2ed008f4c481f40c3094f35b81f50c908/example/mysa-log.txt"
+        }
+      ],
+      "stats": {
+        "total": 71553,
+        "additions": 71553,
+        "deletions": 0
+      },
+      "message": "added example git logs (#6)",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/19608ad2ed008f4c481f40c3094f35b81f50c908"
+    },
+    {
+      "sha": "8713067c083854f089b9a777a37a867345c28080",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 19864447,
+      "files": [
+        {
+          "filename": ".gitignore",
+          "status": "added",
+          "additions": 116,
+          "deletions": 0,
+          "changes": 116,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/8713067c083854f089b9a777a37a867345c28080/.gitignore"
+        },
+        {
+          "filename": "docker-compose.yml",
+          "status": "modified",
+          "additions": 4,
+          "deletions": 0,
+          "changes": 4,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/8713067c083854f089b9a777a37a867345c28080/docker-compose.yml"
+        },
+        {
+          "filename": "packages/frontend/Dockerfile",
+          "status": "added",
+          "additions": 8,
+          "deletions": 0,
+          "changes": 8,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/8713067c083854f089b9a777a37a867345c28080/packages/frontend/Dockerfile"
+        },
+        {
+          "filename": "packages/frontend/elm.json",
+          "status": "added",
+          "additions": 24,
+          "deletions": 0,
+          "changes": 24,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/8713067c083854f089b9a777a37a867345c28080/packages/frontend/elm.json"
+        },
+        {
+          "filename": "packages/frontend/index.html",
+          "status": "modified",
+          "additions": 4387,
+          "deletions": 10,
+          "changes": 4397,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/8713067c083854f089b9a777a37a867345c28080/packages/frontend/index.html"
+        },
+        {
+          "filename": "packages/frontend/package-lock.json",
+          "status": "added",
+          "additions": 680,
+          "deletions": 0,
+          "changes": 680,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/8713067c083854f089b9a777a37a867345c28080/packages/frontend/package-lock.json"
+        },
+        {
+          "filename": "packages/frontend/package.json",
+          "status": "added",
+          "additions": 17,
+          "deletions": 0,
+          "changes": 17,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/8713067c083854f089b9a777a37a867345c28080/packages/frontend/package.json"
+        },
+        {
+          "filename": "packages/frontend/src/Main.elm",
+          "status": "added",
+          "additions": 5,
+          "deletions": 0,
+          "changes": 5,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/8713067c083854f089b9a777a37a867345c28080/packages/frontend/src/Main.elm"
+        }
+      ],
+      "stats": {
+        "total": 5251,
+        "additions": 5241,
+        "deletions": 10
+      },
+      "message": "Merge pull request #4 from chaos-monkeys/feat/elm-live\\n\\nFeat/elm live",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/8713067c083854f089b9a777a37a867345c28080"
+    },
+    {
+      "sha": "3851f2d3afc5b325d64548de27dd25dee2d242c5",
+      "author": null,
+      "committer": null,
+      "files": [
+        {
+          "filename": ".editorconfig",
+          "status": "added",
+          "additions": 24,
+          "deletions": 0,
+          "changes": 24,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3851f2d3afc5b325d64548de27dd25dee2d242c5/.editorconfig"
+        },
+        {
+          "filename": ".github/PULL_REQUEST_TEMPLATE.MD",
+          "status": "added",
+          "additions": 5,
+          "deletions": 0,
+          "changes": 5,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3851f2d3afc5b325d64548de27dd25dee2d242c5/.github/PULL_REQUEST_TEMPLATE.MD"
+        },
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3851f2d3afc5b325d64548de27dd25dee2d242c5/README.md"
+        },
+        {
+          "filename": "packages/backend/app/app.go",
+          "status": "modified",
+          "additions": 5,
+          "deletions": 5,
+          "changes": 10,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3851f2d3afc5b325d64548de27dd25dee2d242c5/packages/backend/app/app.go"
+        },
+        {
+          "filename": "packages/backend/app/app_test.go",
+          "status": "modified",
+          "additions": 5,
+          "deletions": 5,
+          "changes": 10,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/3851f2d3afc5b325d64548de27dd25dee2d242c5/packages/backend/app/app_test.go"
+        }
+      ],
+      "stats": {
+        "total": 51,
+        "additions": 40,
+        "deletions": 11
+      },
+      "message": "Merge branch 'master' into feat/elm-live\\n\\n# Conflicts:\\n#\\tpackages/frontend/index.html",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/3851f2d3afc5b325d64548de27dd25dee2d242c5"
+    },
+    {
+      "sha": "a66ac8618d2639345f950b876df4c527b805a0ee",
+      "author": {
+        "login": "admin-chaosmonkeys",
+        "id": 55034205,
+        "node_id": "MDQ6VXNlcjU1MDM0MjA1",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/55034205?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/admin-chaosmonkeys",
+        "html_url": "https://github.com/admin-chaosmonkeys",
+        "followers_url": "https://api.github.com/users/admin-chaosmonkeys/followers",
+        "following_url": "https://api.github.com/users/admin-chaosmonkeys/following{/other_user}",
+        "gists_url": "https://api.github.com/users/admin-chaosmonkeys/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/admin-chaosmonkeys/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/admin-chaosmonkeys/subscriptions",
+        "organizations_url": "https://api.github.com/users/admin-chaosmonkeys/orgs",
+        "repos_url": "https://api.github.com/users/admin-chaosmonkeys/repos",
+        "events_url": "https://api.github.com/users/admin-chaosmonkeys/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/admin-chaosmonkeys/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 19864447,
+      "files": [
+        {
+          "filename": ".editorconfig",
+          "status": "added",
+          "additions": 24,
+          "deletions": 0,
+          "changes": 24,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/a66ac8618d2639345f950b876df4c527b805a0ee/.editorconfig"
+        },
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/a66ac8618d2639345f950b876df4c527b805a0ee/README.md"
+        },
+        {
+          "filename": "packages/backend/app/app.go",
+          "status": "modified",
+          "additions": 5,
+          "deletions": 5,
+          "changes": 10,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/a66ac8618d2639345f950b876df4c527b805a0ee/packages/backend/app/app.go"
+        },
+        {
+          "filename": "packages/backend/app/app_test.go",
+          "status": "modified",
+          "additions": 5,
+          "deletions": 5,
+          "changes": 10,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/a66ac8618d2639345f950b876df4c527b805a0ee/packages/backend/app/app_test.go"
+        },
+        {
+          "filename": "packages/frontend/index.html",
+          "status": "modified",
+          "additions": 7,
+          "deletions": 7,
+          "changes": 14,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/a66ac8618d2639345f950b876df4c527b805a0ee/packages/frontend/index.html"
+        }
+      ],
+      "stats": {
+        "total": 60,
+        "additions": 42,
+        "deletions": 18
+      },
+      "message": "Merge pull request #2 from chaos-monkeys/feat/netlify-badge\\n\\nAdded netlify build badge",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/a66ac8618d2639345f950b876df4c527b805a0ee"
+    },
+    {
+      "sha": "22de4bcc07c98490d93d46dfabf6d8c743a8a2b5",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 19864447,
+      "files": [
+        {
+          "filename": ".github/PULL_REQUEST_TEMPLATE.MD",
+          "status": "added",
+          "additions": 5,
+          "deletions": 0,
+          "changes": 5,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/22de4bcc07c98490d93d46dfabf6d8c743a8a2b5/.github/PULL_REQUEST_TEMPLATE.MD"
+        }
+      ],
+      "stats": {
+        "total": 5,
+        "additions": 5,
+        "deletions": 0
+      },
+      "message": "Merge pull request #5 from chaos-monkeys/feat/pr-template\\n\\nPR template",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/22de4bcc07c98490d93d46dfabf6d8c743a8a2b5"
+    },
+    {
+      "sha": "a256282301a228e7e3d2d447d0bfc11c7e1edb0a",
+      "author": null,
+      "committer": null,
+      "files": [
+        {
+          "filename": ".github/PULL_REQUEST_TEMPLATE.MD",
+          "status": "added",
+          "additions": 5,
+          "deletions": 0,
+          "changes": 5,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/a256282301a228e7e3d2d447d0bfc11c7e1edb0a/.github/PULL_REQUEST_TEMPLATE.MD"
+        }
+      ],
+      "stats": {
+        "total": 5,
+        "additions": 5,
+        "deletions": 0
+      },
+      "message": "added pr-template",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/a256282301a228e7e3d2d447d0bfc11c7e1edb0a"
+    },
+    {
+      "sha": "9d4ded065fe1112e111e54e9bc214ae97fffaf5d",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": ".editorconfig",
+          "status": "added",
+          "additions": 24,
+          "deletions": 0,
+          "changes": 24,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/9d4ded065fe1112e111e54e9bc214ae97fffaf5d/.editorconfig"
+        },
+        {
+          "filename": ".travis.yml",
+          "status": "added",
+          "additions": 4,
+          "deletions": 0,
+          "changes": 4,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/9d4ded065fe1112e111e54e9bc214ae97fffaf5d/.travis.yml"
+        },
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "additions": 14,
+          "deletions": 2,
+          "changes": 16,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/9d4ded065fe1112e111e54e9bc214ae97fffaf5d/README.md"
+        },
+        {
+          "filename": "docker-compose.yml",
+          "status": "added",
+          "additions": 19,
+          "deletions": 0,
+          "changes": 19,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/9d4ded065fe1112e111e54e9bc214ae97fffaf5d/docker-compose.yml"
+        },
+        {
+          "filename": "packages/backend/Dockerfile",
+          "status": "added",
+          "additions": 24,
+          "deletions": 0,
+          "changes": 24,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/9d4ded065fe1112e111e54e9bc214ae97fffaf5d/packages/backend/Dockerfile"
+        },
+        {
+          "filename": "packages/backend/app/app.go",
+          "status": "added",
+          "additions": 15,
+          "deletions": 0,
+          "changes": 15,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/9d4ded065fe1112e111e54e9bc214ae97fffaf5d/packages/backend/app/app.go"
+        },
+        {
+          "filename": "packages/backend/app/app_test.go",
+          "status": "added",
+          "additions": 25,
+          "deletions": 0,
+          "changes": 25,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/9d4ded065fe1112e111e54e9bc214ae97fffaf5d/packages/backend/app/app_test.go"
+        },
+        {
+          "filename": "packages/frontend/index.html",
+          "status": "added",
+          "additions": 10,
+          "deletions": 0,
+          "changes": 10,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/9d4ded065fe1112e111e54e9bc214ae97fffaf5d/packages/frontend/index.html"
+        }
+      ],
+      "stats": {
+        "total": 137,
+        "additions": 135,
+        "deletions": 2
+      },
+      "message": "Adds editorconfig + merged wiht amster",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/9d4ded065fe1112e111e54e9bc214ae97fffaf5d"
+    },
+    {
+      "sha": "993f33f36cc5a1028f2a51add967f342f892c530",
+      "author": null,
+      "committer": null,
+      "files": [
+        {
+          "filename": "docker-compose.yml",
+          "status": "modified",
+          "additions": 4,
+          "deletions": 0,
+          "changes": 4,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/993f33f36cc5a1028f2a51add967f342f892c530/docker-compose.yml"
+        },
+        {
+          "filename": "packages/frontend/Dockerfile",
+          "status": "added",
+          "additions": 8,
+          "deletions": 0,
+          "changes": 8,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/993f33f36cc5a1028f2a51add967f342f892c530/packages/frontend/Dockerfile"
+        },
+        {
+          "filename": "packages/frontend/elm.json",
+          "status": "added",
+          "additions": 24,
+          "deletions": 0,
+          "changes": 24,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/993f33f36cc5a1028f2a51add967f342f892c530/packages/frontend/elm.json"
+        },
+        {
+          "filename": "packages/frontend/index.html",
+          "status": "modified",
+          "additions": 4387,
+          "deletions": 10,
+          "changes": 4397,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/993f33f36cc5a1028f2a51add967f342f892c530/packages/frontend/index.html"
+        },
+        {
+          "filename": "packages/frontend/package-lock.json",
+          "status": "added",
+          "additions": 680,
+          "deletions": 0,
+          "changes": 680,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/993f33f36cc5a1028f2a51add967f342f892c530/packages/frontend/package-lock.json"
+        },
+        {
+          "filename": "packages/frontend/package.json",
+          "status": "added",
+          "additions": 17,
+          "deletions": 0,
+          "changes": 17,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/993f33f36cc5a1028f2a51add967f342f892c530/packages/frontend/package.json"
+        },
+        {
+          "filename": "packages/frontend/src/Main.elm",
+          "status": "added",
+          "additions": 5,
+          "deletions": 0,
+          "changes": 5,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/993f33f36cc5a1028f2a51add967f342f892c530/packages/frontend/src/Main.elm"
+        }
+      ],
+      "stats": {
+        "total": 5135,
+        "additions": 5125,
+        "deletions": 10
+      },
+      "message": "added elm-live",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/993f33f36cc5a1028f2a51add967f342f892c530"
+    },
+    {
+      "sha": "5fbfee12a52c822f93b4d0b3d081beeb31398914",
+      "author": null,
+      "committer": null,
+      "files": [
+        {
+          "filename": ".gitignore",
+          "status": "added",
+          "additions": 116,
+          "deletions": 0,
+          "changes": 116,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/5fbfee12a52c822f93b4d0b3d081beeb31398914/.gitignore"
+        }
+      ],
+      "stats": {
+        "total": 116,
+        "additions": 116,
+        "deletions": 0
+      },
+      "message": "added gitignore",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/5fbfee12a52c822f93b4d0b3d081beeb31398914"
+    },
+    {
+      "sha": "f76da974e5f7b6ca79a502fa6046df0da29d5404",
+      "author": {
+        "login": "pxlprfct",
+        "id": 3811773,
+        "node_id": "MDQ6VXNlcjM4MTE3NzM=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/3811773?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pxlprfct",
+        "html_url": "https://github.com/pxlprfct",
+        "followers_url": "https://api.github.com/users/pxlprfct/followers",
+        "following_url": "https://api.github.com/users/pxlprfct/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pxlprfct/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pxlprfct/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pxlprfct/subscriptions",
+        "organizations_url": "https://api.github.com/users/pxlprfct/orgs",
+        "repos_url": "https://api.github.com/users/pxlprfct/repos",
+        "events_url": "https://api.github.com/users/pxlprfct/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pxlprfct/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 19864447,
+      "files": [
+        {
+          "filename": ".travis.yml",
+          "status": "added",
+          "additions": 4,
+          "deletions": 0,
+          "changes": 4,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/f76da974e5f7b6ca79a502fa6046df0da29d5404/.travis.yml"
+        },
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 0,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/f76da974e5f7b6ca79a502fa6046df0da29d5404/README.md"
+        },
+        {
+          "filename": "packages/backend/app/app.go",
+          "status": "modified",
+          "additions": 11,
+          "deletions": 3,
+          "changes": 14,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/f76da974e5f7b6ca79a502fa6046df0da29d5404/packages/backend/app/app.go"
+        },
+        {
+          "filename": "packages/backend/app/app_test.go",
+          "status": "added",
+          "additions": 25,
+          "deletions": 0,
+          "changes": 25,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/f76da974e5f7b6ca79a502fa6046df0da29d5404/packages/backend/app/app_test.go"
+        }
+      ],
+      "stats": {
+        "total": 45,
+        "additions": 42,
+        "deletions": 3
+      },
+      "message": "Merge pull request #3 from chaos-monkeys/feat/travis-support\\n\\nFeat/travis support",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/f76da974e5f7b6ca79a502fa6046df0da29d5404"
+    },
+    {
+      "sha": "da82967b0e4e5c86849a31878d8da00e7382e36d",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/backend/app/app_test.go",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/da82967b0e4e5c86849a31878d8da00e7382e36d/packages/backend/app/app_test.go"
+        }
+      ],
+      "stats": {
+        "total": 2,
+        "additions": 1,
+        "deletions": 1
+      },
+      "message": "Hotfix whitespace at end of file",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/da82967b0e4e5c86849a31878d8da00e7382e36d"
+    },
+    {
+      "sha": "a17af727c788d7e5347561b4fc59d776126570ba",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 0,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/a17af727c788d7e5347561b4fc59d776126570ba/README.md"
+        }
+      ],
+      "stats": {
+        "total": 2,
+        "additions": 2,
+        "deletions": 0
+      },
+      "message": "Adds build status to the README",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/a17af727c788d7e5347561b4fc59d776126570ba"
+    },
+    {
+      "sha": "1d03183247c67683292b666f3ff119b2c059d812",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": ".travis.yml",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/1d03183247c67683292b666f3ff119b2c059d812/.travis.yml"
+        }
+      ],
+      "stats": {
+        "total": 2,
+        "additions": 1,
+        "deletions": 1
+      },
+      "message": "Hotfix changing directory to run",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/1d03183247c67683292b666f3ff119b2c059d812"
+    },
+    {
+      "sha": "20f88400f3f2e183f07792d5a16e32dc83deb75e",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": ".travis.yml",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/20f88400f3f2e183f07792d5a16e32dc83deb75e/.travis.yml"
+        }
+      ],
+      "stats": {
+        "total": 2,
+        "additions": 1,
+        "deletions": 1
+      },
+      "message": "Hotfix TravisCI test script",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/20f88400f3f2e183f07792d5a16e32dc83deb75e"
+    },
+    {
+      "sha": "e87d64a2a65f386a8786b190802f20f10379439a",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": ".travis.yml",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 3,
+          "changes": 4,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/e87d64a2a65f386a8786b190802f20f10379439a/.travis.yml"
+        }
+      ],
+      "stats": {
+        "total": 4,
+        "additions": 1,
+        "deletions": 3
+      },
+      "message": "Hotfix TravisCI setup",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/e87d64a2a65f386a8786b190802f20f10379439a"
+    },
+    {
+      "sha": "c8385a29da7fe710a015395e55c1c7d027820eec",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": ".travis.yml",
+          "status": "added",
+          "additions": 6,
+          "deletions": 0,
+          "changes": 6,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/c8385a29da7fe710a015395e55c1c7d027820eec/.travis.yml"
+        },
+        {
+          "filename": "packages/backend/app/app.go",
+          "status": "modified",
+          "additions": 11,
+          "deletions": 3,
+          "changes": 14,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/c8385a29da7fe710a015395e55c1c7d027820eec/packages/backend/app/app.go"
+        },
+        {
+          "filename": "packages/backend/app/app_test.go",
+          "status": "added",
+          "additions": 25,
+          "deletions": 0,
+          "changes": 25,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/c8385a29da7fe710a015395e55c1c7d027820eec/packages/backend/app/app_test.go"
+        }
+      ],
+      "stats": {
+        "total": 45,
+        "additions": 42,
+        "deletions": 3
+      },
+      "message": "Adds healthCheck + test and TravisCI",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/c8385a29da7fe710a015395e55c1c7d027820eec"
+    },
+    {
+      "sha": "6478cf882b808386f3b638e1a8c3a02965f4cdb6",
+      "author": {
+        "login": "admin-chaosmonkeys",
+        "id": 55034205,
+        "node_id": "MDQ6VXNlcjU1MDM0MjA1",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/55034205?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/admin-chaosmonkeys",
+        "html_url": "https://github.com/admin-chaosmonkeys",
+        "followers_url": "https://api.github.com/users/admin-chaosmonkeys/followers",
+        "following_url": "https://api.github.com/users/admin-chaosmonkeys/following{/other_user}",
+        "gists_url": "https://api.github.com/users/admin-chaosmonkeys/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/admin-chaosmonkeys/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/admin-chaosmonkeys/subscriptions",
+        "organizations_url": "https://api.github.com/users/admin-chaosmonkeys/orgs",
+        "repos_url": "https://api.github.com/users/admin-chaosmonkeys/repos",
+        "events_url": "https://api.github.com/users/admin-chaosmonkeys/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/admin-chaosmonkeys/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 19864447,
+      "files": [
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "additions": 13,
+          "deletions": 1,
+          "changes": 14,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/6478cf882b808386f3b638e1a8c3a02965f4cdb6/README.md"
+        },
+        {
+          "filename": "docker-compose.yml",
+          "status": "added",
+          "additions": 19,
+          "deletions": 0,
+          "changes": 19,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/6478cf882b808386f3b638e1a8c3a02965f4cdb6/docker-compose.yml"
+        },
+        {
+          "filename": "packages/backend/Dockerfile",
+          "status": "added",
+          "additions": 24,
+          "deletions": 0,
+          "changes": 24,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/6478cf882b808386f3b638e1a8c3a02965f4cdb6/packages/backend/Dockerfile"
+        },
+        {
+          "filename": "packages/backend/app/app.go",
+          "status": "added",
+          "additions": 7,
+          "deletions": 0,
+          "changes": 7,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/6478cf882b808386f3b638e1a8c3a02965f4cdb6/packages/backend/app/app.go"
+        },
+        {
+          "filename": "packages/frontend/index.html",
+          "status": "added",
+          "additions": 10,
+          "deletions": 0,
+          "changes": 10,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/6478cf882b808386f3b638e1a8c3a02965f4cdb6/packages/frontend/index.html"
+        }
+      ],
+      "stats": {
+        "total": 74,
+        "additions": 73,
+        "deletions": 1
+      },
+      "message": "Merge pull request #1 from chaos-monkeys/feat/local-environment\\n\\nFeat/local environment",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/6478cf882b808386f3b638e1a8c3a02965f4cdb6"
+    },
+    {
+      "sha": "5593b937b5ea9d4ac26e68b555d8d72bcc9fca15",
+      "author": {
+        "login": "admin-chaosmonkeys",
+        "id": 55034205,
+        "node_id": "MDQ6VXNlcjU1MDM0MjA1",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/55034205?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/admin-chaosmonkeys",
+        "html_url": "https://github.com/admin-chaosmonkeys",
+        "followers_url": "https://api.github.com/users/admin-chaosmonkeys/followers",
+        "following_url": "https://api.github.com/users/admin-chaosmonkeys/following{/other_user}",
+        "gists_url": "https://api.github.com/users/admin-chaosmonkeys/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/admin-chaosmonkeys/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/admin-chaosmonkeys/subscriptions",
+        "organizations_url": "https://api.github.com/users/admin-chaosmonkeys/orgs",
+        "repos_url": "https://api.github.com/users/admin-chaosmonkeys/repos",
+        "events_url": "https://api.github.com/users/admin-chaosmonkeys/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/admin-chaosmonkeys/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 19864447,
+      "files": [
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "additions": 3,
+          "deletions": 1,
+          "changes": 4,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/5593b937b5ea9d4ac26e68b555d8d72bcc9fca15/README.md"
+        }
+      ],
+      "stats": {
+        "total": 4,
+        "additions": 3,
+        "deletions": 1
+      },
+      "message": "added netlify build status",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/5593b937b5ea9d4ac26e68b555d8d72bcc9fca15"
+    },
+    {
+      "sha": "9a6d294d64ff074189899a13c3b87ca778ad2ba0",
+      "author": null,
+      "committer": null,
+      "files": [
+        {
+          "filename": "packages/frontend/index.html",
+          "status": "added",
+          "additions": 10,
+          "deletions": 0,
+          "changes": 10,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/9a6d294d64ff074189899a13c3b87ca778ad2ba0/packages/frontend/index.html"
+        }
+      ],
+      "stats": {
+        "total": 10,
+        "additions": 10,
+        "deletions": 0
+      },
+      "message": "added index.html",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/9a6d294d64ff074189899a13c3b87ca778ad2ba0"
+    },
+    {
+      "sha": "2f8b2cdd7dfb65c68d69c07599120d350fa522bb",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "additions": 13,
+          "deletions": 1,
+          "changes": 14,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/2f8b2cdd7dfb65c68d69c07599120d350fa522bb/README.md"
+        }
+      ],
+      "stats": {
+        "total": 14,
+        "additions": 13,
+        "deletions": 1
+      },
+      "message": "Adds README instructions to get started on local environemnt.",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/2f8b2cdd7dfb65c68d69c07599120d350fa522bb"
+    },
+    {
+      "sha": "aac9e3672bda2aa33c966bf304440f37e998c904",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "docker-compose.yml",
+          "status": "added",
+          "additions": 19,
+          "deletions": 0,
+          "changes": 19,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/aac9e3672bda2aa33c966bf304440f37e998c904/docker-compose.yml"
+        }
+      ],
+      "stats": {
+        "total": 19,
+        "additions": 19,
+        "deletions": 0
+      },
+      "message": "Adds docker-compmose file for backend and database",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/aac9e3672bda2aa33c966bf304440f37e998c904"
+    },
+    {
+      "sha": "fe9a51d1b6988a6f52aea394603a6270eccc21e8",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 5066994,
+      "files": [
+        {
+          "filename": "packages/backend/Dockerfile",
+          "status": "added",
+          "additions": 24,
+          "deletions": 0,
+          "changes": 24,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/fe9a51d1b6988a6f52aea394603a6270eccc21e8/packages/backend/Dockerfile"
+        },
+        {
+          "filename": "packages/backend/app/app.go",
+          "status": "added",
+          "additions": 7,
+          "deletions": 0,
+          "changes": 7,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/fe9a51d1b6988a6f52aea394603a6270eccc21e8/packages/backend/app/app.go"
+        }
+      ],
+      "stats": {
+        "total": 31,
+        "additions": 31,
+        "deletions": 0
+      },
+      "message": "Adds backend folder structure and Dockerfile",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/fe9a51d1b6988a6f52aea394603a6270eccc21e8"
+    },
+    {
+      "sha": "44654bf5260c714550ac8732e48665d0580fd272",
+      "author": {
+        "login": "robalaban",
+        "id": 5066994,
+        "node_id": "MDQ6VXNlcjUwNjY5OTQ=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/robalaban",
+        "html_url": "https://github.com/robalaban",
+        "followers_url": "https://api.github.com/users/robalaban/followers",
+        "following_url": "https://api.github.com/users/robalaban/following{/other_user}",
+        "gists_url": "https://api.github.com/users/robalaban/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/robalaban/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/robalaban/subscriptions",
+        "organizations_url": "https://api.github.com/users/robalaban/orgs",
+        "repos_url": "https://api.github.com/users/robalaban/repos",
+        "events_url": "https://api.github.com/users/robalaban/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/robalaban/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": 19864447,
+      "files": [
+        {
+          "filename": "README.md",
+          "status": "added",
+          "additions": 1,
+          "deletions": 0,
+          "changes": 1,
+          "raw_url": "https://github.com/chaos-monkeys/git-chaos/raw/44654bf5260c714550ac8732e48665d0580fd272/README.md"
+        }
+      ],
+      "stats": {
+        "total": 1,
+        "additions": 1,
+        "deletions": 0
+      },
+      "message": "Initial commit",
+      "url": "https://api.github.com/repos/chaos-monkeys/git-chaos/git/commits/44654bf5260c714550ac8732e48665d0580fd272"
+    }
+  ]
+}`

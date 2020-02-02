@@ -1,7 +1,7 @@
 const core = require("@actions/core");
 
 const getCollaborators = async ({ octokit, owner, repo }) => {
-  const collaboratorPromise = [];
+  const allCollaborators = {};
   const projectCollaborators = await octokit
     .paginate(`GET /repos/:owner/:repo/collaborators`, { owner, repo })
     .catch(error => {
@@ -9,31 +9,27 @@ const getCollaborators = async ({ octokit, owner, repo }) => {
       core.setFailed(error.message);
     });
 
-  projectCollaborators.map(collaborator =>
-    octokit
+  for (const collaborator of projectCollaborators) {
+    const collaboratorInfo = await octokit
       .request(`GET /users/${collaborator.login}`)
-      .then(c => collaboratorPromise.push(c.data))
+      .then(c => c.data)
       .catch(error => {
-        core.debug("collaboratorInformation");
+        core.debug("collaboratorInfo");
         core.setFailed(error.message);
-      })
-  );
+      });
 
-  (await Promise.all(collaboratorPromise)).reduce(
-    (allCollaborators, collaborator) => {
-      allCollaborators[collaborator.id] = {
-        username: collaborator.login,
-        name: collaborator.name,
-        avatar_url: collaborator.avatar_url,
-        html_url: collaborator.html_url,
-        company: collaborator.company,
-        blog: collaborator.blog,
-        location: collaborator.location
-      };
-      return allCollaborators;
-    },
-    {}
-  );
+    allCollaborators[collaboratorInfo.id] = {
+      username: collaboratorInfo.login,
+      name: collaboratorInfo.name,
+      avatar_url: collaboratorInfo.avatar_url,
+      html_url: collaboratorInfo.html_url,
+      company: collaboratorInfo.company,
+      blog: collaboratorInfo.blog,
+      location: collaboratorInfo.location
+    };
+  }
+
+  return allCollaborators;
 };
 
 module.exports = {

@@ -1,3 +1,5 @@
+const fs = require("fs");
+const util = require("util");
 const core = require("@actions/core");
 const Octokit = require("@octokit/rest");
 const { getCodeHistory, getBranchName } = require("./helpers/history");
@@ -5,6 +7,8 @@ const { createComment } = require("./helpers/comment");
 const { uploadHistory } = require("./helpers/aws");
 const { getCollaborators } = require("./helpers/collaborators");
 const { getCurrentTimestamp, buildHistoryIndex } = require("./helpers/utils");
+
+const isLocal = process.env.NODE_ENV ? true : false;
 
 // these envs come from the github action
 const {
@@ -17,7 +21,6 @@ const {
 } = process.env;
 
 const [GIT_OWNER, GIT_REPO] = GITHUB_REPOSITORY.split("/");
-core.debug(GITHUB_REF);
 const issueNumber = GITHUB_REF.split("/")[2];
 
 const run = async () => {
@@ -54,6 +57,18 @@ const run = async () => {
     historyIndex: historyIndex,
     history: history
   };
+
+  if (isLocal) {
+    fs.writeFileSync(
+      "../../../example/output.json",
+      util.inspect(JSON.stringify(reponseBuilder), {
+        showHidden: false,
+        depth: null
+      }),
+      "utf-8"
+    );
+    return;
+  }
 
   const path = await uploadHistory({
     accessKeyId: AWS_ACCESS_KEY,
