@@ -9009,6 +9009,8 @@ isStream.transform = function (stream) {
 /* 334 */
 /***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
 
+const fs = __webpack_require__(747);
+const util = __webpack_require__(669);
 const core = __webpack_require__(470);
 const Octokit = __webpack_require__(0);
 const { getCodeHistory, getBranchName } = __webpack_require__(630);
@@ -9016,6 +9018,8 @@ const { createComment } = __webpack_require__(210);
 const { uploadHistory } = __webpack_require__(623);
 const { getCollaborators } = __webpack_require__(522);
 const { getCurrentTimestamp, buildHistoryIndex } = __webpack_require__(400);
+
+const isLocal = process.env.NODE_ENV ? true : false;
 
 // these envs come from the github action
 const {
@@ -9028,7 +9032,6 @@ const {
 } = process.env;
 
 const [GIT_OWNER, GIT_REPO] = GITHUB_REPOSITORY.split("/");
-core.debug(GITHUB_REF);
 const issueNumber = GITHUB_REF.split("/")[2];
 
 const run = async () => {
@@ -9065,6 +9068,18 @@ const run = async () => {
     historyIndex: historyIndex,
     history: history
   };
+
+  if (isLocal) {
+    fs.writeFileSync(
+      "../../../example/output.json",
+      util.inspect(JSON.stringify(reponseBuilder), {
+        showHidden: false,
+        depth: null
+      }),
+      "utf-8"
+    );
+    return;
+  }
 
   const path = await uploadHistory({
     accessKeyId: AWS_ACCESS_KEY,
@@ -15233,7 +15248,7 @@ function addHook (state, kind, name, hook) {
 const core = __webpack_require__(470);
 
 const getCollaborators = async ({ octokit, owner, repo }) => {
-  const collaboratorPromise = [];
+  const allCollaborators = {};
   const projectCollaborators = await octokit
     .paginate(`GET /repos/:owner/:repo/collaborators`, { owner, repo })
     .catch(error => {
@@ -15241,31 +15256,27 @@ const getCollaborators = async ({ octokit, owner, repo }) => {
       core.setFailed(error.message);
     });
 
-  projectCollaborators.map(collaborator =>
-    octokit
+  for (const collaborator of projectCollaborators) {
+    const collaboratorInfo = await octokit
       .request(`GET /users/${collaborator.login}`)
-      .then(c => collaboratorPromise.push(c.data))
+      .then(c => c.data)
       .catch(error => {
-        core.debug("collaboratorInformation");
+        core.debug("collaboratorInfo");
         core.setFailed(error.message);
-      })
-  );
+      });
 
-  (await Promise.all(collaboratorPromise)).reduce(
-    (allCollaborators, collaborator) => {
-      allCollaborators[collaborator.id] = {
-        username: collaborator.login,
-        name: collaborator.name,
-        avatar_url: collaborator.avatar_url,
-        html_url: collaborator.html_url,
-        company: collaborator.company,
-        blog: collaborator.blog,
-        location: collaborator.location
-      };
-      return allCollaborators;
-    },
-    {}
-  );
+    allCollaborators[collaboratorInfo.id] = {
+      username: collaboratorInfo.login,
+      name: collaboratorInfo.name,
+      avatar_url: collaboratorInfo.avatar_url,
+      html_url: collaboratorInfo.html_url,
+      company: collaboratorInfo.company,
+      blog: collaboratorInfo.blog,
+      location: collaboratorInfo.location
+    };
+  }
+
+  return allCollaborators;
 };
 
 module.exports = {
