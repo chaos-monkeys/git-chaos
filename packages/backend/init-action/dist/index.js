@@ -9026,12 +9026,12 @@ const {
   AWS_ACCESS_KEY,
   AWS_SECRET_KEY
 } = process.env;
+
 const [GIT_OWNER, GIT_REPO] = GITHUB_REPOSITORY.split("/");
+core.debug(GITHUB_REF);
 const issueNumber = GITHUB_REF.split("/")[2];
 
 const run = async () => {
-  core.debug(`issue_number: ${issueNumber}`);
-
   const octokit = new Octokit({
     auth: GITHUB_TOKEN
   });
@@ -9040,7 +9040,6 @@ const run = async () => {
     octokit,
     owner: GIT_OWNER,
     repo: GIT_REPO,
-
     branch: await getBranchName({
       octokit,
       owner: GIT_OWNER,
@@ -9050,8 +9049,6 @@ const run = async () => {
   });
 
   const historyIndex = buildHistoryIndex(history);
-
-  core.debug(historyIndex);
 
   const reponseBuilder = {
     meta: {
@@ -9068,8 +9065,6 @@ const run = async () => {
     historyIndex: historyIndex,
     history: history
   };
-
-  core.debug(`response_builder: ${reponseBuilder.meta}`);
 
   const path = await uploadHistory({
     accessKeyId: AWS_ACCESS_KEY,
