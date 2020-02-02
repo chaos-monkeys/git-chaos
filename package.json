@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "index.js"
+    "start": "index.js",
+    "start:local": "ncc run -r dotenv/config index.js"
   },
   "author": "Chaos Monkeys",
   "license": "ISC",
