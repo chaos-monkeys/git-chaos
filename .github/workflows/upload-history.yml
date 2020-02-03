@@ -1,11 +1,13 @@
 name: upload-history
-
 on: [pull_request]
 
 jobs:
-  build:
-    - uses: chaos-monkeys/git-chaos-action
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        AWS_ACCESS_KEY: ${{ secrets.ACTIONS_AWS_ACCESS_KEY }}
-        AWS_SECRET_KEY: ${{ secrets.ACTIONS_AWS_SECRET_KEY }}
+  generate_chaos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Chaos
+        uses: chaos-monkeys/git-chaos-action
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AWS_ACCESS_KEY: ${{ secrets.ACTIONS_AWS_ACCESS_KEY }}
+          AWS_SECRET_KEY: ${{ secrets.ACTIONS_AWS_SECRET_KEY }}
