@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Generate Chaos
-        uses: chaos-monkeys/git-chaos-action
+        uses: chaos-monkeys/git-chaos-action@v0.1-alpha
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           AWS_ACCESS_KEY: ${{ secrets.ACTIONS_AWS_ACCESS_KEY }}
