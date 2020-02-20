@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'projects.apps.ProjectsConfig',
-    'projects.apps.CollaboratorsConfig',
+    'collaborators.apps.CollaboratorsConfig',
 ]
 
 MIDDLEWARE = [
