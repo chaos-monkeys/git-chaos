@@ -1,5 +1,11 @@
+from typing import Dict
 from django.db import models
 from django.contrib.postgres.fields import JSONField
+
+
+class MetadataOptions(Dict):
+    location: str
+    company: str
 
 
 class Collaborator(models.Model):
@@ -8,7 +14,7 @@ class Collaborator(models.Model):
     name = models.CharField(max_length=128, blank=True)
     avatar = models.URLField(blank=True)
     html_url = models.URLField(blank=True)
-    metadata = JSONField(default=dict)
+    metadata = JSONField(default=MetadataOptions)
 
     def __str__(self) -> str:
         return f'{self.username}'

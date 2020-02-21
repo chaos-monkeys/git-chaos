@@ -7,6 +7,7 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
+        fields = '__all__'
 
 
 class RepositorySerializer(serializers.ModelSerializer):
@@ -14,4 +15,4 @@ class RepositorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Repository
         fields = ('repo_name', 'repo_owner')
-        read_only_fields = 'authors'
+        read_only_fields = ('authors',)

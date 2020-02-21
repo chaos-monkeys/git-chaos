@@ -16,16 +16,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
-from rest_framework.routers import DefaultRouter
+from django.http import HttpResponse
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
     TokenVerifyView
 )
-router = DefaultRouter()
 
-# Example
-# router.register(r'scenarios', ScenarioViewSet)
+
+from projects import views
+
+router = [
+    url(r'projects/', views.ProjectList.as_view()),
+    url(r'projects/<int:pk>/', views.ProjectDetail.as_view()),
+    url(r'repositories/', views.RepositoryList.as_view()),
+    url(r'repositories/<int:pk>', views.RepositoryDetail.as_view()),
+]
 
 auth_urls = [
     url(r'get_token/', TokenObtainPairView.as_view()),
@@ -36,6 +42,7 @@ auth_urls = [
 urlpatterns = [
     url(r'^api/auth/', include(auth_urls)),
     url(r'^api-auth/', include('rest_framework.urls')),
-    path('api/', include(router.urls)),
+    url(r'^api/check/', lambda request: HttpResponse()),
+    path('api/v1/', include(router)),
     path('admin/', admin.site.urls),
 ]
