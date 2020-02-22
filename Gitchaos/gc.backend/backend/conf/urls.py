@@ -24,13 +24,16 @@ from rest_framework_simplejwt.views import (
 )
 
 
-from projects import views
+from projects.views import ProjectList, ProjectDetail, RepositoryList, RepositoryDetail
+from collaborators.views import CollaboratorList, CollaboratorDetail
 
 router = [
-    url(r'projects/', views.ProjectList.as_view()),
-    url(r'projects/<int:pk>/', views.ProjectDetail.as_view()),
-    url(r'repositories/', views.RepositoryList.as_view()),
-    url(r'repositories/<int:pk>', views.RepositoryDetail.as_view()),
+    url(r'projects/', ProjectList.as_view()),
+    url(r'projects/<int:pk>/', ProjectDetail.as_view()),
+    url(r'repositories/', RepositoryList.as_view()),
+    url(r'repositories/<int:pk>', RepositoryDetail.as_view()),
+    url(r'collaborators/', CollaboratorList.as_view()),
+    url(r'collaborators/<int:pk>', CollaboratorDetail.as_view()),
 ]
 
 auth_urls = [
