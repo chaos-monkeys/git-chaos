@@ -30,6 +30,7 @@ INSTALLED_APPS = [
 
     'projects.apps.ProjectsConfig',
     'collaborators.apps.CollaboratorsConfig',
+    'parsers.apps.ParsersConfig',
 ]
 
 MIDDLEWARE = [

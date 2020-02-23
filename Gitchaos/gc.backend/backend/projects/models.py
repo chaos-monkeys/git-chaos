@@ -11,7 +11,7 @@ class Project(models.Model):
 class Repository(models.Model):
     repo_name = models.CharField(max_length=128)
     repo_owner = models.ForeignKey('projects.Project', on_delete=models.CASCADE)
-    collaborators = models.ManyToManyField('collaborators.Collaborator')
+    collaborators = models.ManyToManyField('collaborators.Collaborator', blank=True)
 
     class Meta:
         unique_together = ('repo_owner', 'repo_name')
