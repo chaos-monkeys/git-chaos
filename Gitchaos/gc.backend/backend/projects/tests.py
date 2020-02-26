@@ -1,5 +1,8 @@
 from django.test import TestCase
+from rest_framework.test import APIRequestFactory
+
 from .models import Project, Repository
+
 
 payloadJSON = {
     "meta": {
@@ -42,6 +45,7 @@ payloadJSON = {
 
 class ProjectTestCase(TestCase):
     repo_owner = payloadJSON["meta"]["repo_owner"]
+    factory = APIRequestFactory()
 
     def setUp(self):
         Project.objects.create(repo_owner=self.repo_owner)
@@ -50,6 +54,8 @@ class ProjectTestCase(TestCase):
         project = Project.objects.get()
         self.assertEqual(f'{project}', self.repo_owner)
 
+    def test_project_JSON_parsed_successfully(self):
+        request = self.factory.post('/api/v1/projects/', payloadJSON, format='json')
 
 
 class RepositoryTestCase(TestCase):
