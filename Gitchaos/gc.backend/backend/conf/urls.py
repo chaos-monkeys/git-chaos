@@ -28,12 +28,16 @@ from projects.views import ProjectList, ProjectDetail, RepositoryList, Repositor
 from collaborators.views import CollaboratorList, CollaboratorDetail
 
 router = [
+    # Projects
     url('projects/', ProjectList.as_view()),
     url('project/<int:pk>/', ProjectDetail.as_view()),
+    # Repositories
     url('repositories/', RepositoryList.as_view()),
     url('repository/<int:pk>', RepositoryDetail.as_view()),
-    url('collaborators/', CollaboratorList.as_view()),
-    url('collaborator/<int:pk>', CollaboratorDetail.as_view()),
+    # Collaborators
+    url('collaborator/', CollaboratorList.as_view()),
+    url('collaborators/<str:repo_owner>', CollaboratorList.as_view()),
+    url('collaborator/<uuid:collaborator_id>', CollaboratorDetail.as_view()),
 ]
 
 auth_urls = [

@@ -1,7 +1,8 @@
+from django.db import transaction
 from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.status import HTTP_201_CREATED, HTTP_200_OK
+from rest_framework.status import HTTP_201_CREATED, HTTP_409_CONFLICT
 
 from .models import Project, Repository
 from .serializers import ProjectSerializer, RepositorySerializer
@@ -18,13 +19,17 @@ class ProjectList(APIView):
         return Response(serializer.data)
 
     def post(self, request, *args, **kwargs):
-        project_meta = request.data.get("meta")
-        # TODO: prepare statement - insert once - and atomic
-        project, create = Project.objects.get_or_create(repo_owner=project_meta['repo_owner'])
+        # TODO: Check for malformed JSON, return serializer errors
+        p_meta = request.data.get("meta")
 
+        project, c_project = Project.objects.get_or_create(repo_owner=p_meta['repo_owner'])
+        print(project)
+        repository, c_repository = Repository.objects.get_or_create(repo_name=p_meta['repo_owner'], repo_owner=project)
 
-        if create:
-            Response(HTTP_201_CREATED)
+        if c_project or c_repository:
+            return Response(HTTP_201_CREATED)
+
+        return Response(HTTP_409_CONFLICT)  # Resources already exists
 
 
 class ProjectDetail(generics.RetrieveUpdateDestroyAPIView):

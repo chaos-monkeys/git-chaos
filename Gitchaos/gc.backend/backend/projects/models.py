@@ -2,10 +2,10 @@ from django.db import models
 
 
 class Project(models.Model):
-    repo_owner = models.CharField(max_length=128, primary_key=True)
+    repo_owner = models.CharField(max_length=128, unique=True)
 
-    def __str__(self):
-        return self.repo_owner
+    def __str__(self) -> str:
+        return f'{self.repo_owner}'
 
 
 class Repository(models.Model):
