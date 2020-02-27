@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  db:
+    image: "postgres:11"
+    container_name: "backend_db"
+    environment:
+      - POSTGRES_USER=chaosmonkey
+      - POSTGRES_PASSWORD=chaosPassword
+      - POSTGRES_DB=gc_backend
+    ports:
+      - 5432:5432
+    volumes:
+      - backend_db:/var/lib/postgresql/data
+
+volumes:
+  backend_db:
