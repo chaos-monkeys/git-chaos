@@ -27,9 +27,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'django.contrib.postgres',
+    'psqlextra',
 
-    'projects.apps.ProjectsConfig',
+    'organisations.apps.OrganisationsConfig',
     'collaborators.apps.CollaboratorsConfig',
+    'repositories.apps.RepositoriesConfig',
 ]
 
 MIDDLEWARE = [

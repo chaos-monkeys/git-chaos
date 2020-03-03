@@ -1,7 +1,8 @@
 from django.test import TestCase
 from rest_framework.test import APIRequestFactory
+from rest_framework.status import HTTP_200_OK
 
-from .models import Project, Repository
+from .models import Organisation
 
 
 payloadJSON = {
@@ -48,27 +49,8 @@ class ProjectTestCase(TestCase):
     factory = APIRequestFactory()
 
     def setUp(self):
-        Project.objects.create(repo_owner=self.repo_owner)
+        Organisation.objects.create(name=self.repo_owner)
 
-    def test_project_saved_successfully(self):
-        project = Project.objects.get()
+    def test_organisation_saved_successfully(self):
+        project = Organisation.objects.get()
         self.assertEqual(f'{project}', self.repo_owner)
-
-    def test_project_JSON_parsed_successfully(self):
-        request = self.factory.post('/api/v1/projects/', payloadJSON, format='json')
-
-
-class RepositoryTestCase(TestCase):
-    repo_owner = payloadJSON["meta"]["repo_owner"]
-    repo_name = payloadJSON["meta"]["repo_name"]
-    collaborators = payloadJSON["collaborators"]
-
-    def setUp(self):
-        Project.objects.create(repo_owner=self.repo_owner)
-        project_pk = Project.objects.get()
-        Repository.objects.create(repo_name=self.repo_name, repo_owner=project_pk)
-
-    def test_repository_saved_successfully(self):
-        repository = Repository.objects.get()
-        self.assertEqual(f'{repository}', f'{self.repo_owner}/{self.repo_name}')
-

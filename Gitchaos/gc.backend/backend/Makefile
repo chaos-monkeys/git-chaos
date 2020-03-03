@@ -17,3 +17,10 @@ test:
 
 shell:
 	@python manage.py shell $(LOCALCONF)
+
+coverage:
+	coverage erase
+	coverage run manage.py test $(LOCALCONF)
+
+coverage-report:
+	coverage html
