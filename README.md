@@ -22,8 +22,8 @@ Make sure you're running `python 3.7.X` and `virtualenv`.
 - `pip install -r requirements.txt`
   - Recursively installs all packages from requirements.txt to .venv
 - `cd backend`
-- `make migrate`
-  - Runs all the migrations to the Docker database)
+- `make database`
+  - Runs all the migrations to the Docker database as well as populates the database with the fixtures
 - `make runserver`
 
   - Starts the Python Django webserver
@@ -31,3 +31,7 @@ Make sure you're running `python 3.7.X` and `virtualenv`.
 ### Running the tests
 
 - `make test`
+    - Runs the tests in each module
+    
+- `coverage`
+    - Runs the coverage, can be combined with `coverage-report` to output a html document of the application coverage
