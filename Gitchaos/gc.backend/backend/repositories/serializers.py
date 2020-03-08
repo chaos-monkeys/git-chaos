@@ -12,9 +12,9 @@ class RepositorySerializer(serializers.ModelSerializer):
 
 
 class RepositoryDetailSerializer(serializers.ModelSerializer):
-    collaborators = CollaboratorSerializer(many=True)
+    collaborators = CollaboratorSerializer(many=True, read_only=True)
     organisation = serializers.StringRelatedField(read_only=True)
 
     class Meta:
         model = Repository
-        fields = ('name', 'organisation', 'collaborators',)
+        fields = ('id', 'name', 'organisation', 'collaborators',)

@@ -1,15 +1,17 @@
+import json
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.status import HTTP_202_ACCEPTED
 from psqlextra.query import ConflictAction
 
+from collaborators.serializers import CollaboratorSerializer
 from collaborators.parsers import parse_collaborator
 from collaborators.models import Collaborator
 from repositories.models import Repository
-from repositories.serializers import RepositorySerializer
+from repositories.serializers import RepositoryDetailSerializer, RepositorySerializer
 
 from .models import Organisation
-from .serializers import OrganisationSerializer
+from .serializers import OrganisationSerializer, OrganisationDetailSerializer
 
 
 class OrganisationList(APIView):
@@ -23,10 +25,24 @@ class OrganisationList(APIView):
         return Response(serializer.data)
 
 
-class OrganisationDetails(APIView):
+class OrganisationDetail(APIView):
     """
     Upload, update or retrieve an organisation
     """
+
+    def get(self, request, *args, **kwargs):
+        organisation_name = kwargs.get('organisation_name')
+        org_pk = Organisation.objects.get(name=organisation_name)
+        collaborators_pk = Repository.objects.values_list('collaborators', flat=True)\
+                .filter(organisation=org_pk)\
+                .distinct()
+        collaborators = Collaborator.objects.filter(id__in=list(collaborators_pk))
+        collaborator_serializer = CollaboratorSerializer(collaborators, many=True)
+
+        serializer = OrganisationDetailSerializer(org_pk)
+        response_obj = dict(serializer.data)
+        response_obj['collaborators'] = collaborator_serializer.data
+        return Response(response_obj)
 
     def post(self, request, *args, **kwargs):
         # TODO: Clean up / serializer errors

@@ -11,5 +11,17 @@
         55034205
       ]
     }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 2,
+    "fields": {
+      "name": "git-chaos-frontend",
+      "organisation": 1,
+      "collaborators": [
+        3811773,
+        5066994
+      ]
+    }
   }
 ]

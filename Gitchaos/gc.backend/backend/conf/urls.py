@@ -24,12 +24,13 @@ from rest_framework_simplejwt.views import (
 )
 
 
-from organisations.views import OrganisationList
+from organisations.views import OrganisationList, OrganisationDetail
 from repositories.views import RepositoryDetail
 
 router = [
     # Organisation
     path('organisations/', OrganisationList.as_view()),
+    path('<str:organisation_name>/', OrganisationDetail.as_view()),
     # Repository
     path('<str:organisation_name>/<str:repository_name>/', RepositoryDetail.as_view()),
     # Collaborators
