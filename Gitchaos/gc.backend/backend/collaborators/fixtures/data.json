@@ -1,0 +1,44 @@
+[
+  {
+    "model": "collaborators.collaborator",
+    "pk": 3811773,
+    "fields": {
+      "username": "pxlprfct",
+      "name": "Ollie Williams",
+      "avatar": "https://avatars1.githubusercontent.com/u/3811773?v=4",
+      "html_url": "https://github.com/pxlprfct",
+      "metadata": {
+        "company": "IBM",
+        "location": "London, UK"
+      }
+    }
+  },
+  {
+    "model": "collaborators.collaborator",
+    "pk": 5066994,
+    "fields": {
+      "username": "robalaban",
+      "name": "Robert Balaban",
+      "avatar": "https://avatars3.githubusercontent.com/u/5066994?v=4",
+      "html_url": "https://github.com/robalaban",
+      "metadata": {
+        "company": "IBM ",
+        "location": "London, United Kingdom"
+      }
+    }
+  },
+  {
+    "model": "collaborators.collaborator",
+    "pk": 55034205,
+    "fields": {
+      "username": "admin-chaosmonkeys",
+      "name": "null",
+      "avatar": "https://avatars0.githubusercontent.com/u/55034205?v=4",
+      "html_url": "https://github.com/admin-chaosmonkeys",
+      "metadata": {
+        "company": "null",
+        "location": "null"
+      }
+    }
+  }
+]

@@ -1,21 +1,19 @@
-from rest_framework import generics
+from rest_framework.views import APIView
+from django.shortcuts import get_object_or_404
+from rest_framework.response import Response
 
 from .models import Collaborator
 from .serializers import CollaboratorSerializer
 
+class CollaboratorList(APIView):
+    """
+    Retrieve, update or delete a collaborator.
+    """
 
-class CollaboratorList(generics.ListCreateAPIView):
-    """
-    List all projects, or create a new project.
-    """
-    queryset = Collaborator.objects.all()
-    serializer_class = CollaboratorSerializer
+    def get(self, request, *args, **kwargs):
+        collaborator_id = request.GET['collaborator_id']
+        queryset = get_object_or_404(Collaborator, id=collaborator_id)
+        serializer = CollaboratorSerializer(queryset)
 
-
-class CollaboratorDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    Retrieve, update or delete a project.
-    """
-    queryset = Collaborator.objects.all()
-    serializer_class = CollaboratorSerializer
+        return Response(serializer.data)
 

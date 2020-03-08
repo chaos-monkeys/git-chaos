@@ -27,10 +27,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'django.contrib.postgres',
+    'psqlextra',
 
-    'projects.apps.ProjectsConfig',
+    'organisations.apps.OrganisationsConfig',
     'collaborators.apps.CollaboratorsConfig',
-    'parsers.apps.ParsersConfig',
+    'repositories.apps.RepositoriesConfig',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +85,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
+        # 'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
