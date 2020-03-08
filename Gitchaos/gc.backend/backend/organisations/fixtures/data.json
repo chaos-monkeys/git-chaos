@@ -1,0 +1,9 @@
+[
+  {
+    "model": "organisations.organisation",
+    "pk": 1,
+    "fields": {
+      "name": "chaos-monkeys"
+    }
+  }
+]

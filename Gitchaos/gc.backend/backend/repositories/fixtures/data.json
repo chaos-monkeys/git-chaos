@@ -1,0 +1,15 @@
+[
+  {
+    "model": "repositories.repository",
+    "pk": 1,
+    "fields": {
+      "name": "git-chaos",
+      "organisation": 1,
+      "collaborators": [
+        3811773,
+        5066994,
+        55034205
+      ]
+    }
+  }
+]

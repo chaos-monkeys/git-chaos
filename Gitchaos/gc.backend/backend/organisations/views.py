@@ -28,23 +28,13 @@ class OrganisationDetails(APIView):
     Upload, update or retrieve an organisation
     """
 
-    def get(self, request, *args, **kwargs):
-        org_name = kwargs.get('organisation_name')
-        organisation = Organisation.objects.get(name=org_name)
-        repositories = Repository.objects.filter(organisation=organisation)
-
-        print(repositories)
-
-        return Response(RepositorySerializer(repositories).data)
-
-
     def post(self, request, *args, **kwargs):
         # TODO: Clean up / serializer errors
         p_meta = request.data.get("meta")
         p_collaborators = request.data.get("collaborators")
 
         org, _ = Organisation.objects.get_or_create(name=p_meta['repo_owner'])
-        repository, _ = Repository.objects.get_or_create(name=p_meta['repo_owner'], organisation=org)
+        repository, _ = Repository.objects.get_or_create(name=p_meta['repo_name'], organisation=org)
 
         if p_collaborators is not None:
             collaborators = (

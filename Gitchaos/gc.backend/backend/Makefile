@@ -18,6 +18,11 @@ test:
 shell:
 	@python manage.py shell $(LOCALCONF)
 
+loaddata:
+	@python manage.py loaddata data $(LOCALCONF)
+
+database: | migrate loaddata
+
 coverage:
 	coverage erase
 	coverage run manage.py test $(LOCALCONF)
