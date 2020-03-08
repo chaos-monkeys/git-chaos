@@ -1,6 +1,5 @@
 from django.test import TestCase
 
-from .models import Collaborator
 from .serializers import CollaboratorSerializer
 from .parsers import parse_collaborator
 

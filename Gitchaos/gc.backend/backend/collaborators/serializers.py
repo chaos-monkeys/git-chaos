@@ -7,4 +7,4 @@ class CollaboratorSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Collaborator
-        fields = ['id', 'username', 'name', 'avatar', 'html_url', 'metadata']
+        fields = '__all__'
