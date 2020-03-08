@@ -31,7 +31,7 @@ from repositories.views import RepositoryList
 router = [
     # Organisation
     path('organisations/', OrganisationList.as_view()),
-    path('organisation/', OrganisationDetails.as_view()),
+    path('organisation/<str:organisation_name>/', OrganisationDetails.as_view()),
     # Repository
     path('repositories/', RepositoryList.as_view()),
     # Collaborators

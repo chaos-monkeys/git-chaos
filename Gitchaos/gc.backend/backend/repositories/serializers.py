@@ -7,5 +7,4 @@ class RepositorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Repository
-        fields = ('name', 'organisation')
-        read_only_fields = ('collaborators',)
+        fields = ('id',)

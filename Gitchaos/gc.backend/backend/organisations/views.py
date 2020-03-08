@@ -6,6 +6,7 @@ from psqlextra.query import ConflictAction
 from collaborators.parsers import parse_collaborator
 from collaborators.models import Collaborator
 from repositories.models import Repository
+from repositories.serializers import RepositorySerializer
 
 from .models import Organisation
 from .serializers import OrganisationSerializer
@@ -13,7 +14,7 @@ from .serializers import OrganisationSerializer
 
 class OrganisationList(APIView):
     """
-    List all projects
+    List all organisations
     """
 
     def get(self, request, *args, **kwargs):
@@ -24,8 +25,18 @@ class OrganisationList(APIView):
 
 class OrganisationDetails(APIView):
     """
-    Upload or update an organisation
+    Upload, update or retrieve an organisation
     """
+
+    def get(self, request, *args, **kwargs):
+        org_name = kwargs.get('organisation_name')
+        organisation = Organisation.objects.get(name=org_name)
+        repositories = Repository.objects.filter(organisation=organisation)
+
+        print(repositories)
+
+        return Response(RepositorySerializer(repositories).data)
+
 
     def post(self, request, *args, **kwargs):
         # TODO: Clean up / serializer errors

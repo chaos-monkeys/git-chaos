@@ -6,9 +6,6 @@ class Repository(models.Model):
     organisation = models.ForeignKey('organisations.Organisation', on_delete=models.CASCADE)
     collaborators = models.ManyToManyField('collaborators.Collaborator', blank=True)
 
-    class Meta:
-        unique_together = ('organisation', 'name')
-
     def __str__(self) -> str:
         return self.get_unique_name
 
